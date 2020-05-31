@@ -6,6 +6,7 @@
 :root{
     --NAVBAR:linear-gradient(90deg, #1c3643, #273b47 25%, #1e5372);
     --SECTION1:#062038;
+    --SECTION1_CONTAINER_FOTOS : rgb(193, 199, 205);
     --SECTION2: #041625;
     --COLOR_LETRA: #c0c5c9;
     --FOOTER: #020B13;
@@ -43,7 +44,15 @@ ion-icon {
 /*-------------------------CSS PUBLICACIONES*/
 #publicaciones{
     background-color: var(--SECTION1);
+    color: VAR(--COLOR_LETRA);
 }
+
+.card-color{
+    background-color: var(--SECTION1_CONTAINER_FOTOS);
+}
+
+
+
 #galeria{
     background-color: var(--SECTION2);
 
