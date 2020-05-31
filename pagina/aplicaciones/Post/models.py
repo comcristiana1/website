@@ -62,7 +62,7 @@ class Miembro(models.Model):
 #Creacion Tabla Eventos
 #Hecho por Andres Cevallos
 class Evento(models.Model):
-    id = models.IntegerField(primary_key=True)
+    id = models.AutoField(primary_key = True)
     event_date = models.DateField('Fecha del evento',auto_now=False,auto_now_add=False, null=False, blank=False)
     event_time = models.TimeField('Hora del Evento',auto_now=False, auto_now_add=False)
     primary_street = models.CharField('Calle principal',max_length=100,null=False, blank=False)
