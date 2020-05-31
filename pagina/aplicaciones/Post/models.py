@@ -77,3 +77,31 @@ class Evento(models.Model):
     
     def __str__(self):
         return "%s %s %s %s %s %s %s %s %s" % (self.event_date,self.event_time,self.primary_street,self.secondary_street,self.house_number,self.city,self.description,self.created_date, self.status)
+
+class Groups(models.Model):
+    id = models.AutoField(primary_key=True)
+    groupName = models.CharField('Nombre Grupo',max_length = 30,null = False,blank = False)
+    grouPhoto = models.ImageField('Imagen Grupo',upload_to='group_image',null=False,blank=False)
+    groupDir = models.CharField('Direccion',max_length=100,null=False,blank=False)
+    groupStatus = models.BooleanField('Estado Activado/Desactivado',default = True)
+
+    class Meta:
+        verbose_name = 'Grupo'
+        verbose_name_plural = 'Grupos'
+
+    def __str__(self):
+        return "%s %s" % (self.groupName,self.groupDir)
+
+class Ministry(models.Model):
+    id = models.AutoField(primary_key=True)
+    minisName = models.CharField('Nombre Ministerio',max_length=40,null=False,blank=False)
+    minisPhoto = models.ImageField('Imagen Ministerio',upload_to='minis_image',null=False,blank=False)
+    minisDir = models.CharField('Direccion',max_length=100,null=False,blank=False)
+    miniStatus = models.BooleanField('Estado Activado/Desactivado',default = True)
+
+    class Meta:
+        verbose_name = 'Ministerios'
+        verbose_name_plural = 'Ministerios'
+
+    def __str__(self):
+        return "%s %s" % (self.minisName,self.minisDir)

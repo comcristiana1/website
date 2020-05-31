@@ -3,6 +3,8 @@ from .models import Categoria
 from .models import Autor
 from .models import Miembro
 from .models import Evento
+from .models import Groups
+from .models import Ministry
 
 # Register your models here.
 
@@ -26,7 +28,19 @@ class EventoAdmin(admin.ModelAdmin):
 
     list_display = ('id','event_date','event_time','primary_street','secondary_street','house_number','city','description','image','created_date','status')
 
+class GruposAdmin(admin.ModelAdmin):
+    search_fields = ['groupName']
+
+    list_display = ('id','groupName','groupDir')
+
+class MinisterioAdmin(admin.ModelAdmin):
+    search_fields = ['minisName']
+
+    list_display = ('id','minisName','minisDir')
+
 admin.site.register(Categoria,CategoriaAdmin)
 admin.site.register(Autor,AutorAdmin)
 admin.site.register(Miembro,MiembroAdmin)
 admin.site.register(Evento,EventoAdmin)
+admin.site.register(Groups,GruposAdmin)
+admin.site.register(Ministry,MinisterioAdmin)
