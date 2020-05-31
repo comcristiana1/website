@@ -1,13 +1,27 @@
 /*-------------------------------CSS NAVBAR */
 
+
+/*VARIABLES*/
+
+:root{
+    --NAVBAR:linear-gradient(90deg, #1c3643, #273b47 25%, #1e5372);
+    --SECTION1:#062038;
+    --SECTION2: #041625;
+    --COLOR_LETRA: #c0c5c9;
+    --FOOTER: #020B13;
+}
+
+
+
+
 .navbar {
-    background: linear-gradient(90deg, #1c3643, #273b47 25%, #1e5372);
+    background: VAR(--NAVBAR);
     box-shadow: 0 2px 4px 0;
     min-height: 6px;
 }
 
 .navbar-brand {
-    color: white;
+    color: VAR(--COLOR_LETRA);
 }
 
 .navbar-brand:hover {
@@ -25,6 +39,17 @@
 ion-icon {
     color: white;
 }
+
+/*-------------------------CSS PUBLICACIONES*/
+#publicaciones{
+    background-color: var(--SECTION1);
+}
+#galeria{
+    background-color: var(--SECTION2);
+
+}
+
+
 
 
 /*-------------------------------CSS CAROUSEL - MAIN */
@@ -59,15 +84,16 @@ ion-icon {
 /*-------------------------------CSS FIN CAROUSEL*/
 
 #footer {
-    background: linear-gradient(90deg, #1c3643, #273b47 25%, #1e5372);
+    /*background: linear-gradient(90deg, #1c3643, #273b47 25%, #1e5372);*/
+    background-color: VAR(--FOOTER);
 }
 
 #footer div {
-    color: white;
+    color: VAR(--COLOR_LETRA);
 }
 
 #footer a {
-    color: white;
+    color: VAR(--COLOR_LETRA);
 }
 
 /*-------------------------------INICIO CSS CONTACT*/
