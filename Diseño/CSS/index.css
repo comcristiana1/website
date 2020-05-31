@@ -69,3 +69,25 @@ ion-icon {
 #footer a {
     color: white;
 }
+
+/*-------------------------------INICIO CSS CONTACT*/
+.header {
+    color: #FFFFFF;
+    font-size: 27px;
+    padding: 10px;
+}
+
+.bigicon {
+    font-size: 35px;
+    color: #FFFFFF;
+}
+
+.body{
+	background-image: url("../images/backgroundeventos.jpg");
+	border: 2px solid black;
+  	padding: 25px;
+  	background-repeat: no-repeat;
+  	background-size: 100% 100%;
+}
+
+/*-------------------------------INICIO CSS CONTACT*/
