@@ -1,6 +1,3 @@
-/*-------------------------------CSS NAVBAR */
-
-
 /*VARIABLES*/
 
 :root {
@@ -11,6 +8,9 @@
     --COLOR_LETRA: #c0c5c9;
     --FOOTER: #020B13;
 }
+
+
+/*-------------------------------CSS NAVBAR */
 
 .navbar {
     background: VAR(--NAVBAR);
@@ -23,19 +23,19 @@
 }
 
 .navbar-brand:hover {
-    color: white;
+    color: VAR(--COLOR_LETRA);
 }
 
 .nav-link {
-    color: white;
+    color: VAR(--COLOR_LETRA);
 }
 
 .nav-link:hover {
-    color: white;
+    color: VAR(--COLOR_LETRA);
 }
 
 ion-icon {
-    color: white;
+    color: VAR(--COLOR_LETRA);
 }
 
 
