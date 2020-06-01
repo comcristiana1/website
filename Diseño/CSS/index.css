@@ -1,17 +1,16 @@
-/*-------------------------------CSS NAVBAR */
-
-
 /*VARIABLES*/
 
-:root{
-    --NAVBAR:linear-gradient(90deg, #1c3643, #273b47 25%, #1e5372);
-    --SECTION1:#062038;
-    --SECTION1_CONTAINER_FOTOS : rgb(193, 199, 205);
+:root {
+    --NAVBAR: linear-gradient(90deg, #1c3643, #273b47 25%, #1e5372);
+    --SECTION1: #062038;
+    --SECTION1_CONTAINER_FOTOS: rgb(193, 199, 205);
     --SECTION2: #041625;
     --COLOR_LETRA: #c0c5c9;
     --FOOTER: #020B13;
 }
 
+
+/*-------------------------------CSS NAVBAR */
 
 .navbar {
     background: VAR(--NAVBAR);
@@ -24,30 +23,33 @@
 }
 
 .navbar-brand:hover {
-    color: white;
+    color: VAR(--COLOR_LETRA);
 }
 
 .nav-link {
-    color: white;
+    color: VAR(--COLOR_LETRA);
 }
 
 .nav-link:hover {
-    color: white;
+    color: VAR(--COLOR_LETRA);
 }
 
 ion-icon {
-    color: white;
+    color: VAR(--COLOR_LETRA);
 }
 
+
 /*-------------------------CSS PUBLICACIONES*/
-#publicaciones{
+
+#publicaciones {
     background-color: var(--SECTION1);
     color: VAR(--COLOR_LETRA);
 }
 
-.card-color{
+.card-color {
     background-color: var(--SECTION1_CONTAINER_FOTOS);
 	border: 0px;
+	
 }
 .card-body{
 	color:VAR(--COLOR_LETRA);
@@ -64,12 +66,9 @@ ion-icon {
 	margin:3em;
 }
 
-#galeria{
+#galeria {
     background-color: var(--SECTION2);
-
 }
-
-
 
 
 /*-------------------------------CSS CAROUSEL - MAIN */
@@ -116,7 +115,9 @@ ion-icon {
     color: VAR(--COLOR_LETRA);
 }
 
+
 /*-------------------------------INICIO CSS CONTACT*/
+
 .header {
     color: VAR(--COLOR_LETRA);
     font-size: 27px;
@@ -128,18 +129,19 @@ ion-icon {
     color: VAR(--COLOR_LETRA);
 }
 
-.dir-contacto{
-	padding-top: 2px;
+.dir-contacto {
+    padding-top: 2px;
     font-size: 15px;
     color: VAR(--COLOR_LETRA);
 }
 
-.body{
-	background: linear-gradient(90deg, #1c3643, #273b47 25%, #1e5372);
-	border: 1px solid black;
-  	padding: 25px;
-  	background-repeat: no-repeat;
-  	background-size: 100% 100%;
+.body {
+    background: var(--SECTION1);
+    border: 1px solid black;
+    padding: 25px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
+
 
 /*-------------------------------FIN CSS CONTACT*/
