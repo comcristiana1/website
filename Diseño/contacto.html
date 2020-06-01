@@ -13,20 +13,19 @@
 </head>
 
 <body>
-
     <!--Inicio Navbar-->
     <nav class="navbar navbar-expand-lg ">
         <div class="container">
             <a class="navbar-brand" href="#">Com. Crist. "La Magdalena"</a>
             <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
-          <ion-icon name="menu"></ion-icon>
-  </button>
+          	<ion-icon name="menu"></ion-icon>
+  			</button>
             <div class="collapse navbar-collapse" id="collapsibleNavId">
                 <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
                     <li class="nav-item mr-auto">
-                        <a class="nav-link" href="#">Inicio </a>
+                        <a class="nav-link" href="#" id="Inicio">Inicio </a>
                     </li>
-                    <li class="nav-item dropdown mr-auto">
+                    <li class="nav-item dropdown mr-auto" id="Tu_Iglesia">
                         <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tu Iglesia</a>
                         <div class="dropdown-menu" aria-labelledby="dropdownId">
                             <a class="dropdown-item" href="#">¿Quienes somos?</a>
@@ -84,36 +83,38 @@
 						<div align="center" id="imgcontact" ><img src="images/contactanos.png" class="d-none d-md-block"></div>
 						
                         <legend class="text-center header">Comunidad Cristiana "La Magdalena"</legend>
-
+						<p class="dir-contacto"> </br>Av. Los Rosales112, 28021, Madrid</br> info@misitio.com</br>Tel:914-23-456
+						
+						</p>
                         <div class="form-group">
                             <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>
-                            <div class="col-md-8">
+                            <div class="col-md-6">
                                 <input id="fname" name="name" type="text" placeholder="Nombre" class="form-control">
                             </div>
                         </div>
                         <div class="form-group">
-                            <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>
-                            <div class="col-md-8">
+                            <span class="col-md- col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>
+                            <div class="col-md-6">
                                 <input id="lname" name="name" type="text" placeholder="Apellido" class="form-control">
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-envelope-o bigicon"></i></span>
-                            <div class="col-md-8">
+                            <span class="col-md- col-md-offset-2 text-center"><i class="fa fa-envelope-o bigicon"></i></span>
+                            <div class="col-md-6">
                                 <input id="email" name="email" type="text" placeholder="Email" class="form-control">
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-pencil-square-o bigicon"></i></span>
-                            <div class="col-md-8">
+                            <span class="col-md- col-md-offset-2 text-center"><i class="fa fa-pencil-square-o bigicon"></i></span>
+                            <div class="col-md-6">
                                 <textarea class="form-control" id="message" name="message" placeholder="Escribe tú mensaje aquí..." rows="7"></textarea>
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <div class="col-md-12 text-center">
+                            <div class="col-md-13 text-center">
                                 <button type="submit" class="btn btn-primary btn-lg">Enviar</button>
                             </div>
                         </div>
