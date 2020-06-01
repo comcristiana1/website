@@ -48,6 +48,21 @@ ion-icon {
 	border: 0px;
 	
 }
+.card-body{
+	color:VAR(--COLOR_LETRA);
+	
+	background:#1A3B4A;
+	
+}
+.esp{
+	padding: 4em 0 4em 0;
+	position: relative;
+	height:45em;
+}
+	
+.card-deck{
+	margin:3em;
+}
 
 #galeria {
     background-color: var(--SECTION2);
