@@ -90,7 +90,7 @@ ion-icon {
     bottom: 0;
     left: 0;
     right: 0;
-    color: white;
+    color: var(--COLOR_LETRA);
     background-color: rgba(0, 0, 0, 0.5);
 }
 
@@ -117,14 +117,20 @@ ion-icon {
 
 /*-------------------------------INICIO CSS CONTACT*/
 .header {
-    color: #FFFFFF;
+    color: VAR(--COLOR_LETRA);
     font-size: 27px;
-    padding: 10px;
+    padding: 8px;
 }
 
 .bigicon {
-    font-size: 35px;
-    color: #FFFFFF;
+    font-size: 20px;
+    color: VAR(--COLOR_LETRA);
+}
+
+.dir-contacto{
+	padding-top: 2px;
+    font-size: 15px;
+    color: VAR(--COLOR_LETRA);
 }
 
 .body{
