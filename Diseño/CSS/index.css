@@ -126,9 +126,16 @@ ion-icon {
 .body{
 	background: linear-gradient(90deg, #1c3643, #273b47 25%, #1e5372);
 	border: 1px solid black;
-  	padding: 25px;
+
+}
+
+.body{
+	background-image: ;
+	border: 1px solid black;
+	padding: 25px;
   	background-repeat: no-repeat;
   	background-size: 100% 100%;
 }
+
 
 /*-------------------------------FIN CSS CONTACT*/
