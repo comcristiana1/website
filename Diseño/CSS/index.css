@@ -1,6 +1,3 @@
-/*-------------------------------CSS NAVBAR */
-
-
 /*VARIABLES*/
 
 :root {
@@ -23,19 +20,19 @@
 }
 
 .navbar-brand:hover {
-    color: white;
+    color: VAR(--COLOR_LETRA);
 }
 
 .nav-link {
-    color: white;
+    color: VAR(--COLOR_LETRA);
 }
 
 .nav-link:hover {
-    color: white;
+    color: VAR(--COLOR_LETRA);
 }
 
 ion-icon {
-    color: white;
+    color: VAR(--COLOR_LETRA);
 }
 
 
@@ -48,6 +45,8 @@ ion-icon {
 
 .card-color {
     background-color: var(--SECTION1_CONTAINER_FOTOS);
+	border: 0px;
+	
 }
 
 #galeria {
