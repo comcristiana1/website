@@ -80,7 +80,7 @@ ion-icon {
     bottom: 0;
     left: 0;
     right: 0;
-    color: white;
+    color: var(--COLOR_LETRA);
     background-color: rgba(0, 0, 0, 0.5);
 }
 
