@@ -1,29 +1,56 @@
-/*-------------------------------CSS NAVBAR */
+/*VARIABLES*/
+
+:root {
+    --NAVBAR: linear-gradient(90deg, #1c3643, #273b47 25%, #1e5372);
+    --SECTION1: #062038;
+    --SECTION1_CONTAINER_FOTOS: rgb(193, 199, 205);
+    --SECTION2: #041625;
+    --COLOR_LETRA: #c0c5c9;
+    --FOOTER: #020B13;
+}
 
 .navbar {
-    background: linear-gradient(90deg, #1c3643, #273b47 25%, #1e5372);
+    background: VAR(--NAVBAR);
     box-shadow: 0 2px 4px 0;
     min-height: 6px;
 }
 
 .navbar-brand {
-    color: white;
+    color: VAR(--COLOR_LETRA);
 }
 
 .navbar-brand:hover {
-    color: white;
+    color: VAR(--COLOR_LETRA);
 }
 
 .nav-link {
-    color: white;
+    color: VAR(--COLOR_LETRA);
 }
 
 .nav-link:hover {
-    color: white;
+    color: VAR(--COLOR_LETRA);
 }
 
 ion-icon {
-    color: white;
+    color: VAR(--COLOR_LETRA);
+}
+
+
+/*-------------------------CSS PUBLICACIONES*/
+
+#publicaciones {
+    background-color: var(--SECTION1);
+    color: VAR(--COLOR_LETRA);
+}
+
+.card-color {
+    background-color: var(--SECTION1_CONTAINER_FOTOS);
+	border: 0px;
+	
+}
+
+#galeria {
+    background-color: var(--SECTION2);
 }
 
 
@@ -46,7 +73,7 @@ ion-icon {
     bottom: 0;
     left: 0;
     right: 0;
-    color: white;
+    color: var(--COLOR_LETRA);
     background-color: rgba(0, 0, 0, 0.5);
 }
 
@@ -59,35 +86,45 @@ ion-icon {
 /*-------------------------------CSS FIN CAROUSEL*/
 
 #footer {
-    background: linear-gradient(90deg, #1c3643, #273b47 25%, #1e5372);
+    /*background: linear-gradient(90deg, #1c3643, #273b47 25%, #1e5372);*/
+    background-color: VAR(--FOOTER);
 }
 
 #footer div {
-    color: white;
+    color: VAR(--COLOR_LETRA);
 }
 
 #footer a {
-    color: white;
+    color: VAR(--COLOR_LETRA);
 }
 
+
 /*-------------------------------INICIO CSS CONTACT*/
+
 .header {
-    color: #FFFFFF;
+    color: VAR(--COLOR_LETRA);
     font-size: 27px;
-    padding: 10px;
+    padding: 8px;
 }
 
 .bigicon {
-    font-size: 35px;
-    color: #FFFFFF;
+    font-size: 20px;
+    color: VAR(--COLOR_LETRA);
 }
 
-.body{
-	background-image: url("../images/backgroundeventos.jpg");
-	border: 2px solid black;
-  	padding: 25px;
-  	background-repeat: no-repeat;
-  	background-size: 100% 100%;
+.dir-contacto {
+    padding-top: 2px;
+    font-size: 15px;
+    color: VAR(--COLOR_LETRA);
 }
 
-/*-------------------------------INICIO CSS CONTACT*/
+.body {
+    background: var(--SECTION1);
+    border: 1px solid black;
+    padding: 25px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+
+/*-------------------------------FIN CSS CONTACT*/

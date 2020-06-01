@@ -1,4 +1,7 @@
 from django.db import models
+from ckeditor.fields import RichTextField
+
+
 
 # Creación tabla Categoria
 class Categoria(models.Model):
@@ -59,7 +62,7 @@ class Miembro(models.Model):
 #Creacion Tabla Eventos
 #Hecho por Andres Cevallos
 class Evento(models.Model):
-    id = models.IntegerField(primary_key=True)
+    id = models.AutoField(primary_key = True)
     event_date = models.DateField('Fecha del evento',auto_now=False,auto_now_add=False, null=False, blank=False)
     event_time = models.TimeField('Hora del Evento',auto_now=False, auto_now_add=False)
     primary_street = models.CharField('Calle principal',max_length=100,null=False, blank=False)
@@ -105,3 +108,25 @@ class Ministry(models.Model):
 
     def __str__(self):
         return "%s %s" % (self.minisName,self.minisDir)
+
+
+#Cración modelo Post
+class Post(models.Model):
+    id = models.AutoField(primary_key= True)
+    title = models.CharField('Titulo',max_length=90,blank=False,null=False)
+    slug = models.CharField('Slug',max_length=100,blank=False,null=False)
+    description = models.CharField('Descripción',max_length=110,blank=False,null=False)
+    content = RichTextField()
+    image = models.ImageField(upload_to="image_post",null=False)
+    author = models.ForeignKey(Autor,on_delete=models.CASCADE)
+    category = models.ForeignKey(Categoria,on_delete=models.CASCADE)
+    status = models.BooleanField('Publicado/No publicado',default=True)
+    create_date = models.DateField('Fecha de Creación',auto_now=False,auto_now_add=True)
+
+
+    class Meta:
+        verbose_name = 'Post'
+        verbose_name_plural = 'Posts'
+
+    def __str__(self):
+        return self.titulo
