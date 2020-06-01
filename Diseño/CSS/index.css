@@ -47,10 +47,12 @@ ion-icon {
 
 .card-color{
     background-color: var(--SECTION1_CONTAINER_FOTOS);
+	border: 0px;
 }
 .card-body{
 	color:VAR(--COLOR_LETRA);
 	background:#1A3B4A;
+	
 }
 .esp{
 	padding: 4em 0 4em 0;
@@ -61,7 +63,6 @@ ion-icon {
 .card-deck{
 	margin:3em;
 }
-	
 
 #galeria{
     background-color: var(--SECTION2);
