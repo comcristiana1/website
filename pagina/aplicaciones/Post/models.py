@@ -42,7 +42,7 @@ class Miembro(models.Model):
     miemSurname1 = models.CharField('Primer Apellido',max_length = 30,null = False,blank = False)
     miemSurname2 = models.CharField('Segundo Apellido',max_length = 30,null = True,blank = True)
     miemOcu = models.CharField('Ocupación',max_length = 30,null = False, blank = False)
-    #miemIma = models.ImageField(upload_to = ) 
+    miemIma = models.ImageField('Imagen',upload_to ='member_image',null = False, blank = True) 
     miemPho1 = models.CharField('Teléfono Convencional',max_length = 10,null = True, blank = True)
     miemPho2 = models.CharField('Teléfono Celular',max_length = 10, null = True, blank = True)
     miemCrea = models.DateField('Fecha de Creación',auto_now=False,auto_now_add=True)
