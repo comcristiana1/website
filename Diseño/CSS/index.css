@@ -46,14 +46,14 @@ ion-icon {
 .card-color {
     background-color: var(--SECTION1_CONTAINER_FOTOS);
 	border: 0px;
-	
+
 }
 
 .card-body{
 	color:VAR(--COLOR_LETRA);
-	
+
 	background:#1A3B4A;
-	
+
 }
 
 .esp{
@@ -61,7 +61,7 @@ ion-icon {
 	position: relative;
 	height:45em;
 }
-	
+
 .card-deck{
 	margin:3em;
 }
@@ -83,7 +83,7 @@ ion-icon {
 /*-------------------------------CSS CAROUSEL - MAIN */
 
 #main .carousel-inner img {
-    max-height: 70vh;
+    max-height: 92vh;
     object-fit: cover;
     filter: grayscale(30%);
 }
@@ -150,8 +150,3 @@ ion-icon {
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
-
-
-
-
-
