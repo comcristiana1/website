@@ -5,6 +5,7 @@
     --SECTION1: #062038;
     --SECTION1_CONTAINER_FOTOS: rgb(193, 199, 205);
     --SECTION2: #041625;
+	--BUTTOM: #FFC107;
     --COLOR_LETRA: #c0c5c9;
     --FOOTER: #020B13;
 }
@@ -35,7 +36,6 @@ ion-icon {
     color: VAR(--COLOR_LETRA);
 }
 
-
 /*-------------------------CSS PUBLICACIONES*/
 
 #publicaciones {
@@ -48,12 +48,14 @@ ion-icon {
 	border: 0px;
 	
 }
+
 .card-body{
 	color:VAR(--COLOR_LETRA);
 	
 	background:#1A3B4A;
 	
 }
+
 .esp{
 	padding: 4em 0 4em 0;
 	position: relative;
@@ -64,10 +66,19 @@ ion-icon {
 	margin:3em;
 }
 
+/*-------------------------------CSS GALERIA */
+
 #galeria {
     background-color: var(--SECTION2);
 }
 
+.btn-yellow:hover{
+	background-color: var(--BUTTOM);
+}
+
+.galery-brand{
+	color: #FFFFFF;
+}
 
 /*-------------------------------CSS CAROUSEL - MAIN */
 
@@ -93,12 +104,12 @@ ion-icon {
 }
 
 #carousel .overlay .container,
+
 #carousel .overlay .row {
     height: 100%;
 }
 
-
-/*-------------------------------CSS FIN CAROUSEL*/
+/*-------------------------------CSS FOOTER */
 
 #footer {
     /*background: linear-gradient(90deg, #1c3643, #273b47 25%, #1e5372);*/
@@ -112,7 +123,6 @@ ion-icon {
 #footer a {
     color: VAR(--COLOR_LETRA);
 }
-
 
 /*-------------------------------INICIO CSS CONTACT*/
 
@@ -140,6 +150,3 @@ ion-icon {
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
-
-
-/*-------------------------------FIN CSS CONTACT*/
