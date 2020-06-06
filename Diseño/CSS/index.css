@@ -2,12 +2,11 @@
 
 :root {
     --NAVBAR: linear-gradient(90deg, #1c3643, #273b47 25%, #1e5372);
-    --SECTION1: #062038;
-    --SECTION1_CONTAINER_FOTOS: rgb(193, 199, 205);
-    --SECTION2: #041625;
+
+    --SECTION2: #262626;;
 	--BUTTOM: #FFC107;
     --COLOR_LETRA: #c0c5c9;
-    --FOOTER: #020B13;
+    --FOOTER: #262626;;
 }
 
 .navbar {
@@ -38,6 +37,9 @@ ion-icon {
 
 /*-------------------------CSS PUBLICACIONES*/
 
+
+
+
 #publicaciones {
     background-color: var(--SECTION1);
     color: VAR(--COLOR_LETRA);
@@ -65,6 +67,10 @@ ion-icon {
 .card-deck{
 	margin:3em;
 }
+
+
+
+
 
 /*-------------------------------CSS GALERIA */
 
