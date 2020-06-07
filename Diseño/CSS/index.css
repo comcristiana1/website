@@ -7,7 +7,11 @@
     --COLOR_LETRA: #c0c5c9;
 	--COLOR_LETRA2:#FFC107;
     --FOOTER: #262626;
+<<<<<<< HEAD
+	--h3: white;
+=======
     ;
+>>>>>>> 998615bdefb9f4decbafcb389aa852af21579d40
 }
 
 
@@ -146,9 +150,14 @@ img.zoom:hover{
 }
 
 #footer a {
-    color: VAR(--COLOR_LETRA);
+    color: #F1BE38;
 }
 
+#footer .h3{
+	
+	
+	color: white;
+}
 
 /*-------------------------------INICIO CSS CONTACT*/
 
