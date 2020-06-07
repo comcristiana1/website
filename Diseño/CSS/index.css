@@ -6,7 +6,8 @@
     --SECTION2: #262626;;
 	--BUTTOM: #FFC107;
     --COLOR_LETRA: #c0c5c9;
-    --FOOTER: #262626;;
+    --FOOTER: #262626;
+	--h3: white;
 }
 
 .navbar {
@@ -127,9 +128,14 @@ ion-icon {
 }
 
 #footer a {
-    color: VAR(--COLOR_LETRA);
+    color: #F1BE38;
 }
 
+#footer .h3{
+	
+	
+	color: white;
+}
 
 
 /*-------------------------------INICIO CSS CONTACT*/
