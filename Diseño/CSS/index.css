@@ -1,18 +1,23 @@
 /*VARIABLES*/
 
 :root {
-    --NAVBAR: linear-gradient(90deg, #1c3643, #273b47 25%, #1e5372);
-
-    --SECTION2: #262626;;
-	--BUTTOM: #FFC107;
+    --NAVBAR: transparent;
+    --SECTION2: #262626;
+    --BUTTOM: #FFC107;
     --COLOR_LETRA: #c0c5c9;
     --FOOTER: #262626;
+<<<<<<< HEAD
 	--h3: white;
+=======
+    ;
+>>>>>>> 998615bdefb9f4decbafcb389aa852af21579d40
 }
 
+
+/*-------------------------CSS NAVBAR*/
+
 .navbar {
-    background: VAR(--NAVBAR);
-    box-shadow: 0 2px 4px 0;
+    background-color: var(--NAVBAR);
     min-height: 6px;
 }
 
@@ -36,10 +41,13 @@ ion-icon {
     color: VAR(--COLOR_LETRA);
 }
 
+.c_color {
+    transition: all 1s ease;
+    background-color: var(--FOOTER);
+}
+
+
 /*-------------------------CSS PUBLICACIONES*/
-
-
-
 
 #publicaciones {
     background-color: var(--SECTION1);
@@ -48,29 +56,23 @@ ion-icon {
 
 .card-color {
     background-color: var(--SECTION1_CONTAINER_FOTOS);
-	border: 0px;
-
+    border: 0px;
 }
 
-.card-body{
-	color:VAR(--COLOR_LETRA);
-
-	background:#1A3B4A;
-
+.card-body {
+    color: VAR(--COLOR_LETRA);
+    background: #1A3B4A;
 }
 
-.esp{
-	padding: 4em 0 4em 0;
-	position: relative;
-	height:45em;
+.esp {
+    padding: 4em 0 4em 0;
+    position: relative;
+    height: 45em;
 }
 
-.card-deck{
-	margin:3em;
+.card-deck {
+    margin: 3em;
 }
-
-
-
 
 
 /*-------------------------------CSS GALERIA */
@@ -79,13 +81,14 @@ ion-icon {
     background-color: var(--SECTION2);
 }
 
-.btn-yellow:hover{
-	background-color: var(--BUTTOM);
+.btn-yellow:hover {
+    background-color: var(--BUTTOM);
 }
 
-.galery-brand{
-	color: #FFFFFF;
+.galery-brand {
+    color: #FFFFFF;
 }
+
 
 /*-------------------------------CSS CAROUSEL - MAIN */
 
@@ -111,10 +114,10 @@ ion-icon {
 }
 
 #carousel .overlay .container,
-
 #carousel .overlay .row {
     height: 100%;
 }
+
 
 /*-------------------------------CSS FOOTER */
 
@@ -136,7 +139,6 @@ ion-icon {
 	
 	color: white;
 }
-
 
 /*-------------------------------INICIO CSS CONTACT*/
 
