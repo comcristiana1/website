@@ -1,5 +1,6 @@
 /*VARIABLES*/
 
+
 :root {
     --NAVBAR: transparent;
     --SECTION2: #262626;
@@ -7,12 +8,15 @@
     --COLOR_LETRA: #c0c5c9;
 	--COLOR_LETRA2:#FFC107;
     --FOOTER: #262626;
-<<<<<<< HEAD
-	--h3: white;
-=======
-    ;
->>>>>>> 998615bdefb9f4decbafcb389aa852af21579d40
+    --h3: white;
+    --LETRA: 'Source Sans Pro', sans-serif;
 }
+
+
+body{
+    font-family: VAR(--LETRA);
+}
+
 
 
 /*-------------------------CSS NAVBAR*/
@@ -89,7 +93,7 @@ img.zoom:hover{
 
 .letra {
 	color:VAR(--COLOR_LETRA2);
-	font-family: "Playfair Display", times, serif
+	font-family: VAR(--LETRA);
 }
 
 
