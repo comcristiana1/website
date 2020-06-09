@@ -192,7 +192,11 @@ img.zoom:hover{
 
 
 
-/* :: 15.0 Ministry Area CSS */
+/* MINISTERIOS*/
+.ministries-area{
+	
+	background-color: #FAFAFA;
+}
 .single-ministry {
   position: relative;
   z-index: 1;
