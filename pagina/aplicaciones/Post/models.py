@@ -98,8 +98,11 @@ class Groups(models.Model):
 class Ministry(models.Model):
     id = models.AutoField(primary_key=True)
     minisName = models.CharField('Nombre Ministerio',max_length=40,null=False,blank=False)
+    minisDir = models.CharField('Lugar de Reunión',max_length=100,null=False,blank=False)
+    minisPers = models.CharField('Responsable',max_length=80,null=False,blank=False)
+    minisFrec = models.CharField('Frecuencia',max_length=20,null=False,blank=False)
+    minisCola = models.CharField('Colaboradores',max_length=20,null=False,blank=False)
     minisPhoto = models.ImageField('Imagen Ministerio',upload_to='minis_image',null=False,blank=False)
-    minisDir = models.CharField('Direccion',max_length=100,null=False,blank=False)
     miniStatus = models.BooleanField('Estado Activado/Desactivado',default = True)
 
     class Meta:
@@ -107,8 +110,8 @@ class Ministry(models.Model):
         verbose_name_plural = 'Ministerios'
 
     def __str__(self):
-        return "%s %s" % (self.minisName,self.minisDir)
-
+        return "%s %s %s %s %s %s" % (self.minisName,self.minisDir,self.minisPers,self.minisFrec,self.minisCola,self.miniStatus)
+##,self.minisPers,self.minisFrec,self.minisCola,self.miniStatus
 
 #Cración modelo Post
 class Post(models.Model):

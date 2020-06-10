@@ -38,8 +38,8 @@ class GruposAdmin(admin.ModelAdmin):
 class MinisterioAdmin(admin.ModelAdmin):
     search_fields = ['minisName']
 
-    list_display = ('id','minisName','minisDir')
-
+    list_display = ('id','minisName','minisDir','minisPers','minisFrec','minisCola','minisPhoto','miniStatus')
+##,'minisPers','minisFrec','minisCola','minisPhoto','miniStatus'
 
 
 
