@@ -278,9 +278,9 @@ img.zoom:hover{
 	font-size: 14px;
 }
 
-.groups-section p {
-	font-size: 16px;
-	color: #f4f4f4;
+.groups-info p {
+	font-size: 20px;
+	color:  #FFC107;
 	line-height: 1.8;
 }
 
@@ -296,11 +296,11 @@ img.zoom:hover{
 	color: #f4f4f4;
 }
 
-.groups-section {
+/*.groups-section {
 	padding-bottom: 5;
 	padding-top: 5;
 }
-
+*/
 
 .groups-info {
 	list-style: none;
