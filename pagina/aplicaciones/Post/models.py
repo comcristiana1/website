@@ -81,7 +81,43 @@ class Evento(models.Model):
     def __str__(self):
         return "%s %s %s %s %s %s %s %s %s" % (self.event_date,self.event_time,self.primary_street,self.secondary_street,self.house_number,self.city,self.description,self.created_date, self.status)
 
+
 #Creacion tabla Grupos
+class CasaOracion(models.Model):
+    id = models.AutoField("Id",primary_key=True)
+    place = models.CharField("Lugar de Reunion", max_length=100, null=True)
+    responsable = models.CharField("Responsable", max_length=100, null=True)
+    frecuency = models.CharField("Frecuencia", max_length=50)
+    day = models.CharField("Dia", max_length=50)
+    initial_time = models.TimeField("Hora inicio", auto_now=False, auto_now_add=False)
+    final_time = models.TimeField("Hora fin", auto_now=False, auto_now_add=False)
+    description = models.TextField("Descripcion", null=False, blank=True)
+
+    class Meta:
+        verbose_name = 'Casa Oracion'
+        verbose_name_plural = 'Casa Oraciones'
+
+    def __str__(self):
+        return "%s %s %s %s %s %s %s %s" % (self.id,self.place,self.responsable,self.frecuency,self.day,self.initial_time,self.final_time,self.description)
+    
+class Oracion(models.Model):
+    id = models.AutoField('Id',primary_key=True)
+    category = models.ForeignKey(Categoria, on_delete=models.CASCADE,null=False)
+    name = models.CharField("Nombre", max_length=100,null=True,blank=False)
+    surname = models.CharField("Apellido", max_length=100,null=False,blank=True)
+    prayer = RichTextField()
+    created= models.DateField("Fecha Creacion", auto_now=False, auto_now_add=True)
+    status = models.BooleanField('Estado Activado/Desactivado',default=True)
+    
+
+    class Meta:
+        verbose_name = "Oracion"
+        verbose_name_plural = "Oraciones"
+
+    def __str__(self):
+        return self.name
+
+
 class Groups(models.Model):
     id = models.AutoField(primary_key=True)
     groupName = models.CharField('Nombre Grupo',max_length = 30,null = False,blank = False)

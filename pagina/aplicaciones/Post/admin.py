@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Categoria,Autor,Miembro,Evento,Groups,Ministry,Activities,Post
+from .models import Categoria,Autor,Miembro,Evento,Groups,Ministry,Activities,Post,CasaOracion,Oracion
 
 
 # Register your models here.
@@ -28,6 +28,15 @@ class EventoAdmin(admin.ModelAdmin):
 
     list_display = ('id','event_date','event_time','primary_street','secondary_street','house_number','city','description','image','created_date','status')
 
+@admin.register(CasaOracion)
+class CasaOracionAdmin(admin.ModelAdmin):
+    list_display= ('id','place','responsable','frecuency','day','initial_time','final_time','description')
+
+@admin.register(Oracion)
+class OracionAdmin(admin.ModelAdmin):
+    search_fields= ['name','surname']
+
+    list_display=('id','name','surname','created')
 
 class GruposAdmin(admin.ModelAdmin):
     search_fields = ['groupName']
