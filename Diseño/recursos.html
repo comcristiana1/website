@@ -8,11 +8,11 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="CSS/index.css">
-    <!--<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>-->
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Ropa+Sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
-
+    
 	<link href="social_icons_from_Techandallcom.css" rel="stylesheet" />
     <title>Comunidad Cristiana</title>
 </head>
@@ -34,14 +34,8 @@
                     <li class="nav-item dropdown mr-auto" id="Tu_Iglesia">
                         <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tu Iglesia</a>
                         <div class="dropdown-menu" aria-labelledby="dropdownId">
-<<<<<<< HEAD
                             <a class="dropdown-item" href="#">¿Quienes somos?</a>
                             <a class="dropdown-item" href="recursos.html">Recursos</a>
-=======
-                            <a class="dropdown-item" href="quienessomos.html">¿Quienes somos?</a>
-                            <a class="dropdown-item" href="#">Recursos</a>
-                            <a class="dropdown-item" href="#">Casa de Oración</a>
->>>>>>> 783dafe4d86912a9296b1c2092c38692d535b3f2
                         </div>
                     </li>
                     <li class="nav-item dropdown mr-auto" id="Eventos">
@@ -52,7 +46,7 @@
                         </div>
                     </li>
                     <li class="nav-item mr-auto">
-                        <a class="nav-link" href="ministries.html" id="Ministerios">Ministerios </a>
+                        <a class="nav-link" href="#" id="Ministerios">Ministerios </a>
                     </li>
                     <li class="nav-item mr-auto">
                         <a class="nav-link" href="#" id="Grupos">Grupos </a>
@@ -102,138 +96,43 @@
     </main>
     <!--Fin Carousel -->
 
-    <!--Inicio últimas publicaciones-->
+    <!--Inicio Recursos-->
     <section class="pt-4 pb-4" id="publicaciones">
         <div class="esp">
             <div class="container">
-            	<h2 align="center"><b>Eventos Más Cercanos</b></h2><br><br><br>
-            		<div id="evento1">
-                    <a href=""><img class="mediana zoom" src="images/genteora.jpg"><br></a>
-                    <br>
-                    <div class="letra"><h4 align="center">Vida en familia</h4></div>
-                    <br>
-                   <p align="center">El plan de Dios para el matrimonio y la paternidad, junto con herramientas prácticas y bíblicas implementarlo</p>
-                    </div>
+            	
+            	<h2 align="center"><b>Formulario para solicitar oración o petición</b></h2><br><br>
+               <div id="formulario"> 
+  <form>
+  <div class="form-group">
+  <label> Nombre </label>
+  <input class="form-control" type="text" id="nombre" > 
+    <label for="exampleInputEmail1"> Email </label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <small id="emailHelp" class="form-text text-muted">No compartiremos tu email con nadie más.</small>
 
-            		<div id="evento2">
-
-                    <a href=""><img class="mediana zoom" src="images/mujeresorando.jpg"></a>
-
-                    <br><br><div class="letra"><h4 align="center">Misiones en zonas urbanas y rurales.</h4></div><br>
-                    <p align="center">Un llamado específico a servir a quienes más lo necesitan.</p>
-                    </div>
-
-
-                <br>
-
+	<label> Petición/Oración</label>
+  <select class="custom-select custom-select-sm">
+  
+  <option selected>Seleccionar</option>
+  <option value="Petición">Petición</option>
+  <option value="Oración">Oración</option>
+</select>
+  <label> Título </label>
+  <input class="form-control" type="text" id="titulo" >
+    <label for="exampleFormControlTextarea1">Ingrese texto</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    <br>
+  <button class="btn btn-yellow pt-2 pb-2 btn-lg btn-block galery-brand" type="submit">Enviar</button>
+  
+  </div>
+</form>
+                </div>
+                
             </div>
         </div>
-    </section>
-    <!--Fin ultimas publicaciones-->
-
-    <!-- Inicio Galeria -->
-    <div class="pt-4 pb-4" id="galeria">
-        <div class="container">
-            <div class="pt-4 pb-4 col-md-12 col-lg">
-                <h2 class="nav-link">Galeria</h2>
-            </div>
-            <div class="row">
-                <div class="col-xs-6 col-md-3">
-                    <div class="row pt-2 pb-2">
-                        <button type="button" class="btn btn-yellow pt-2 pb-2 btn-lg btn-block galery-brand">Multimedia de la Iglesia</button>
-                    </div>
-                    <div class="row pt-2 pb-2">
-                        <button type="button" class="btn btn-yellow pt-2 pb-2 btn-lg btn-block galery-brand">Multimedia de los grupos</button>
-                    </div>
-                    <div class="row pt-2 pb-2">
-                        <button type="button" class="btn btn-yellow pt-2 pb-2 btn-lg btn-block galery-brand">Multimedia de reuniones</button>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-md-9">
-                    <div class="row">
-                        <div class="col-md pt-2 pb-4">
-                            <img src="images/cross_01.jpg" alt="" class="img-rounded">
-                        </div>
-                        <div class="col-md pt-2 pb-4">
-                            <img src="images/cross_02.jpg" alt="" class="img-rounded">
-                        </div>
-                        <div class="col-md pt-2 pb-4">
-                            <img src="images/cross_01.jpg" alt="" class="img-rounded">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-4 well pb-4">
-                            <img src="images/cross_02.jpg" alt="" class="img-rounded">
-                        </div>
-                        <div class="col-md-4 well pb-4">
-                            <img src="images/cross_01.jpg" alt="" class="img-rounded">
-                        </div>
-                        <div class="col-md-4 well pb-4">
-                            <img src="images/cross_02.jpg" alt="" class="img-rounded">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--Fin Galeria -->
-
-    <!-- <footer id="footer" class="pt-4 pb-4">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-lg">
-                    <h3>Recursos</h3>
-					<table class="table">
-  						<tbody>
-    						<tr>
-								<td><a href="#">Frase del dia</a></td>
-							</tr>
-							<tr>
-                    			<td><a href="#">Necesitas una oración</a></td>
-							</tr>
-							<tr>
-                    			<td><a href="#">Necesitas una petición</a></td>
-							</tr>
-						</tbody>
-					</table>
-                </div>
-                <div class="col-12 col-lg">
-                    <h3>Ministerios</h3>
-                    <table class="table">
-  						<tbody>
-    						<tr>
-								<td><a href="#">Frase del dia</a></td>
-							</tr>
-							<tr>
-                    			<td><a href="#">Necesitas una oración</a></td>
-							</tr>
-							<tr>
-                    			<td><a href="#">Necesitas una petición</a></td>
-							</tr>
-						</tbody>
-					</table>
-                </div>
-                <div class="col-12 col-lg">
-                    <h3>Contactanos</h3>
-                    <table class="table">
-  						<tbody>
-    						<tr>
-								<td><a href="#">Frase del dia</a></td>
-							</tr>
-							<tr>
-                    			<td><a href="#">Necesitas una oración</a></td>
-							</tr>
-							<tr>
-                    			<td><a href="#">Necesitas una petición</a></td>
-							</tr>
-						</tbody>
-					</table>
-                </div>
-            </div>
-        </div>
-
-
-    </footer>-->
+   
+ 
 
 	<!--INICIO FOOTER -->
 
@@ -268,8 +167,8 @@
             </ul>
   </div>
 
-
-
+		  
+		  
 <div class="col-md-5 mb-5  offset-xl-4 col-xl-4">
 <div class="social-icons">
  <ul>
@@ -301,11 +200,11 @@
 </ul>
 </div>
 </div>
-
+	
 </div>
 </div>
 
-
+	
     </footer>
 
 

@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Categoria,Autor,Miembro,Evento,Groups,Ministry,Post
+from .models import Categoria,Autor,Miembro,Evento,Groups,Ministry,Activities,Post,CasaOracion,Oracion
 
 
 # Register your models here.
@@ -28,6 +28,15 @@ class EventoAdmin(admin.ModelAdmin):
 
     list_display = ('id','event_date','event_time','primary_street','secondary_street','house_number','city','description','image','created_date','status')
 
+@admin.register(CasaOracion)
+class CasaOracionAdmin(admin.ModelAdmin):
+    list_display= ('id','place','responsable','frecuency','day','initial_time','final_time','description')
+
+@admin.register(Oracion)
+class OracionAdmin(admin.ModelAdmin):
+    search_fields= ['name','surname']
+
+    list_display=('id','name','surname','created')
 
 class GruposAdmin(admin.ModelAdmin):
     search_fields = ['groupName']
@@ -38,8 +47,13 @@ class GruposAdmin(admin.ModelAdmin):
 class MinisterioAdmin(admin.ModelAdmin):
     search_fields = ['minisName']
 
-    list_display = ('id','minisName','minisDir')
+    list_display = ('id','minisName','minisDir','minisPers','minisFrec','minisCola','minisPhoto','minisDesc','miniStatus')
 
+
+class ActividadesAdmin(admin.ModelAdmin):
+    search_fields = ['actName']
+
+    list_display = ('id','actName','actPhoto','actDesc','actDate','actTimei','actTimef','actDir','actPers','actPhono','actPhono2','actMail','actStatus')
 
 
 
@@ -50,4 +64,5 @@ admin.site.register(Miembro,MiembroAdmin)
 admin.site.register(Evento,EventoAdmin)
 admin.site.register(Groups,GruposAdmin)
 admin.site.register(Ministry,MinisterioAdmin)
+admin.site.register(Activities,ActividadesAdmin)
 admin.site.register(Post)

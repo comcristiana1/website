@@ -5,7 +5,7 @@
     --NAVBAR: transparent;
     --SECTION2: #262626;
     --BUTTOM: #FFC107;
-    --COLOR_LETRA: #c0c5c9;
+    --COLOR_LETRA: #F4F4F4;
 	--COLOR_LETRA2:#FFC107;
     --FOOTER: #262626;
     --h3: white;
@@ -96,6 +96,23 @@ img.zoom:hover{
 	font-family: VAR(--LETRA);
 }
 
+
+/*-------------------------------CSS RECURSOS */
+
+#formulario {
+		background-color: var(--SECTION2);
+        padding:20px;
+		display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: 100% 100%;
+  
+}
+.form-group{
+  justify-content: center;
+  height:500px;
+        padding:20px;
+        width:450px;}
 
 
 /*-------------------------------CSS GALERIA */
@@ -189,3 +206,149 @@ img.zoom:hover{
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
+
+
+
+/* MINISTERIOS*/
+.ministries-area{
+	
+	background-color: #FAFAFA;
+}
+.single-ministry {
+  position: relative;
+  z-index: 1;
+  background-color: #262626;
+  -webkit-transition-duration: 500ms;
+  transition-duration: 500ms; }
+.single-ministry img{
+	align-items: center;
+}
+  .single-ministry .ministry-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    -webkit-transition-duration: 500ms;
+    transition-duration: 500ms;
+    padding: 50px 30px 110px;
+    border-bottom: 2px solid transparent;
+    border-right: 2px solid transparent;
+    border-left: 2px solid transparent; }
+    .single-ministry .ministry-content h6 {
+      display: block;
+      font-size: 18px;
+      margin-bottom: 5px; }
+    .single-ministry .ministry-content span {
+      font-size: 13px;
+      margin-bottom: 40px;
+      display: block;
+      color: #f4f4f4; }
+	.single-ministry .ministry-content h1,h2,h3,h4,h5,h6 {
+		color: aliceblue;
+}
+    .single-ministry .ministry-content p {
+      margin-bottom: 0;
+		color: #f4f4f4;
+}
+    .single-ministry .ministry-content .ministry-btn {
+      position: absolute;
+      width: 100%;
+      left: 0;
+      bottom: -15px; }
+  .single-ministry:hover, .single-ministry:focus {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3); }
+    .single-ministry:hover .ministry-content, .single-ministry:focus .ministry-content {
+      border-bottom-color: #FFC107;
+      border-right-color: #FFC107;
+      border-left-color: #FFC107; }
+
+/*---------------------
+	GRUPOS
+-----------------------*/
+
+
+
+.groups-section h1, h2, h3, h4, h5, h6 {
+	color: #f4f4f4;
+	margin: 0;
+	font-weight: 600;
+	font-family: "Open Sans", sans-serif;
+}
+
+.groups-section h1 {
+	font-size: 60px;
+}
+
+.groups-section h2 {
+	font-size: 36px;
+	line-height: 1.2;
+}
+
+.groups-section h3 {
+	font-size: 30px;
+}
+
+.groups-section h4 {
+	font-size: 24px;
+}
+
+.groups-section h5 {
+	font-size: 14px;
+}
+
+.groups-info p {
+	font-size: 20px;
+	color:  #FFC107;
+	line-height: 1.8;
+}
+
+.groups-item img {
+	width: 300px;
+	height: 260px;
+	align-content: center;
+}
+
+.groups-section ul,ol,li {
+	padding: 0;
+	margin: 0;
+	color: #f4f4f4;
+}
+
+/*.groups-section {
+	padding-bottom: 5;
+	padding-top: 5;
+}
+*/
+
+.groups-info {
+	list-style: none;
+	margin-bottom: 20px;
+}
+
+.groups-info li {
+	font-size: 18px;
+	font-family: "Lora", serif;
+	font-style: italic;
+	margin-bottom: 10px;
+}
+
+.groups-info li span {
+	color: #dd3e3e;
+}
+
+.groups-itemf{
+	background: #262626;
+
+}
+
+/*.container{
+	border-color: #FFC107;
+   	border-width: 2px;
+   	border-style: solid;
+	
+*/
+
+
+/*---------------------
+	GRUPOS
+-----------------------*/
+
