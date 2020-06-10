@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Categoria,Autor,Miembro,Evento,Groups,Ministry,Post
+from .models import Categoria,Autor,Miembro,Evento,Groups,Ministry,Activities,Post
 
 
 # Register your models here.
@@ -38,8 +38,13 @@ class GruposAdmin(admin.ModelAdmin):
 class MinisterioAdmin(admin.ModelAdmin):
     search_fields = ['minisName']
 
-    list_display = ('id','minisName','minisDir','minisPers','minisFrec','minisCola','minisPhoto','miniStatus')
-##,'minisPers','minisFrec','minisCola','minisPhoto','miniStatus'
+    list_display = ('id','minisName','minisDir','minisPers','minisFrec','minisCola','minisPhoto','minisDesc','miniStatus')
+
+
+class ActividadesAdmin(admin.ModelAdmin):
+    search_fields = ['actName']
+
+    list_display = ('id','actName','actPhoto','actDesc','actDate','actTimei','actTimef','actDir','actPers','actPhono','actPhono2','actMail','actStatus')
 
 
 
@@ -50,4 +55,5 @@ admin.site.register(Miembro,MiembroAdmin)
 admin.site.register(Evento,EventoAdmin)
 admin.site.register(Groups,GruposAdmin)
 admin.site.register(Ministry,MinisterioAdmin)
+admin.site.register(Activities,ActividadesAdmin)
 admin.site.register(Post)

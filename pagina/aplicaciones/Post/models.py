@@ -81,6 +81,7 @@ class Evento(models.Model):
     def __str__(self):
         return "%s %s %s %s %s %s %s %s %s" % (self.event_date,self.event_time,self.primary_street,self.secondary_street,self.house_number,self.city,self.description,self.created_date, self.status)
 
+#Creacion tabla Grupos
 class Groups(models.Model):
     id = models.AutoField(primary_key=True)
     groupName = models.CharField('Nombre Grupo',max_length = 30,null = False,blank = False)
@@ -95,6 +96,7 @@ class Groups(models.Model):
     def __str__(self):
         return "%s %s" % (self.groupName,self.groupDir)
 
+#Creacion tabla Ministerios
 class Ministry(models.Model):
     id = models.AutoField(primary_key=True)
     minisName = models.CharField('Nombre Ministerio',max_length=40,null=False,blank=False)
@@ -103,6 +105,7 @@ class Ministry(models.Model):
     minisFrec = models.CharField('Frecuencia',max_length=20,null=False,blank=False)
     minisCola = models.CharField('Colaboradores',max_length=20,null=False,blank=False)
     minisPhoto = models.ImageField('Imagen Ministerio',upload_to='minis_image',null=False,blank=False)
+    minisDesc = models.CharField('Descripción',max_length = 200,null = False, blank = True)
     miniStatus = models.BooleanField('Estado Activado/Desactivado',default = True)
 
     class Meta:
@@ -110,8 +113,32 @@ class Ministry(models.Model):
         verbose_name_plural = 'Ministerios'
 
     def __str__(self):
-        return "%s %s %s %s %s %s" % (self.minisName,self.minisDir,self.minisPers,self.minisFrec,self.minisCola,self.miniStatus)
-##,self.minisPers,self.minisFrec,self.minisCola,self.miniStatus
+        return "%s %s %s %s %s %s %s" % (self.minisName,self.minisDir,self.minisPers,self.minisFrec,self.minisCola,self.minisDesc,self.miniStatus)
+
+#Creacion tabla Actividades
+class Activities(models.Model):
+    id = models.AutoField(primary_key=True)
+    actName = models.CharField('Nombre Actividad',max_length=40,null=False,blank=False)
+    actPhoto = models.ImageField('Imagen Actividad',upload_to='activ_image',null=False,blank=False)
+    actDesc = models.CharField('Descripcion', max_length=200,null=True, blank=True)
+    actDate = models.DateField('Fecha Actividad',auto_now=False,auto_now_add=False, null=False, blank=False)
+    actTimei = models.TimeField('Hora Inicio',auto_now=False, auto_now_add=False)
+    actTimef = models.TimeField('Hora Fin',auto_now=False, auto_now_add=False)
+    actDir = models.CharField('Dirección',max_length=100,null=False,blank=False)
+    actPers = models.CharField('Encargado', max_length=60, null=False, blank=False)
+    actPhono = models.CharField('Teléfono Celular ',max_length = 10, null = True, blank = True)
+    actPhono2 = models.CharField('Teléfono Convencional ',max_length = 10, null = True, blank = True)
+    actMail = models.EmailField('Correo Electrónico ',max_length = 30,unique = True,null = True, blank = True)
+    actStatus = models.BooleanField('Estado Activado/Desactivado',default = True)
+
+    class Meta:
+        verbose_name = 'Actividades'
+        verbose_name_plural = 'Actividades'
+        
+    def __str__(self):
+        return "%s %s %s %s %s %s %s %s %s %s %s" % (self.actName,self.actDesc,self.actDate,self.actTimei,self.actTimef,self.actDir,self.actPers,self.actPhono, self.actPhono2, self.actMail, self.actStatus)
+
+    
 
 #Cración modelo Post
 class Post(models.Model):
