@@ -243,3 +243,95 @@ img.zoom:hover{
       border-bottom-color: #FFC107;
       border-right-color: #FFC107;
       border-left-color: #FFC107; }
+
+/*---------------------
+	GRUPOS
+-----------------------*/
+
+
+
+.groups-section h1, h2, h3, h4, h5, h6 {
+	color: #f4f4f4;
+	margin: 0;
+	font-weight: 600;
+	font-family: "Open Sans", sans-serif;
+}
+
+.groups-section h1 {
+	font-size: 60px;
+}
+
+.groups-section h2 {
+	font-size: 36px;
+	line-height: 1.2;
+}
+
+.groups-section h3 {
+	font-size: 30px;
+}
+
+.groups-section h4 {
+	font-size: 24px;
+}
+
+.groups-section h5 {
+	font-size: 14px;
+}
+
+.groups-section p {
+	font-size: 16px;
+	color: #f4f4f4;
+	line-height: 1.8;
+}
+
+.groups-item img {
+	width: 300px;
+	height: 260px;
+	align-content: center;
+}
+
+.groups-section ul,ol,li {
+	padding: 0;
+	margin: 0;
+	color: #f4f4f4;
+}
+
+.groups-section {
+	padding-bottom: 5;
+	padding-top: 5;
+}
+
+
+.groups-info {
+	list-style: none;
+	margin-bottom: 20px;
+}
+
+.groups-info li {
+	font-size: 18px;
+	font-family: "Lora", serif;
+	font-style: italic;
+	margin-bottom: 10px;
+}
+
+.groups-info li span {
+	color: #dd3e3e;
+}
+
+.groups-itemf{
+	background: #262626;
+
+}
+
+/*.container{
+	border-color: #FFC107;
+   	border-width: 2px;
+   	border-style: solid;
+	
+*/
+
+
+/*---------------------
+	GRUPOS
+-----------------------*/
+
