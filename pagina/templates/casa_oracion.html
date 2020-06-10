@@ -1,0 +1,16 @@
+{% extends 'index.html' %}
+{% block title %}
+Casa de Oracion
+{% endblock title %}
+
+
+{% block content %}
+<h2>Casa de Oracion</h2>
+{% for i in oracion %}
+    <p><strong>Lugar: </strong>{{i.place}}</p>
+    <p><strong>Responsable: </strong>{{i.responsable}}</p>
+    <p><strong>Frecuencia: </strong>{{i.frecuency}} {{i.day}} {{i.initial_time}}-{{i.final_time}}</p>
+    <p><strong>Descripcion: </strong>{{i.description}}</p>
+
+{% endfor %}
+{% endblock content %}
