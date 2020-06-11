@@ -189,6 +189,7 @@ class Activities(models.Model):
         
     def __str__(self):
         return "%s %s %s %s %s %s %s %s %s %s %s" % (self.actName,self.actDesc,self.actDate,self.actTimei,self.actTimef,self.actDir,self.actPers,self.actPhono, self.actPhono2, self.actMail, self.actStatus)
+        
 
     
 
@@ -211,4 +212,4 @@ class Post(models.Model):
         verbose_name_plural = 'Posts'
 
     def __str__(self):
-        return self.titulo
+        return self.title
