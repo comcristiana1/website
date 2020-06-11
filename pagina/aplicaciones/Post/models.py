@@ -3,6 +3,22 @@ from ckeditor.fields import RichTextField
 
 
 
+
+#Tabla Form Oracion_Peticion
+
+class O_P(models.Model):
+    SELECT_CHOICE=(
+        ('Oracion','Oracion'),
+        ('Peticion','Peticion'),
+    )
+    id = models.AutoField(primary_key=True)
+    name_person = models.CharField('Nombre de la persona',max_length=100,null= False, blank=False)
+    mail_persona = models.EmailField('Correo de la persona',max_length=30,null=False,blank=False)
+    section_category = models.CharField(max_length=100,null=False,blank=False,choices=SELECT_CHOICE,default='Oracion')
+    title = models.CharField('Titulo de Oración/Petición',max_length=30,null=False,blank=False)
+    description= models.CharField('Descripción de la Oración/Petición',max_length=255,null=False,blank=False)
+    status = models.BooleanField('Estado Publicado/No_Publicado',default=False)
+
 # Creación tabla Categoria
 class Categoria(models.Model):
     id = models.AutoField(primary_key=True)
@@ -70,7 +86,7 @@ class Evento(models.Model):
     house_number = models.CharField('Numero Domicilio',max_length=100,null=False, blank=False)
     city = models.CharField('Ciudad',max_length=50,null=False,blank=False)
     description = models.TextField(max_length=200,null=False, blank=False)
-    image = models.ImageField('Imagen', upload_to='event_image',blank=True,null=False)
+    image_ev = models.ImageField('Imagen', upload_to='event_image',blank=True,null=False)
     created_date = models.DateField('Fecha de Creación',auto_now=False,auto_now_add=True)
     status = models.BooleanField('Estado Activado/Desactivado',default=True)
 
@@ -80,6 +96,43 @@ class Evento(models.Model):
     
     def __str__(self):
         return "%s %s %s %s %s %s %s %s %s" % (self.event_date,self.event_time,self.primary_street,self.secondary_street,self.house_number,self.city,self.description,self.created_date, self.status)
+
+
+#Creacion tabla Grupos
+class CasaOracion(models.Model):
+    id = models.AutoField("Id",primary_key=True)
+    place = models.CharField("Lugar de Reunion", max_length=100, null=True)
+    responsable = models.CharField("Responsable", max_length=100, null=True)
+    frecuency = models.CharField("Frecuencia", max_length=50)
+    day = models.CharField("Dia", max_length=50)
+    initial_time = models.TimeField("Hora inicio", auto_now=False, auto_now_add=False)
+    final_time = models.TimeField("Hora fin", auto_now=False, auto_now_add=False)
+    description = models.TextField("Descripcion", null=False, blank=True)
+
+    class Meta:
+        verbose_name = 'Casa Oracion'
+        verbose_name_plural = 'Casa Oraciones'
+
+    def __str__(self):
+        return "%s %s %s %s %s %s %s %s" % (self.id,self.place,self.responsable,self.frecuency,self.day,self.initial_time,self.final_time,self.description)
+    
+class Oracion(models.Model):
+    id = models.AutoField('Id',primary_key=True)
+    category = models.ForeignKey(Categoria, on_delete=models.CASCADE,null=False)
+    name = models.CharField("Nombre", max_length=100,null=True,blank=False)
+    surname = models.CharField("Apellido", max_length=100,null=False,blank=True)
+    prayer = RichTextField()
+    created= models.DateField("Fecha Creacion", auto_now=False, auto_now_add=True)
+    status = models.BooleanField('Estado Activado/Desactivado',default=True)
+    
+
+    class Meta:
+        verbose_name = "Oracion"
+        verbose_name_plural = "Oraciones"
+
+    def __str__(self):
+        return self.name
+
 
 class Groups(models.Model):
     id = models.AutoField(primary_key=True)
@@ -95,6 +148,7 @@ class Groups(models.Model):
     def __str__(self):
         return "%s %s" % (self.groupName,self.groupDir)
 
+#Creacion tabla Ministerios
 class Ministry(models.Model):
     id = models.AutoField(primary_key=True)
     minisName = models.CharField('Nombre Ministerio',max_length=40,null=False,blank=False)
@@ -103,6 +157,7 @@ class Ministry(models.Model):
     minisFrec = models.CharField('Frecuencia',max_length=20,null=False,blank=False)
     minisCola = models.CharField('Colaboradores',max_length=20,null=False,blank=False)
     minisPhoto = models.ImageField('Imagen Ministerio',upload_to='minis_image',null=False,blank=False)
+    minisDesc = models.CharField('Descripción',max_length = 200,null = False, blank = True)
     miniStatus = models.BooleanField('Estado Activado/Desactivado',default = True)
 
     class Meta:
@@ -110,8 +165,33 @@ class Ministry(models.Model):
         verbose_name_plural = 'Ministerios'
 
     def __str__(self):
-        return "%s %s %s %s %s %s" % (self.minisName,self.minisDir,self.minisPers,self.minisFrec,self.minisCola,self.miniStatus)
-##,self.minisPers,self.minisFrec,self.minisCola,self.miniStatus
+        return "%s %s %s %s %s %s %s" % (self.minisName,self.minisDir,self.minisPers,self.minisFrec,self.minisCola,self.minisDesc,self.miniStatus)
+
+#Creacion tabla Actividades
+class Activities(models.Model):
+    id = models.AutoField(primary_key=True)
+    actName = models.CharField('Nombre Actividad',max_length=40,null=False,blank=False)
+    actPhoto = models.ImageField('Imagen Actividad',upload_to='activ_image',null=False,blank=False)
+    actDesc = models.CharField('Descripcion', max_length=200,null=True, blank=True)
+    actDate = models.DateField('Fecha Actividad',auto_now=False,auto_now_add=False, null=False, blank=False)
+    actTimei = models.TimeField('Hora Inicio',auto_now=False, auto_now_add=False)
+    actTimef = models.TimeField('Hora Fin',auto_now=False, auto_now_add=False)
+    actDir = models.CharField('Dirección',max_length=100,null=False,blank=False)
+    actPers = models.CharField('Encargado', max_length=60, null=False, blank=False)
+    actPhono = models.CharField('Teléfono Celular ',max_length = 10, null = True, blank = True)
+    actPhono2 = models.CharField('Teléfono Convencional ',max_length = 10, null = True, blank = True)
+    actMail = models.EmailField('Correo Electrónico ',max_length = 30,unique = True,null = True, blank = True)
+    actStatus = models.BooleanField('Estado Activado/Desactivado',default = True)
+
+    class Meta:
+        verbose_name = 'Actividades'
+        verbose_name_plural = 'Actividades'
+        
+    def __str__(self):
+        return "%s %s %s %s %s %s %s %s %s %s %s" % (self.actName,self.actDesc,self.actDate,self.actTimei,self.actTimef,self.actDir,self.actPers,self.actPhono, self.actPhono2, self.actMail, self.actStatus)
+        
+
+    
 
 #Cración modelo Post
 class Post(models.Model):
@@ -132,4 +212,4 @@ class Post(models.Model):
         verbose_name_plural = 'Posts'
 
     def __str__(self):
-        return self.titulo
+        return self.title

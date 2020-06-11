@@ -97,6 +97,23 @@ img.zoom:hover{
 }
 
 
+/*-------------------------------CSS RECURSOS */
+
+#formulario {
+		background-color: var(--SECTION2);
+        padding:20px;
+		display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: 100% 100%;
+  
+}
+.form-group{
+  justify-content: center;
+  height:500px;
+        padding:20px;
+        width:450px;}
+
 
 /*-------------------------------CSS GALERIA */
 
