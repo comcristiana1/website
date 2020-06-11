@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Categoria,Autor,Miembro,Evento,Groups,Ministry,Activities,Post,CasaOracion,Oracion
+from .models import Categoria, Autor, Miembro, Evento, Groups, Ministry, Activities, Post, CasaOracion,Oracion
 
 
 # Register your models here.
@@ -8,19 +8,19 @@ from .models import Categoria,Autor,Miembro,Evento,Groups,Ministry,Activities,Po
 class CategoriaAdmin(admin.ModelAdmin):
     search_fields = ['name']
 
-    list_display = ('id','name','status','create_date')
+    list_display = ('id', 'name', 'status', 'create_date')
 
 
 class AutorAdmin(admin.ModelAdmin):
     search_fields = ['autName1']
 
-    list_display = ('id','autName1','autName2','autSurname1','autSurname2','autMail','autStatus')
+    list_display = ('id', 'autName1', 'autName2', 'autSurname1', 'autSurname2', 'autMail', 'autStatus')
 
 
 class MiembroAdmin(admin.ModelAdmin):
     search_fields = ['miemName1']
 
-    list_display = ('id','miemName1','miemName2','miemSurname1','miemSurname2','miemOcu','miemPho1','miemPho2','miemCrea','miemDesc')
+    list_display = ('id', 'miemName1', 'miemName2', 'miemSurname1', 'miemSurname2', 'miemOcu', 'miemPho1', 'miemPho2', 'miemCrea', 'miemDesc')
 
 
 class EventoAdmin(admin.ModelAdmin):
@@ -53,7 +53,7 @@ class MinisterioAdmin(admin.ModelAdmin):
 class ActividadesAdmin(admin.ModelAdmin):
     search_fields = ['actName']
 
-    list_display = ('id','actName','actPhoto','actDesc','actDate','actTimei','actTimef','actDir','actPers','actPhono','actPhono2','actMail','actStatus')
+    list_display = ('id', 'actName', 'actPhoto', 'actDesc', 'actDate', 'actTimei', 'actTimef', 'actDir', 'actPers', 'actPhono', 'actPhono2', 'actMail', 'actStatus')
 
 
 

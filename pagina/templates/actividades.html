@@ -1,0 +1,23 @@
+{% extends 'index.html' %}
+
+{% block title %}
+Actividades
+{% endblock title %}
+
+
+{% block content %}
+<h2>Actividades</h2>
+{% for a in actividad %}
+    <p>Actividad: {{a.actName}}</p>
+    <p>Descripcion: {{a.actDesc}}</p>
+    <p>Fecha: {{a.actDate}} </p>
+    <p>Hora inicio: {{a.actTimei}}</p>
+    <p>Hora fin: {{a.actTimef}}</p>
+    <p>Direccion: {{a.actDir}}</p>
+    <p>Encargado: {{a.actPers}}</p>
+    <p>Telefono Celular: {{a.actPhono}}</p>
+    <p>Telefono Convencional: {{a.actPhono2}}</p>
+    <p>Correo electronico: {{a.actMail}}</p>
+
+{% endfor %}
+{% endblock content %}
