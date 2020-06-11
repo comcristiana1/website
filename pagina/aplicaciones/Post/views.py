@@ -1,9 +1,11 @@
 from django.shortcuts import render,redirect
-from .models import Miembro,CasaOracion,Oracion,O_P
+from .models import Miembro,CasaOracion,Oracion,O_P,Activities,Ministry
 from .forms import O_PForm
 from django.core.mail import send_mail
 from django.conf import settings
 # Create your views here.
+
+
 
 
 def mostrar_pastor(request):
@@ -17,6 +19,15 @@ def casa_oracion(request):
 def oracion(request):
     oracion = Oracion.objects.all()
     return render(request,'oracion.html',{'oracion':oracion})
+
+
+def mostrar_actividades(request):
+    actividad = Activities.objects.all()
+    return render(request,'actividades.html',{'actividad':actividad})
+
+def mostrar_ministerio(request):
+    ministerio = Ministry.objects.all()
+    return render(request,'ministerios.html',{'ministerio':ministerio})    
 
 
 def oracion_peticion(request):
