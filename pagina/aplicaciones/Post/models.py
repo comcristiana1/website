@@ -3,6 +3,22 @@ from ckeditor.fields import RichTextField
 
 
 
+
+#Tabla Form Oracion_Peticion
+
+class O_P(models.Model):
+    SELECT_CHOICE=(
+        ('Oracion','Oracion'),
+        ('Peticion','Peticion'),
+    )
+    id = models.AutoField(primary_key=True)
+    name_person = models.CharField('Nombre de la persona',max_length=100,null= False, blank=False)
+    mail_persona = models.EmailField('Correo de la persona',max_length=30,null=False,blank=False)
+    section_category = models.CharField(max_length=100,null=False,blank=False,choices=SELECT_CHOICE,default='Oracion')
+    title = models.CharField('Titulo de Oración/Petición',max_length=30,null=False,blank=False)
+    description= models.CharField('Descripción de la Oración/Petición',max_length=255,null=False,blank=False)
+    status = models.BooleanField('Estado Publicado/No_Publicado',default=False)
+
 # Creación tabla Categoria
 class Categoria(models.Model):
     id = models.AutoField(primary_key=True)

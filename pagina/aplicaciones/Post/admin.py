@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Categoria,Autor,Miembro,Evento,Groups,Ministry,Activities,Post,CasaOracion,Oracion
+from .models import Categoria,Autor,Miembro,Evento,Groups,Ministry,Activities,Post,CasaOracion,Oracion,O_P
 
 
 # Register your models here.
@@ -56,6 +56,11 @@ class ActividadesAdmin(admin.ModelAdmin):
     list_display = ('id','actName','actPhoto','actDesc','actDate','actTimei','actTimef','actDir','actPers','actPhono','actPhono2','actMail','actStatus')
 
 
+class O_PAdmin(admin.ModelAdmin):
+    search_fields = ['section_category','title']
+    list_display = ('title','name_person','section_category','mail_persona','description','status')
+
+
 
 
 admin.site.register(Categoria,CategoriaAdmin)
@@ -66,3 +71,4 @@ admin.site.register(Groups,GruposAdmin)
 admin.site.register(Ministry,MinisterioAdmin)
 admin.site.register(Activities,ActividadesAdmin)
 admin.site.register(Post)
+admin.site.register(O_P,O_PAdmin)

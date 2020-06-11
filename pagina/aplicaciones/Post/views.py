@@ -1,5 +1,8 @@
-from django.shortcuts import render
-from .models import Miembro,CasaOracion,Oracion
+from django.shortcuts import render,redirect
+from .models import Miembro,CasaOracion,Oracion,O_P
+from .forms import O_PForm
+from django.core.mail import send_mail
+from django.conf import settings
 # Create your views here.
 
 
@@ -16,7 +19,22 @@ def oracion(request):
     return render(request,'oracion.html',{'oracion':oracion})
 
 
+def oracion_peticion(request):
 
+    if request.method=='POST':
+        O_P_form = O_PForm(request.POST)
+        if O_P_form.is_valid():
+            subject = request.POST["title"]
+            message = "Hola soy "+request.POST["name_person"]+" "+request.POST["description"] + " att: " + request.POST["mail_persona"]
+            email_from=settings.EMAIL_HOST_USER
+            recipient_list = ["adrigato3@gmail.com"]
+            send_mail(subject,message,email_from,recipient_list)
 
+            O_P_form.save()
+            return redirect('Post:orar')
+    else:
+        O_P_form = O_PForm()
+
+    return render(request,'prueba.html',{'datos':O_P_form})
 
 
