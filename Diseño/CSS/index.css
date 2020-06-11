@@ -164,11 +164,11 @@ img.zoom:hover{
 
 #footer {
     /*background: linear-gradient(90deg, #1c3643, #273b47 25%, #1e5372);*/
-    background-color: VAR(--FOOTER);
+    background: linear-gradient(to bottom,#262626 ,#030202 );
 }
 
 #footer div {
-    color: VAR(--COLOR_LETRA);
+    color: white;
 }
 
 #footer a {
@@ -213,7 +213,8 @@ img.zoom:hover{
 /* MINISTERIOS*/
 .ministries-area{
 	
-	background-color: #FAFAFA;
+	background: linear-gradient(to bottom,#262626 ,#030202 );
+	
 }
 .single-ministry {
   position: relative;
@@ -267,7 +268,10 @@ img.zoom:hover{
 -----------------------*/
 
 
-
+.groups-list-section{
+	background: linear-gradient(to bottom,#262626 ,#030202 );
+	
+}
 .groups-section h1, h2, h3, h4, h5, h6 {
 	color: #f4f4f4;
 	margin: 0;
