@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Categoria,Autor,Miembro,Evento,Groups,Ministry,Activities,Post,CasaOracion,Oracion,O_P
+from .models import Categoria,Autor,Miembro,Evento,Groups,Ministry,Activities,Post,CasaOracion,Oracion,O_P,Recurso
 
 
 # Register your models here.
@@ -62,6 +62,14 @@ class O_PAdmin(admin.ModelAdmin):
 
 
 
+class RecursoAdmin(admin.ModelAdmin):
+    search_fields = ['id','title']
+    list_display = ('id','title','pdf')
+    
+
+
+
+
 
 admin.site.register(Categoria,CategoriaAdmin)
 admin.site.register(Autor,AutorAdmin)
@@ -72,3 +80,4 @@ admin.site.register(Ministry,MinisterioAdmin)
 admin.site.register(Activities,ActividadesAdmin)
 admin.site.register(Post)
 admin.site.register(O_P,O_PAdmin)
+admin.site.register(Recurso,RecursoAdmin)

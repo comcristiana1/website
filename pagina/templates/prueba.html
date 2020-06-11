@@ -7,6 +7,16 @@
     <title>Formulario</title>
 </head>
 <body>
+    <h1>HOLA PDFS XD</h1>
+
+    {% for i in recursos %}
+        <a download="{{ i.title }}" href="{{ i.pdf.url }}" >{{ i.title }}</a>
+    
+    
+    {% endfor %}
+
+
+
 
     <form method="POST">
         {% csrf_token %}

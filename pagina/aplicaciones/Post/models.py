@@ -213,3 +213,17 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class Recurso(models.Model):
+    id = models.AutoField(primary_key=True),
+    title = models.CharField("Titulo del PDF", max_length=50,null=False,blank=False)
+    pdf = models.FileField(upload_to="Recursos PDF", max_length=254)
+
+    class Meta:
+        verbose_name = "Recurso"
+        verbose_name_plural = "Recursos"
+
+    def __str__(self):
+        return self.title
+

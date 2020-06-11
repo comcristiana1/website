@@ -1,5 +1,5 @@
 from django.shortcuts import render,redirect
-from .models import Miembro,CasaOracion,Oracion,O_P,Activities,Ministry,Evento,Groups
+from .models import Miembro,CasaOracion,Oracion,O_P,Activities,Ministry,Evento,Groups,Recurso
 from .forms import O_PForm
 from django.core.mail import send_mail
 from django.conf import settings
@@ -33,6 +33,8 @@ def mostrar_ministerio(request):
 
 def oracion_peticion(request):
 
+    libros = Recurso.objects.all()
+
     if request.method=='POST':
         O_P_form = O_PForm(request.POST)
         if O_P_form.is_valid():
@@ -47,7 +49,7 @@ def oracion_peticion(request):
     else:
         O_P_form = O_PForm()
 
-    return render(request,'prueba.html',{'datos':O_P_form})
+    return render(request,'prueba.html',{'datos':O_P_form,'recursos':libros})
 
 
 def mostrar_eventos(request):
