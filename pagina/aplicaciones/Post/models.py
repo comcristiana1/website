@@ -86,7 +86,7 @@ class Evento(models.Model):
     house_number = models.CharField('Numero Domicilio',max_length=100,null=False, blank=False)
     city = models.CharField('Ciudad',max_length=50,null=False,blank=False)
     description = models.TextField(max_length=200,null=False, blank=False)
-    image = models.ImageField('Imagen', upload_to='event_image',blank=True,null=False)
+    image_ev = models.ImageField('Imagen', upload_to='event_image',blank=True,null=False)
     created_date = models.DateField('Fecha de Creación',auto_now=False,auto_now_add=True)
     status = models.BooleanField('Estado Activado/Desactivado',default=True)
 

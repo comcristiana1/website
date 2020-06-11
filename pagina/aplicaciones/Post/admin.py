@@ -26,7 +26,7 @@ class MiembroAdmin(admin.ModelAdmin):
 class EventoAdmin(admin.ModelAdmin):
     search_fields = ['event_date']
 
-    list_display = ('id','event_date','event_time','primary_street','secondary_street','house_number','city','description','image','created_date','status')
+    list_display = ('id','event_date','event_time','primary_street','secondary_street','house_number','city','description','image_ev','created_date','status')
 
 @admin.register(CasaOracion)
 class CasaOracionAdmin(admin.ModelAdmin):
