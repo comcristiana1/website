@@ -88,9 +88,9 @@ img.zoom:hover{
 	overflow:hidden;
     background-color: var(--SECTION2);
     float: left;
-    height: 50%;
+    height: 5%;
     padding: 2%;
-    width: 50%;
+    width: 100%;
 }
 
 #evento2 {
