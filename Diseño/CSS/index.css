@@ -20,33 +20,33 @@ body {
 /*-------------------------CSS NAVBAR*/
 
 .navbar {
-    background-color: var(--NAVBAR);
+    background: transparent;
     min-height: 6px;
 }
 
 .navbar-brand {
-    color: VAR(--COLOR_LETRA);
+    color: white;
 }
 
 .navbar-brand:hover {
-    color: VAR(--COLOR_LETRA);
+    color: white;
 }
 
 .nav-link {
-    color: VAR(--COLOR_LETRA);
+    color: white;
 }
 
 .nav-link:hover {
-    color: VAR(--COLOR_LETRA);
+    color: white;
 }
 
 ion-icon {
-    color: VAR(--COLOR_LETRA);
+    color: white;
 }
 
 .c_color {
     transition: all 1s ease;
-    background-color: var(--FOOTER);
+    background: linear-gradient(to bottom, #262626, #030202);
 }
 
 
@@ -223,6 +223,8 @@ img.zoom:hover {
 
 .single-ministry img {
     align-items: center;
+	width: auto;
+	height: auto;
 }
 
 .single-ministry .ministry-content {
