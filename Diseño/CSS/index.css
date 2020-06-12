@@ -121,7 +121,21 @@ img.zoom:hover {
     color: VAR(--COLOR_LETRA2);
     font-family: VAR(--LETRA);
 }
+/*-------------------CSS QUIENES SOMOS */
 
+.quienessomos h2{
+color: black;
+}
+.quienessomos h3{
+  color: black;
+}
+
+.quienessomos li{
+  color: black;
+}
+.quienessomos p{
+  color: black;
+}
 
 /*-------------------------------CSS RECURSOS */
 
@@ -134,7 +148,7 @@ img.zoom:hover {
 		display: inline-block;
   width: 70%;
   height: 100%;
-  
+
 }
 .form-group{
   		height:50%;
@@ -177,7 +191,7 @@ table{
 	text-align:center;
 	border:solid 1px #999;
 }
-	
+
 .esp1 {
     padding: 6%;
     position: relative;
@@ -458,7 +472,7 @@ li {
 	border-color: #FFC107;
    	border-width: 2px;
    	border-style: solid;
-	
+
 */
 
 
