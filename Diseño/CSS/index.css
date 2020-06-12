@@ -63,7 +63,6 @@ ion-icon {
 }
 
 #evento1 {
-<<<<<<< HEAD
 		background-color:var(--SECTION2);
         float:left;
         height:100%;
@@ -87,27 +86,25 @@ img.mediana{
 img.zoom:hover{
 	-webkit-transform:scale(1.3);transform:scale(0.9);
 	overflow:hidden;
-	}
-=======
     background-color: var(--SECTION2);
     float: left;
-    height: 500px;
-    padding: 20px;
-    width: 550px;
+    height: 50%;
+    padding: 2%;
+    width: 50%;
 }
 
 #evento2 {
     background-color: var(--SECTION2);
     float: left;
-    height: 500px;
-    padding: 20px;
-    width: 550px;
+    height: 50%;
+    padding: 2%;
+    width: 50%;
 }
 
 img.mediana {
-    height: 400px;
-    width: 500px;
-    border-radius: 8px;
+    height: 80%;
+    width: 100%;
+    border-radius: 3%;
 }
 
 img.zoom:hover {
@@ -115,7 +112,6 @@ img.zoom:hover {
     transform: scale(0.9);
     overflow: hidden;
 }
->>>>>>> 017c77d1a5b4e901178b88f421b1ae95635194cf
 
 .letra {
     color: VAR(--COLOR_LETRA2);
@@ -126,7 +122,6 @@ img.zoom:hover {
 /*-------------------------------CSS RECURSOS */
 
 #formulario {
-<<<<<<< HEAD
 		background-color: var(--SECTION2);
         padding:1%;
 		display: flex;
@@ -136,23 +131,11 @@ img.zoom:hover {
   height: 100%;
   
 }
-.form-group{
-  		height:50%;
-        width:140%;
-=======
-    background-color: var(--SECTION2);
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-size: 100% 100%;
-}
 
 .form-group {
-    height: 500px;
-    padding: 20px;
-    width: 450px;
->>>>>>> 017c77d1a5b4e901178b88f421b1ae95635194cf
+    height: 50%;
+    padding: 2%;
+    width: 140%;
 }
 
 img.recurso{
