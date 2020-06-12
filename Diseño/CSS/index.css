@@ -210,13 +210,13 @@ img.zoom:hover {
 /* MINISTERIOS*/
 
 .ministries-area {
-    background: linear-gradient(to bottom, #262626, #030202);
+    background: white;
 }
 
 .single-ministry {
     position: relative;
     z-index: 1;
-    background-color: #262626;
+    background-color: black;
     -webkit-transition-duration: 500ms;
     transition-duration: 500ms;
 }
@@ -247,7 +247,7 @@ img.zoom:hover {
     font-size: 13px;
     margin-bottom: 40px;
     display: block;
-    color: #f4f4f4;
+    color: white;
 }
 
 .single-ministry .ministry-content h1,
@@ -256,12 +256,12 @@ h3,
 h4,
 h5,
 h6 {
-    color: aliceblue;
+    color: white;
 }
 
 .single-ministry .ministry-content p {
     margin-bottom: 0;
-    color: #f4f4f4;
+    color: white;
 }
 
 .single-ministry .ministry-content .ministry-btn {
@@ -273,7 +273,7 @@ h6 {
 
 .single-ministry:hover,
 .single-ministry:focus {
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 5px 10px #FFC107;
 }
 
 .single-ministry:hover .ministry-content,
