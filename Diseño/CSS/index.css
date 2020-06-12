@@ -130,6 +130,19 @@ img.zoom:hover {
 }
 
 
+/*-------------------------------CSS ACTIVIDADES Y EVENTOS */
+.acts {
+    background-color: var(--SECTION2);
+}
+
+.acts-brand {
+    color: var(--COLOR_LETRA);
+}
+
+.acts-brand-2 {
+    color: var(--COLOR_LETRA2);
+}
+
 /*-------------------------------CSS CAROUSEL - MAIN */
 
 #main .carousel-inner img {
