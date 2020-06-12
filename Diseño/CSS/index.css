@@ -502,6 +502,28 @@ li {
 */
 
 
+.card { background:#000; }
+
+.card:hover { 
+background:#F1BE38;}
+/*.container{
+	border-color: #FFC107;
+   	border-width: 2px;
+   	border-style: solid;
+	
+*/
+
+.card-title{
+	
+color:#F1BE38;}
+
+div#sep{
+	width:100%;
+	height:70px;
+	
+}
+
+
 /*---------------------
 	GRUPOS
 -----------------------*/
