@@ -169,17 +169,27 @@ table{
 /*-------------------------------CSS GALERIA */
 
 #galeria {
-    background-color: var(--SECTION2);
+    background-color: white;
 }
 
 .btn-yellow:hover {
     background-color: var(--BUTTOM);
+	
+
 }
 
 .galery-brand {
-    color: #FFFFFF;
+    color: black;
 }
 
+
+.btnt{
+	color: white;
+	background-color: black;
+	border-color: white;
+  	border-width: 2px;
+	border-style: solid;
+}
 
 /*-------------------------------CSS ACTIVIDADES Y EVENTOS */
 .acts {
