@@ -200,15 +200,32 @@ table{
 
 /*-------------------------------CSS ACTIVIDADES Y EVENTOS */
 .acts {
-    background-color: var(--SECTION2);
+    background-color: black;
+	box-shadow: 0 2px 5px #FFC107;
+	
 }
 
+
 .acts-brand {
-    color: var(--COLOR_LETRA);
+    color: white;
 }
 
 .acts-brand-2 {
     color: var(--COLOR_LETRA2);
+}
+
+.acts-brand-3 {
+    color: black;
+}
+
+.acts span{
+	color: whitesmoke;
+	font-size: 13px;
+    font-family: "Lora", serif;
+    font-style: italic;
+    margin-bottom: 25px;
+	
+	
 }
 
 /*-------------------------------CSS CAROUSEL - MAIN */
@@ -372,7 +389,7 @@ h6 {
 -----------------------*/
 
 .groups-list-section {
-    background: linear-gradient(to bottom, #262626, #030202);
+    background: white;
 }
 
 .groups-section h1,
@@ -381,7 +398,7 @@ h3,
 h4,
 h5,
 h6 {
-    color: #f4f4f4;
+    color: white;
     margin: 0;
     font-weight: 600;
     font-family: "Open Sans", sans-serif;
@@ -452,7 +469,7 @@ li {
 }
 
 .groups-itemf {
-    background: #262626;
+    background: black;
 }
 
 
