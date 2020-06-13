@@ -153,8 +153,9 @@ img.mediana {
 	float:right;
 }
 /*-------------------------------CSS RECURSOS - FORMULARIO */
-.tit{
+.tit h2{
 	text-align:center;
+	color:white;
 }
 
 .form-group{
