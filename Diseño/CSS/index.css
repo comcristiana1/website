@@ -249,7 +249,7 @@ box-shadow: 0px 2px 10px 1px rgba(0,0,0,1);
 /*-------------------------------CSS CAROUSEL - MAIN */
 
 #main .carousel-inner img {
-    max-height: 92vh;
+    max-height: 100vh;
     object-fit: cover;
     filter: grayscale(30%);
 }
