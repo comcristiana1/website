@@ -190,7 +190,7 @@ img.recurso{
 	margin-bottom:0%;
 }	
 .opacity{
-   opacity:0.8;
+   opacity:0.85;
    filter:alpha(opacity=60); /* IE < 9.0 */
    width:30%;
 }
@@ -368,10 +368,16 @@ img.recurso{
 /* MINISTERIOS*/
 
 .sec1min{
-	background-color: black;
+	  background: url("../images/backmin1.jpg");
+    background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
 }
 .card-bodym{
 	background-color: black;
+	opacity: 0.8;
+   filter: alpha(opacity=100);
+   zoom: 1;
 	
 }
 
@@ -381,7 +387,7 @@ img.recurso{
 }
 
 .card-bodym p{
-	color: white;
+	color:white;
 	
 }
 
@@ -468,8 +474,8 @@ h6 {
 
 
 .opacitym{
-	background-color: black;
-   opacity: 0.9;
+   background-color: black;
+	opacity: 0.8;
    filter: alpha(opacity=100);
    zoom: 1;
 }
