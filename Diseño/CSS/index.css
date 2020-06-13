@@ -56,11 +56,13 @@ ion-icon {
     background-color: var(--SECTION2);
     color: VAR(--COLOR_LETRA);
 }
-#publicaciones h2{
-	color:white;
+
+#publicaciones h2 {
+    color: white;
 }
-#publicaciones p{
-	color:white;
+
+#publicaciones p {
+    color: white;
 }
 
 .esp {
@@ -102,126 +104,126 @@ img.mediana {
 
 /*-------------------CSS QUIENES SOMOS */
 
-
-
 .imgqs:hover,
 .imgqs:focus {
     box-shadow: 0 5px 10px #FFC107;
 }
 
-.secc1{
-  /* background-color: #262626; */
-  /* background: linear-gradient(to right, #262626,#223940); */
-/*background: linear-gradient(to bottom,50% #262626,#153038);*/
-/* background: linear-gradient(to bottom, #262626 45%,#0f2127,#254e5a); */
-
-  background: linear-gradient(to bottom,#1a1108,55%,#7e562c);
-
-
+.secc1 {
+    /* background-color: #262626; */
+    /* background: linear-gradient(to right, #262626,#223940); */
+    /*background: linear-gradient(to bottom,50% #262626,#153038);*/
+    /* background: linear-gradient(to bottom, #262626 45%,#0f2127,#254e5a); */
+    background: linear-gradient(to bottom, #1a1108, 55%, #7e562c);
 }
 
-.secc1 p{
-  color: white;
+.secc1 p {
+    color: white;
 }
 
-.secc2  .card-deck {
-  opacity:0.8;
-  filter:alpha(opacity=60); /* IE < 9.0 */
-
+.secc2 .card-deck {
+    opacity: 0.8;
+    filter: alpha(opacity=60);
+    /* IE < 9.0 */
 }
 
-
-.secc2{
-
-background-image: url("../images/ale.jpg");
-background-position: center;
-background-attachment: fixed;
-background-repeat: no-repeat;
-background-size: 100%;
-
+.secc2 {
+    background-image: url("../images/ale.jpg");
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100%;
 }
 
-.secc1 h1{
-  color: white;
+.secc1 h1 {
+    color: white;
 }
 
-.secc2 h1{
-  color: white;
+.secc2 h1 {
+    color: white;
 }
 
-.secc1 h2{
-  color: #f6c941;
+.secc1 h2 {
+    color: #f6c941;
 }
-.secc2 h2{
-  color: white;
 
+.secc2 h2 {
+    color: white;
 }
+
 
 /*-------------------------------CSS RECURSOS - PDF */
-.sec1rec{
-border-top: 2px solid white;
-background-position: center;
-background-attachment: fixed;
-background-repeat: no-repeat;
-background-size: 100%;
 
+.sec1rec {
+    border-top: 2px solid white;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100%;
 }
 
-.card-body{
-	width: 100%;
-
-}
-.card-body p{
-	color:white;
+.card-body {
+    width: 100%;
 }
 
-
-.btn-yellow1{
-	background-color: var(--BUTTOM);
-	float:right;
+.card-body p {
+    color: white;
 }
+
+.btn-yellow1 {
+    background-color: var(--BUTTOM);
+    float: right;
+}
+
+
 /*-------------------------------CSS RECURSOS - FORMULARIO */
-.tit h2{
-	text-align:center;
-	color:white;
+
+.tit h2 {
+    text-align: center;
+    color: white;
 }
 
-.form-group{
-	background-color:#000;
-  	height:0%;
-    padding:10% 10% 10% 10%;
-    width:140%;
-	color:#FFF;
+.form-group {
+    background-color: #000;
+    height: 0%;
+    padding: 10% 10% 10% 10%;
+    width: 140%;
+    color: #FFF;
 }
 
-img.recurso{
-	height:100%;
-	width:100%;
-    position:relative;
-	margin:8% auto;
-	display:block;
+img.recurso {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    margin: 8% auto;
+    display: block;
 }
-.fondo{
-	background-size: 100% 100%;
+
+.fondo {
+    background-size: 100% 100%;
     filter: grayscale(50%);
+}
 
+.card-img {
+    background-size: 100% 100%;
+    margin-left: auto;
+    margin-right: auto;
 }
-.card-img{
-	background-size: 100% 100%;
-	margin-left: auto;
-  	margin-right: auto;	}
 
-.f{
-	padding: 4% 0% 0% 0%;
-	margin-left: 30%;
-  	margin-right: auto;
-	margin-bottom:0%;
+.f {
+    padding: 4% 0% 0% 0%;
+    margin-left: 30%;
+    margin-right: auto;
+    margin-bottom: 0%;
 }
-.opacity{
-   opacity:0.85;
-   filter:alpha(opacity=60); /* IE < 9.0 */
-   width:30%;
+
+.opacity {
+    opacity: 0.85;
+    filter: alpha(opacity=60);
+    /* IE < 9.0 */
+    width: 30%;
 }
+
 .esp1 {
     padding: 6%;
     position: relative;
@@ -231,11 +233,11 @@ img.recurso{
 /*-------------------------------CSS GALERIA */
 
 #galeria {
-background-image: url("../images/backgaleria.jpg");
-background-position: center;
-background-attachment: fixed;
-background-repeat: no-repeat;
-background-size: 100%;
+    background-image: url("../images/backgaleria.jpg");
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100%;
 }
 
 .btn-yellow:hover {
@@ -276,7 +278,6 @@ background-size: 100%;
 }
 
 
-
 /**/
 
 .galeria {
@@ -285,7 +286,6 @@ background-size: 100%;
     list-style: none;
     padding: 20px;
     box-sizing: border-box;
-    
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -298,10 +298,11 @@ background-size: 100%;
 .galeria img {
     width: 165px;
     height: 120px;
-	    -webkit-box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 1);
+    -webkit-box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 1);
     -moz-box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 1);
     box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 1);
 }
+
 
 /*Estilos del modal*/
 
@@ -310,10 +311,9 @@ background-size: 100%;
 }
 
 .modal:target {
-    
     display: block;
     position: fixed;
-    background: rgba(0,0,0,0.8);
+    background: rgba(0, 0, 0, 0.8);
     top: 0;
     left: 0;
     width: 100%;
@@ -330,7 +330,6 @@ background-size: 100%;
 .imagen {
     width: 100%;
     height: 50%;
-    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -372,12 +371,8 @@ background-size: 100%;
     line-height: 25px;
 }
 
-/*-------------------------------CSS ACTIVIDADES Y EVENTOS */
 
-.acts {
-    background-color: ;
-    box-shadow: ;
-}
+/*-------------------------------CSS ACTIVIDADES Y EVENTOS */
 
 .acts-brand {
     color: white;
@@ -411,10 +406,10 @@ background-size: 100%;
 #carousel {
     position: relative;
 }
-#carousel p{
-    color:white;
-}
 
+#carousel p {
+    color: white;
+}
 
 #carousel .overlay {
     z-index: 1;
@@ -438,8 +433,7 @@ background-size: 100%;
 #footer {
     /*background: linear-gradient(90deg, #1c3643, #273b47 25%, #1e5372);*/
     /* background: linear-gradient(to bottom, #262626, #030202); */
-
-      background: linear-gradient(to bottom,#7e562c,25%,#1a1108);
+    background: linear-gradient(to bottom, #7e562c, 25%, #1a1108);
 }
 
 #footer div {
@@ -497,43 +491,42 @@ background-size: 100%;
 
 /* MINISTERIOS*/
 
-.sec1min{
-	  background: url("../images/backmin1.jpg");
-    background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-size: cover; /* Resize the background image to cover the entire container */
-}
-.card-bodym{
-	background-color: black;
-	opacity: 0.8;
-   filter: alpha(opacity=100);
-   zoom: 1;
-
+.sec1min {
+    background: url("../images/backmin1.jpg");
+    background-position: center;
+    /* Center the image */
+    background-repeat: no-repeat;
+    /* Do not repeat the image */
+    background-size: cover;
+    /* Resize the background image to cover the entire container */
 }
 
-.card-bodym h1{
-	color: white;
-
+.card-bodym {
+    background-color: black;
+    opacity: 0.8;
+    filter: alpha(opacity=100);
+    zoom: 1;
 }
 
-.card-bodym p{
-	color:white;
-
+.card-bodym h1 {
+    color: white;
 }
 
+.card-bodym p {
+    color: white;
+}
 
 .ministries-area {
-background: url("../images/backmin.jpg");
-border-top: 2px solid white;
-background-position: center;
-background-attachment: fixed;
-background-repeat: no-repeat;
-background-size: 100%;
-
+    background: url("../images/backmin.jpg");
+    border-top: 2px solid white;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100%;
 }
 
-.section-padding-100-0{
-	border-bottom: 2px solid white;
+.section-padding-100-0 {
+    border-bottom: 2px solid white;
 }
 
 .single-ministry {
@@ -608,44 +601,43 @@ h6 {
     border-left-color: #FFC107;
 }
 
-
-.opacitym{
-   background-color: black;
-	opacity: 0.8;
-   filter: alpha(opacity=100);
-   zoom: 1;
+.opacitym {
+    background-color: black;
+    opacity: 0.8;
+    filter: alpha(opacity=100);
+    zoom: 1;
 }
+
 
 /*---------------------
 	GRUPOS
 -----------------------*/
 
-
-.titt h2{
-	text-align:center;
-	color:#F1BE38;
+.titt h2 {
+    text-align: center;
+    color: #F1BE38;
 }
-div#tramo{
-	background-color:#FFF;
-	width: 100%;
+
+div#tramo {
+    background-color: #FFF;
+    width: 100%;
     height: 3px;
-
-	}
-.opacityy{
-  /* IE < 9.0 */
-   width:70%;
-
-   padding: 4% 0% 0% 0%;
-	margin-left: 17%;
-  	margin-right: auto;
-	margin-bottom:0%;
-}
-.opacityyy{
-   opacity:0.8;
-   filter:alpha(opacity=60); /* IE < 9.0 */
-
 }
 
+.opacityy {
+    /* IE < 9.0 */
+    width: 70%;
+    padding: 4% 0% 0% 0%;
+    margin-left: 17%;
+    margin-right: auto;
+    margin-bottom: 0%;
+}
+
+.opacityyy {
+    opacity: 0.8;
+    filter: alpha(opacity=60);
+    /* IE < 9.0 */
+}
 
 .groups-list-section {
     background: white;
@@ -807,4 +799,29 @@ p {
 
 #CasaBlog .borde {
     border-bottom: 1px solid black;
+}
+
+#CasaBlog {
+    background: url("../images/Casa_oracion4.jpg");
+    border-top: 2px solid white;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+#CasaBlog .overlay {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: var(--COLOR_LETRA);
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#CasaBlog .overlay .container,
+#CasaBlog .overlay .row {
+    height: 100%;
 }
