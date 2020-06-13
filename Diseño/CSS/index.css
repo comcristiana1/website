@@ -338,7 +338,7 @@ img.recurso{
     width: 500px;
     height: 100%;
     max-width: 100%;
-    border: 3px solid #fff;
+    border: 3px solid white;
     box-sizing: border-box;
 }
 
