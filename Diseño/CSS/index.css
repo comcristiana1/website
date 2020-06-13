@@ -158,6 +158,14 @@ background-size: 100%;
 }
 
 /*-------------------------------CSS RECURSOS - PDF */
+.sec1rec{
+border-top: 2px solid white;
+background-position: center;
+background-attachment: fixed;
+background-repeat: no-repeat;
+background-size: 100%;
+
+}
 
 .card-body{
 	width: 100%;
