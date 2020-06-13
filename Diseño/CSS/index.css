@@ -97,11 +97,11 @@ img.mediana {
 
 .imgqs:hover,
 .imgqs:focus {
-    box-shadow: 0 5px 10px #FFC107;
+    box-shadow: 0 5px 10px white;
 }
 
 .secc1{
-  background-color: #262626;
+  background-color: black;
 
 }
 
@@ -114,10 +114,10 @@ img.mediana {
 }
 
 .secc1 h2{
-  color: #f6c941;
+  color: #FFC107;
 }
 .secc2 h2{
-  color: #262626;
+  color: black;
 }
 /*-------------------------------CSS RECURSOS */
 
