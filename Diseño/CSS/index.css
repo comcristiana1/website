@@ -325,6 +325,25 @@ box-shadow: 0px 2px 10px 1px rgba(0,0,0,1);
 
 /* MINISTERIOS*/
 
+.sec1min{
+	background-color: black;
+}
+.card-bodym{
+	background-color: black;
+	
+}
+
+.card-bodym h1{
+	color: white;
+	
+}
+
+.card-bodym p{
+	color: white;
+	
+}
+
+
 .ministries-area {
     background: white;
 }
