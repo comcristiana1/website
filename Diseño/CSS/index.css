@@ -223,7 +223,11 @@ img.recurso{
 /*-------------------------------CSS GALERIA */
 
 #galeria {
-    background-color: white;
+background-image: url("../images/backgaleria.jpg");
+background-position: center;
+background-attachment: fixed;
+background-repeat: no-repeat;
+background-size: 100%;
 }
 
 .btn-yellow:hover {
@@ -231,7 +235,7 @@ img.recurso{
 }
 
 .galery-brand {
-    color: black;
+    color: white;
 }
 
 .btnt {
@@ -247,7 +251,7 @@ img.recurso{
 }
 
 .t-g h1 {
-    color: black;
+    color: white;
     align-content: center;
 }
 
