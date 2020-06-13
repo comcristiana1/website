@@ -109,6 +109,14 @@ img.mediana {
     color: white;
 }
 
+.secc1 h3 {
+    color: white;
+}
+
+.secc1 p {
+    color: white;
+}
+
 .secc2 h1 {
     color: black;
 }
@@ -120,6 +128,7 @@ img.mediana {
 .secc2 h2 {
     color: black;
 }
+
 
 
 /*-------------------------------CSS RECURSOS */
@@ -297,7 +306,7 @@ table {
     color: white;
 }
 
-#footer .h3 {
+#footer h3 {
     color: white;
 }
 
@@ -335,6 +344,25 @@ table {
 
 
 /* MINISTERIOS*/
+
+.sec1min{
+	background-color: black;
+}
+.card-bodym{
+	background-color: black;
+	
+}
+
+.card-bodym h1{
+	color: white;
+	
+}
+
+.card-bodym p{
+	color: white;
+	
+}
+
 
 .ministries-area {
     background: white;
