@@ -173,7 +173,7 @@ img.recurso{
 	display:block;
 }
 .fondo{
-	background:url(images/orar12.jpg);
+	background:url("images/orar12.jpg");
 	background-size: 100% 100%;
     filter: grayscale(50%);	
 	
@@ -283,6 +283,10 @@ img.recurso{
 #carousel {
     position: relative;
 }
+#carousel p{
+    color:white;
+}
+
 
 #carousel .overlay {
     z-index: 1;
