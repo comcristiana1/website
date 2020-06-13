@@ -484,6 +484,33 @@ h6 {
 	GRUPOS
 -----------------------*/
 
+
+.titt h2{
+	text-align:center;
+	color:#F1BE38;
+}
+div#tramo{
+	background-color:#FFF;
+	width: 100%;
+    height: 3px;
+	
+	}
+.opacityy{
+  /* IE < 9.0 */
+   width:70%;
+   
+   padding: 4% 0% 0% 0%;
+	margin-left: 17%;
+  	margin-right: auto;
+	margin-bottom:0%;
+}
+.opacityyy{
+   opacity:0.8;
+   filter:alpha(opacity=60); /* IE < 9.0 */
+  
+}
+
+
 .groups-list-section {
     background: white;
 }
