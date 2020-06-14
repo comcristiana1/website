@@ -901,15 +901,15 @@ div#sep {
 
 /*CASA DE ORACIÓN*/
 
-#CasaBlog {
-    background-color: white;
+#CasaBlog .container {
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 #Casablog h1,
 h2,
 h3,
 p {
-    color: black;
+    color: white;
 }
 
 #CasaBlog a {
@@ -917,48 +917,32 @@ p {
 }
 
 #CasaBlog .btn {
-    border-color: black;
-    color: black;
+    border-color: white;
+    color: white;
 }
 
 #CasaBlog .btn:hover {
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.7);
     color: white;
 }
 
 #CasaBlog .font-italic {
-    color: black;
+    color: white;
 }
 
 #CasaBlog aside {
-    border-left: 1px solid black;
+    border-left: 1px solid white;
 }
 
 #CasaBlog .borde {
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid white;
 }
 
 #CasaBlog {
     background: url("../images/Casa_oracion4.jpg");
     border-top: 2px solid white;
-    /*background-position: center;*/
-    /*background-attachment: fixed;*/
+    background-position: center;
+    background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: 100%;
-}
-
-#CasaBlog .overlay {
-    z-index: 1;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    color: var(--COLOR_LETRA);
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
-#CasaBlog .overlay .container,
-#CasaBlog .overlay .row {
-    height: 100%;
 }
