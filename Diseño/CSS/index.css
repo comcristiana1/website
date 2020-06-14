@@ -174,7 +174,9 @@ img.mediana {
     background-color: var(--BUTTOM);
     float: right;
 }
-
+.stroke {
+text-shadow: -2px -2px 1px #000, 2px 2px 1px #000, -2px 2px 1px #000, 2px -2px 1px #000;
+}
 
 /*-------------------------------CSS RECURSOS - FORMULARIO */
 
