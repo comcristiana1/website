@@ -585,8 +585,8 @@ div#tramo1 {
 
 #footer {
     /*background: linear-gradient(90deg, #1c3643, #273b47 25%, #1e5372);*/
-    /* background: linear-gradient(to bottom, #262626, #030202); */
-    background: linear-gradient(to bottom, #7e562c, 25%, #1a1108);
+    background: linear-gradient(to bottom, #262626, #030202); 
+    /*background: linear-gradient(to bottom, #7e562c, 25%, #1a1108);*/
 }
 
 #footer div {
