@@ -957,6 +957,7 @@ p {
 #CasaBlog {
     background: url("../images/Casa_oracion4.jpg");
     border-top: 2px solid white;
+	border-bottom: 2px solid white;
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
