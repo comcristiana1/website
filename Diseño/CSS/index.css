@@ -10,6 +10,13 @@
     --h3: white;
     --LETRA: 'Source Sans Pro', sans-serif;
     --SECTION1: linear-gradient(to bottom, #262626, #030202);
+    
+}
+
+*{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 12;
+    
 }
 
 body {
