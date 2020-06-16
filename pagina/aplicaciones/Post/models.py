@@ -6,7 +6,7 @@ from ckeditor.fields import RichTextField
 
 #Tabla Form Oracion_Peticion
 
-class O_P(models.Model):
+class FormularioRecursos(models.Model):
     SELECT_CHOICE=(
         ('Oracion','Oracion'),
         ('Peticion','Peticion'),
@@ -19,66 +19,34 @@ class O_P(models.Model):
     description= models.CharField('Descripción de la Oración/Petición',max_length=255,null=False,blank=False)
     status = models.BooleanField('Estado Publicado/No_Publicado',default=False)
 
-# Creación tabla Categoria
-class Categoria(models.Model):
-    id = models.AutoField(primary_key=True)
-    name = models.CharField('Nombre de la categoria',max_length=100,null=False,blank=False)
-    create_date =  models.DateField('Fecha Creación',auto_now=False,auto_now_add=True)
-    status = models.BooleanField('Estado Activado/Desactivado',default=True)
 
-
-    class Meta:
-        verbose_name='Categoria'
-        verbose_name_plural ='Categorias'
-
-    def __str__(self):
-        return self.name
-
-#Creación tabla Autor
-#Hecho por: Jorge Hidalgo
-class Autor(models.Model):
-    id = models.AutoField(primary_key = True)
-    autName1 = models.CharField('Primer Nombre',max_length = 30, null = False, blank = False)
-    autName2 = models.CharField('Segundo Nombre',max_length = 30, null = True, blank = True)
-    autSurname1 = models.CharField('Primer Apellido',max_length = 30,null = False, blank = False)
-    autSurname2 = models.CharField('Segundo Apellido',max_length = 30,null = True, blank = True)
-    autMail = models.EmailField('Correo Electrónico',max_length = 30,unique = True,null = True, blank = True)
-    autStatus = models.BooleanField('Estado Activado/Desactivado',default = True)
-
-    class Meta:
-        verbose_name = 'Autor'
-        verbose_name_plural = 'Autores'
-
-    def __str__(self):
-        return "%s %s %s %s %s" % (self.autName1,self.autName2,self.autSurname1,self.autSurname2,self.autMail)        
+     
 
 #Creación tabla Miembro
-#Hecho por: Jorge Hidalgo
 class Miembro(models.Model):
     id = models.AutoField(primary_key = True)
-    miemName1 = models.CharField('Primer Nombre',max_length = 30,null = False,blank = False)
-    miemName2 = models.CharField('Segundo Nombre',max_length = 30,null = True,blank = True)
-    miemSurname1 = models.CharField('Primer Apellido',max_length = 30,null = False,blank = False)
-    miemSurname2 = models.CharField('Segundo Apellido',max_length = 30,null = True,blank = True)
-    miemOcu = models.CharField('Ocupación',max_length = 30,null = False, blank = False)
-    #miemIma = models.ImageField(upload_to = ) 
-    miemPho1 = models.CharField('Teléfono Convencional',max_length = 10,null = True, blank = True)
-    miemPho2 = models.CharField('Teléfono Celular',max_length = 10, null = True, blank = True)
-    miemCrea = models.DateField('Fecha de Creación',auto_now=False,auto_now_add=True)
-    miemDesc = models.CharField('Descripción',max_length = 200,null = True, blank = True)
+    name1 = models.CharField('Primer Nombre',max_length = 30,null = False,blank = False)
+    name2 = models.CharField('Segundo Nombre',max_length = 30,null = True,blank = True)
+    surname1 = models.CharField('Primer Apellido',max_length = 30,null = False,blank = False)
+    surname2 = models.CharField('Segundo Apellido',max_length = 30,null = True,blank = True)
+    ocupation = models.CharField('Ocupación',max_length = 30,null = False, blank = False)
+    member_image = models.ImageField('Imagen', upload_to='member_image',blank=True,null=False) 
+    phone1 = models.CharField('Teléfono Convencional',max_length = 10,null = True, blank = True)
+    phone2 = models.CharField('Teléfono Celular',max_length = 10, null = True, blank = True)
+    creation_date = models.DateField('Fecha de Creación',auto_now=False,auto_now_add=True)
+    description = models.CharField('Descripción',max_length = 200,null = True, blank = True)
+    status = models.BooleanField('Estado Publicado/No_Publicado',default=False)
 
     class Meta:
         verbose_name = 'Miembro'
         verbose_name_plural = 'Miembros'
     
     def __str__(self):
-        return "%s %s %s %s %s %s %s %s %s" % (self.miemName1,self.miemName2,self.miemSurname1,self.miemSurname2,self.miemOcu,self.miemPho1,self.miemPho2,self.miemCrea,self.miemDesc)
+        return "%s %s %s %s %s %s %s %s %s" % (self.name1,self.name2,self.surname1,self.surname2,self.ocupation,self.member_image,self.phone1,self.phone2,self.creation_date,self.description)
 
-
-#Creacion Tabla Eventos
-#Hecho por Andres Cevallos
 class Evento(models.Model):
     id = models.AutoField(primary_key = True)
+    name = models.CharField("Nombre", max_length=100,null=False,blank=False)
     event_date = models.DateField('Fecha del evento',auto_now=False,auto_now_add=False, null=False, blank=False)
     event_time = models.TimeField('Hora del Evento',auto_now=False, auto_now_add=False)
     primary_street = models.CharField('Calle principal',max_length=100,null=False, blank=False)
@@ -95,43 +63,26 @@ class Evento(models.Model):
         verbose_name_plural = 'Eventos'
     
     def __str__(self):
-        return "%s %s %s %s %s %s %s %s %s" % (self.event_date,self.event_time,self.primary_street,self.secondary_street,self.house_number,self.city,self.description,self.created_date, self.status)
+        return "%s %s %s %s %s %s %s %s %s %s %s" % (self.name,self.event_date,self.event_time,self.primary_street,self.secondary_street,self.house_number,self.city,self.description,self.image_ev,self.created_date, self.status)
 
 
-#Creacion tabla Grupos
+
 class CasaOracion(models.Model):
     id = models.AutoField("Id",primary_key=True)
-    place = models.CharField("Lugar de Reunion", max_length=100, null=True)
-    responsable = models.CharField("Responsable", max_length=100, null=True)
-    frecuency = models.CharField("Frecuencia", max_length=50)
-    day = models.CharField("Dia", max_length=50)
-    initial_time = models.TimeField("Hora inicio", auto_now=False, auto_now_add=False)
-    final_time = models.TimeField("Hora fin", auto_now=False, auto_now_add=False)
-    description = models.TextField("Descripcion", null=False, blank=True)
+    title = models.CharField("Titulo", max_length=100,null=False,blank=False)
+    author = models.CharField("Autor", max_length=100, null=False,blank=False)
+    prayer = models.TextField("Oracion", max_length=500,null=False, blank=False)
+    created_date = models.DateField('Fecha de Creación',auto_now=False,auto_now_add=True)
+    status = models.BooleanField('Estado Activado/Desactivado',default=True)
 
     class Meta:
         verbose_name = 'Casa Oracion'
         verbose_name_plural = 'Casa Oraciones'
 
     def __str__(self):
-        return "%s %s %s %s %s %s %s %s" % (self.id,self.place,self.responsable,self.frecuency,self.day,self.initial_time,self.final_time,self.description)
-    
-class Oracion(models.Model):
-    id = models.AutoField('Id',primary_key=True)
-    category = models.ForeignKey(Categoria, on_delete=models.CASCADE,null=False)
-    name = models.CharField("Nombre", max_length=100,null=True,blank=False)
-    surname = models.CharField("Apellido", max_length=100,null=False,blank=True)
-    prayer = RichTextField()
-    created= models.DateField("Fecha Creacion", auto_now=False, auto_now_add=True)
-    status = models.BooleanField('Estado Activado/Desactivado',default=True)
+        return "%s %s %s %s %s %s" % (self.id,self.title,self.author,self.prayer,self.created_date,self.status)
     
 
-    class Meta:
-        verbose_name = "Oracion"
-        verbose_name_plural = "Oraciones"
-
-    def __str__(self):
-        return self.name
 
 
 class Groups(models.Model):
@@ -168,51 +119,30 @@ class Ministry(models.Model):
         return "%s %s %s %s %s %s %s" % (self.minisName,self.minisDir,self.minisPers,self.minisFrec,self.minisCola,self.minisDesc,self.miniStatus)
 
 #Creacion tabla Actividades
-class Activities(models.Model):
+class Actividades(models.Model):
     id = models.AutoField(primary_key=True)
-    actName = models.CharField('Nombre Actividad',max_length=40,null=False,blank=False)
-    actPhoto = models.ImageField('Imagen Actividad',upload_to='activ_image',null=False,blank=False)
-    actDesc = models.CharField('Descripcion', max_length=200,null=True, blank=True)
-    actDate = models.DateField('Fecha Actividad',auto_now=False,auto_now_add=False, null=False, blank=False)
-    actTimei = models.TimeField('Hora Inicio',auto_now=False, auto_now_add=False)
-    actTimef = models.TimeField('Hora Fin',auto_now=False, auto_now_add=False)
-    actDir = models.CharField('Dirección',max_length=100,null=False,blank=False)
-    actPers = models.CharField('Encargado', max_length=60, null=False, blank=False)
-    actPhono = models.CharField('Teléfono Celular ',max_length = 10, null = True, blank = True)
-    actPhono2 = models.CharField('Teléfono Convencional ',max_length = 10, null = True, blank = True)
-    actMail = models.EmailField('Correo Electrónico ',max_length = 30,unique = True,null = True, blank = True)
-    actStatus = models.BooleanField('Estado Activado/Desactivado',default = True)
+    name = models.CharField('Nombre Actividad',max_length=40,null=False,blank=False)
+    activity_image = models.ImageField('Imagen Actividad',upload_to='activ_image',null=False,blank=True)
+    description = models.CharField('Descripcion', max_length=200,null=True, blank=True)
+    date = models.DateField('Fecha Actividad',auto_now=False,auto_now_add=False, null=False, blank=False)
+    initial_hour = models.TimeField('Hora Inicio',auto_now=False, auto_now_add=False)
+    finish_hour = models.TimeField('Hora Fin',auto_now=False, auto_now_add=False)
+    direction = models.CharField('Dirección',max_length=100,null=False,blank=False)
+    in_charge = models.CharField('Encargado', max_length=60, null=False, blank=False)
+    phone1 = models.CharField('Teléfono Celular ',max_length = 10, null = True, blank = True)
+    phone2 = models.CharField('Teléfono Convencional ',max_length = 10, null = True, blank = True)
+    mail = models.EmailField('Correo Electrónico ',max_length = 30,unique = True,null = True, blank = True)
+    status = models.BooleanField('Estado Activado/Desactivado',default = True)
 
     class Meta:
         verbose_name = 'Actividades'
         verbose_name_plural = 'Actividades'
         
     def __str__(self):
-        return "%s %s %s %s %s %s %s %s %s %s %s" % (self.actName,self.actDesc,self.actDate,self.actTimei,self.actTimef,self.actDir,self.actPers,self.actPhono, self.actPhono2, self.actMail, self.actStatus)
+        return "%s %s %s %s %s %s %s %s %s %s %s" % (self.name,self.activity_image,self.description,self.date,self.initial_hour,self.finish_hour,self.direction,self.in_charge,self.phone1, self.phone2, self.mail, self.status)
         
 
     
-
-#Cración modelo Post
-class Post(models.Model):
-    id = models.AutoField(primary_key= True)
-    title = models.CharField('Titulo',max_length=90,blank=False,null=False)
-    slug = models.CharField('Slug',max_length=100,blank=False,null=False)
-    description = models.CharField('Descripción',max_length=110,blank=False,null=False)
-    content = RichTextField()
-    image = models.ImageField(upload_to="image_post",null=False)
-    author = models.ForeignKey(Autor,on_delete=models.CASCADE)
-    category = models.ForeignKey(Categoria,on_delete=models.CASCADE)
-    status = models.BooleanField('Publicado/No publicado',default=True)
-    create_date = models.DateField('Fecha de Creación',auto_now=False,auto_now_add=True)
-
-
-    class Meta:
-        verbose_name = 'Post'
-        verbose_name_plural = 'Posts'
-
-    def __str__(self):
-        return self.title
 
 
 class Recurso(models.Model):

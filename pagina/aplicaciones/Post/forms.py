@@ -1,9 +1,9 @@
 from django import forms
-from .models import O_P
+from .models import FormularioRecursos
 
 class O_PForm(forms.ModelForm):
     class Meta:
-        model = O_P
+        model = FormularioRecursos
         fields = ['name_person','mail_persona','section_category','title','description']
 
 
