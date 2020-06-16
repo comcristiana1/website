@@ -23,15 +23,15 @@ class CasaOracionAdmin(admin.ModelAdmin):
 
 
 class GruposAdmin(admin.ModelAdmin):
-    search_fields = ['groupName']
+    search_fields = ['name']
 
-    list_display = ('id','groupName','groupDir')
+    list_display = ('id','name','group_image','direction','responsible_person','frequency','date','initial_hour','finish_hour','collaborators','status')
 
 
 class MinisterioAdmin(admin.ModelAdmin):
-    search_fields = ['minisName']
+    search_fields = ['name']
 
-    list_display = ('id','minisName','minisDir','minisPers','minisFrec','minisCola','minisPhoto','minisDesc','miniStatus')
+    list_display = ('id','name','direction','responsible_person','frequency','collaborators','ministry_image','description','status')
 
 
 class ActividadesAdmin(admin.ModelAdmin):
