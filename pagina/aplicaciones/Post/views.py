@@ -1,5 +1,5 @@
 from django.shortcuts import render,redirect
-from .models import Miembro,CasaOracion,Oracion,O_P,Activities,Ministry,Evento,Groups,Recurso
+from .models import Miembro,CasaOracion,Activities,Ministry,Evento,Groups,Recurso
 from .forms import O_PForm
 from django.core.mail import send_mail
 from django.conf import settings
@@ -16,9 +16,7 @@ def casa_oracion(request):
     oracion = CasaOracion.objects.all()
     return render(request,'casa_oracion.html',{'oracion':oracion})
 
-def oracion(request):
-    oracion = Oracion.objects.all()
-    return render(request,'oracion.html',{'oracion':oracion})
+
 
 
 

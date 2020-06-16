@@ -6,7 +6,7 @@ from ckeditor.fields import RichTextField
 
 #Tabla Form Oracion_Peticion
 
-class O_P(models.Model):
+class FormularioRecursos(models.Model):
     SELECT_CHOICE=(
         ('Oracion','Oracion'),
         ('Peticion','Peticion'),
@@ -19,38 +19,8 @@ class O_P(models.Model):
     description= models.CharField('Descripción de la Oración/Petición',max_length=255,null=False,blank=False)
     status = models.BooleanField('Estado Publicado/No_Publicado',default=False)
 
-# Creación tabla Categoria
-class Categoria(models.Model):
-    id = models.AutoField(primary_key=True)
-    name = models.CharField('Nombre de la categoria',max_length=100,null=False,blank=False)
-    create_date =  models.DateField('Fecha Creación',auto_now=False,auto_now_add=True)
-    status = models.BooleanField('Estado Activado/Desactivado',default=True)
 
-
-    class Meta:
-        verbose_name='Categoria'
-        verbose_name_plural ='Categorias'
-
-    def __str__(self):
-        return self.name
-
-#Creación tabla Autor
-#Hecho por: Jorge Hidalgo
-class Autor(models.Model):
-    id = models.AutoField(primary_key = True)
-    autName1 = models.CharField('Primer Nombre',max_length = 30, null = False, blank = False)
-    autName2 = models.CharField('Segundo Nombre',max_length = 30, null = True, blank = True)
-    autSurname1 = models.CharField('Primer Apellido',max_length = 30,null = False, blank = False)
-    autSurname2 = models.CharField('Segundo Apellido',max_length = 30,null = True, blank = True)
-    autMail = models.EmailField('Correo Electrónico',max_length = 30,unique = True,null = True, blank = True)
-    autStatus = models.BooleanField('Estado Activado/Desactivado',default = True)
-
-    class Meta:
-        verbose_name = 'Autor'
-        verbose_name_plural = 'Autores'
-
-    def __str__(self):
-        return "%s %s %s %s %s" % (self.autName1,self.autName2,self.autSurname1,self.autSurname2,self.autMail)        
+     
 
 #Creación tabla Miembro
 #Hecho por: Jorge Hidalgo
@@ -98,7 +68,7 @@ class Evento(models.Model):
         return "%s %s %s %s %s %s %s %s %s" % (self.event_date,self.event_time,self.primary_street,self.secondary_street,self.house_number,self.city,self.description,self.created_date, self.status)
 
 
-#Creacion tabla Grupos
+
 class CasaOracion(models.Model):
     id = models.AutoField("Id",primary_key=True)
     place = models.CharField("Lugar de Reunion", max_length=100, null=True)
@@ -116,22 +86,7 @@ class CasaOracion(models.Model):
     def __str__(self):
         return "%s %s %s %s %s %s %s %s" % (self.id,self.place,self.responsable,self.frecuency,self.day,self.initial_time,self.final_time,self.description)
     
-class Oracion(models.Model):
-    id = models.AutoField('Id',primary_key=True)
-    category = models.ForeignKey(Categoria, on_delete=models.CASCADE,null=False)
-    name = models.CharField("Nombre", max_length=100,null=True,blank=False)
-    surname = models.CharField("Apellido", max_length=100,null=False,blank=True)
-    prayer = RichTextField()
-    created= models.DateField("Fecha Creacion", auto_now=False, auto_now_add=True)
-    status = models.BooleanField('Estado Activado/Desactivado',default=True)
-    
 
-    class Meta:
-        verbose_name = "Oracion"
-        verbose_name_plural = "Oraciones"
-
-    def __str__(self):
-        return self.name
 
 
 class Groups(models.Model):
@@ -192,27 +147,6 @@ class Activities(models.Model):
         
 
     
-
-#Cración modelo Post
-class Post(models.Model):
-    id = models.AutoField(primary_key= True)
-    title = models.CharField('Titulo',max_length=90,blank=False,null=False)
-    slug = models.CharField('Slug',max_length=100,blank=False,null=False)
-    description = models.CharField('Descripción',max_length=110,blank=False,null=False)
-    content = RichTextField()
-    image = models.ImageField(upload_to="image_post",null=False)
-    author = models.ForeignKey(Autor,on_delete=models.CASCADE)
-    category = models.ForeignKey(Categoria,on_delete=models.CASCADE)
-    status = models.BooleanField('Publicado/No publicado',default=True)
-    create_date = models.DateField('Fecha de Creación',auto_now=False,auto_now_add=True)
-
-
-    class Meta:
-        verbose_name = 'Post'
-        verbose_name_plural = 'Posts'
-
-    def __str__(self):
-        return self.title
 
 
 class Recurso(models.Model):
