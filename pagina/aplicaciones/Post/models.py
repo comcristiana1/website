@@ -23,26 +23,26 @@ class FormularioRecursos(models.Model):
      
 
 #Creación tabla Miembro
-#Hecho por: Jorge Hidalgo
 class Miembro(models.Model):
     id = models.AutoField(primary_key = True)
-    miemName1 = models.CharField('Primer Nombre',max_length = 30,null = False,blank = False)
-    miemName2 = models.CharField('Segundo Nombre',max_length = 30,null = True,blank = True)
-    miemSurname1 = models.CharField('Primer Apellido',max_length = 30,null = False,blank = False)
-    miemSurname2 = models.CharField('Segundo Apellido',max_length = 30,null = True,blank = True)
-    miemOcu = models.CharField('Ocupación',max_length = 30,null = False, blank = False)
-    #miemIma = models.ImageField(upload_to = ) 
-    miemPho1 = models.CharField('Teléfono Convencional',max_length = 10,null = True, blank = True)
-    miemPho2 = models.CharField('Teléfono Celular',max_length = 10, null = True, blank = True)
-    miemCrea = models.DateField('Fecha de Creación',auto_now=False,auto_now_add=True)
-    miemDesc = models.CharField('Descripción',max_length = 200,null = True, blank = True)
+    name1 = models.CharField('Primer Nombre',max_length = 30,null = False,blank = False)
+    name2 = models.CharField('Segundo Nombre',max_length = 30,null = True,blank = True)
+    surname1 = models.CharField('Primer Apellido',max_length = 30,null = False,blank = False)
+    surname2 = models.CharField('Segundo Apellido',max_length = 30,null = True,blank = True)
+    ocupation = models.CharField('Ocupación',max_length = 30,null = False, blank = False)
+    member_image = models.ImageField('Imagen', upload_to='member_image',blank=True,null=False) 
+    phone1 = models.CharField('Teléfono Convencional',max_length = 10,null = True, blank = True)
+    phone2 = models.CharField('Teléfono Celular',max_length = 10, null = True, blank = True)
+    creation_date = models.DateField('Fecha de Creación',auto_now=False,auto_now_add=True)
+    description = models.CharField('Descripción',max_length = 200,null = True, blank = True)
+    status = models.BooleanField('Estado Publicado/No_Publicado',default=False)
 
     class Meta:
         verbose_name = 'Miembro'
         verbose_name_plural = 'Miembros'
     
     def __str__(self):
-        return "%s %s %s %s %s %s %s %s %s" % (self.miemName1,self.miemName2,self.miemSurname1,self.miemSurname2,self.miemOcu,self.miemPho1,self.miemPho2,self.miemCrea,self.miemDesc)
+        return "%s %s %s %s %s %s %s %s %s" % (self.name1,self.name2,self.surname1,self.surname2,self.ocupation,self.member_image,self.phone1,self.phone2,self.creation_date,self.description)
 
 
 #Creacion Tabla Eventos
@@ -123,27 +123,27 @@ class Ministry(models.Model):
         return "%s %s %s %s %s %s %s" % (self.minisName,self.minisDir,self.minisPers,self.minisFrec,self.minisCola,self.minisDesc,self.miniStatus)
 
 #Creacion tabla Actividades
-class Activities(models.Model):
+class Actividades(models.Model):
     id = models.AutoField(primary_key=True)
-    actName = models.CharField('Nombre Actividad',max_length=40,null=False,blank=False)
-    actPhoto = models.ImageField('Imagen Actividad',upload_to='activ_image',null=False,blank=False)
-    actDesc = models.CharField('Descripcion', max_length=200,null=True, blank=True)
-    actDate = models.DateField('Fecha Actividad',auto_now=False,auto_now_add=False, null=False, blank=False)
-    actTimei = models.TimeField('Hora Inicio',auto_now=False, auto_now_add=False)
-    actTimef = models.TimeField('Hora Fin',auto_now=False, auto_now_add=False)
-    actDir = models.CharField('Dirección',max_length=100,null=False,blank=False)
-    actPers = models.CharField('Encargado', max_length=60, null=False, blank=False)
-    actPhono = models.CharField('Teléfono Celular ',max_length = 10, null = True, blank = True)
-    actPhono2 = models.CharField('Teléfono Convencional ',max_length = 10, null = True, blank = True)
-    actMail = models.EmailField('Correo Electrónico ',max_length = 30,unique = True,null = True, blank = True)
-    actStatus = models.BooleanField('Estado Activado/Desactivado',default = True)
+    name = models.CharField('Nombre Actividad',max_length=40,null=False,blank=False)
+    activity_image = models.ImageField('Imagen Actividad',upload_to='activ_image',null=False,blank=True)
+    description = models.CharField('Descripcion', max_length=200,null=True, blank=True)
+    date = models.DateField('Fecha Actividad',auto_now=False,auto_now_add=False, null=False, blank=False)
+    initial_hour = models.TimeField('Hora Inicio',auto_now=False, auto_now_add=False)
+    finish_hour = models.TimeField('Hora Fin',auto_now=False, auto_now_add=False)
+    direction = models.CharField('Dirección',max_length=100,null=False,blank=False)
+    in_charge = models.CharField('Encargado', max_length=60, null=False, blank=False)
+    phone1 = models.CharField('Teléfono Celular ',max_length = 10, null = True, blank = True)
+    phone2 = models.CharField('Teléfono Convencional ',max_length = 10, null = True, blank = True)
+    mail = models.EmailField('Correo Electrónico ',max_length = 30,unique = True,null = True, blank = True)
+    status = models.BooleanField('Estado Activado/Desactivado',default = True)
 
     class Meta:
         verbose_name = 'Actividades'
         verbose_name_plural = 'Actividades'
         
     def __str__(self):
-        return "%s %s %s %s %s %s %s %s %s %s %s" % (self.actName,self.actDesc,self.actDate,self.actTimei,self.actTimef,self.actDir,self.actPers,self.actPhono, self.actPhono2, self.actMail, self.actStatus)
+        return "%s %s %s %s %s %s %s %s %s %s %s" % (self.name,self.activity_image,self.description,self.date,self.initial_hour,self.finish_hour,self.direction,self.in_charge,self.phone1, self.phone2, self.mail, self.status)
         
 
     

@@ -1,6 +1,7 @@
 from django.contrib import admin
-from .models import Miembro,Evento,Groups,Ministry,Activities,CasaOracion,FormularioRecursos,Recurso
-
+from .models import Evento,Groups,Ministry,CasaOracion,FormularioRecursos,Recurso
+from .models import Actividades
+from .models import Miembro
 
 # Register your models here.
 
@@ -11,9 +12,9 @@ from .models import Miembro,Evento,Groups,Ministry,Activities,CasaOracion,Formul
 
 
 class MiembroAdmin(admin.ModelAdmin):
-    search_fields = ['miemName1']
+    search_fields = ['name1']
 
-    list_display = ('id', 'miemName1', 'miemName2', 'miemSurname1', 'miemSurname2', 'miemOcu', 'miemPho1', 'miemPho2', 'miemCrea', 'miemDesc')
+    list_display = ('id', 'name1', 'name2', 'surname1', 'surname2', 'ocupation', 'member_image','phone1','phone2', 'creation_date', 'description','status')
 
 
 class EventoAdmin(admin.ModelAdmin):
@@ -40,9 +41,9 @@ class MinisterioAdmin(admin.ModelAdmin):
 
 
 class ActividadesAdmin(admin.ModelAdmin):
-    search_fields = ['actName']
+    search_fields = ['name']
 
-    list_display = ('id', 'actName', 'actPhoto', 'actDesc', 'actDate', 'actTimei', 'actTimef', 'actDir', 'actPers', 'actPhono', 'actPhono2', 'actMail', 'actStatus')
+    list_display = ('id', 'name', 'activity_image', 'description', 'date', 'initial_hour', 'finish_hour', 'direction', 'in_charge', 'phone1', 'phone2', 'mail', 'status')
 
 
 class FormularioRecursosAdmin(admin.ModelAdmin):
@@ -64,6 +65,6 @@ admin.site.register(Miembro,MiembroAdmin)
 admin.site.register(Evento,EventoAdmin)
 admin.site.register(Groups,GruposAdmin)
 admin.site.register(Ministry,MinisterioAdmin)
-admin.site.register(Activities,ActividadesAdmin)
+admin.site.register(Actividades,ActividadesAdmin)
 admin.site.register(FormularioRecursos,FormularioRecursosAdmin)
 admin.site.register(Recurso,RecursoAdmin)
