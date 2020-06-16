@@ -44,11 +44,9 @@ class Miembro(models.Model):
     def __str__(self):
         return "%s %s %s %s %s %s %s %s %s" % (self.name1,self.name2,self.surname1,self.surname2,self.ocupation,self.member_image,self.phone1,self.phone2,self.creation_date,self.description)
 
-
-#Creacion Tabla Eventos
-#Hecho por Andres Cevallos
 class Evento(models.Model):
     id = models.AutoField(primary_key = True)
+    name = models.CharField("Nombre", max_length=100,null=False,blank=False)
     event_date = models.DateField('Fecha del evento',auto_now=False,auto_now_add=False, null=False, blank=False)
     event_time = models.TimeField('Hora del Evento',auto_now=False, auto_now_add=False)
     primary_street = models.CharField('Calle principal',max_length=100,null=False, blank=False)
@@ -65,26 +63,24 @@ class Evento(models.Model):
         verbose_name_plural = 'Eventos'
     
     def __str__(self):
-        return "%s %s %s %s %s %s %s %s %s" % (self.event_date,self.event_time,self.primary_street,self.secondary_street,self.house_number,self.city,self.description,self.created_date, self.status)
+        return "%s %s %s %s %s %s %s %s %s %s %s" % (self.name,self.event_date,self.event_time,self.primary_street,self.secondary_street,self.house_number,self.city,self.description,self.image_ev,self.created_date, self.status)
 
 
 
 class CasaOracion(models.Model):
     id = models.AutoField("Id",primary_key=True)
-    place = models.CharField("Lugar de Reunion", max_length=100, null=True)
-    responsable = models.CharField("Responsable", max_length=100, null=True)
-    frecuency = models.CharField("Frecuencia", max_length=50)
-    day = models.CharField("Dia", max_length=50)
-    initial_time = models.TimeField("Hora inicio", auto_now=False, auto_now_add=False)
-    final_time = models.TimeField("Hora fin", auto_now=False, auto_now_add=False)
-    description = models.TextField("Descripcion", null=False, blank=True)
+    title = models.CharField("Titulo", max_length=100,null=False,blank=False)
+    author = models.CharField("Autor", max_length=100, null=False,blank=False)
+    prayer = models.TextField("Oracion", max_length=500,null=False, blank=False)
+    created_date = models.DateField('Fecha de Creación',auto_now=False,auto_now_add=True)
+    status = models.BooleanField('Estado Activado/Desactivado',default=True)
 
     class Meta:
         verbose_name = 'Casa Oracion'
         verbose_name_plural = 'Casa Oraciones'
 
     def __str__(self):
-        return "%s %s %s %s %s %s %s %s" % (self.id,self.place,self.responsable,self.frecuency,self.day,self.initial_time,self.final_time,self.description)
+        return "%s %s %s %s %s %s" % (self.id,self.title,self.author,self.prayer,self.created_date,self.status)
     
 
 
