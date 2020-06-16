@@ -238,7 +238,6 @@ img.recurso {
     position: relative;
 }
 
-
 /*-------------------------------CSS GALERIA */
 
 #galeria {
@@ -396,8 +395,16 @@ img.recurso {
     opacity: 0.8;
     filter: alpha(opacity=60);
     /* IE < 9.0 */
+}
 
-
+.fondo1 {
+    background-size: 100% 100%;
+}
+.opacity1 {
+    opacity: 0.75;
+    filter: alpha(opacity=60);
+    /* IE < 9.0 */
+    width: 30%;
 }
 /*-------------------------------CSS ACTIVIDADES Y EVENTOS */
 
