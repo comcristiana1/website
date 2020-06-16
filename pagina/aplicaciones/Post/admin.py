@@ -1,26 +1,20 @@
 from django.contrib import admin
-from .models import Categoria,Autor,Miembro,Evento,Groups,Ministry,Activities,Post,CasaOracion,Oracion,O_P,Recurso
-
+from .models import Evento,Groups,Ministry,CasaOracion,FormularioRecursos,Recurso
+from .models import Actividades
+from .models import Miembro
 
 # Register your models here.
 
 
-class CategoriaAdmin(admin.ModelAdmin):
-    search_fields = ['name']
-
-    list_display = ('id', 'name', 'status', 'create_date')
 
 
-class AutorAdmin(admin.ModelAdmin):
-    search_fields = ['autName1']
 
-    list_display = ('id', 'autName1', 'autName2', 'autSurname1', 'autSurname2', 'autMail', 'autStatus')
 
 
 class MiembroAdmin(admin.ModelAdmin):
-    search_fields = ['miemName1']
+    search_fields = ['name1']
 
-    list_display = ('id', 'miemName1', 'miemName2', 'miemSurname1', 'miemSurname2', 'miemOcu', 'miemPho1', 'miemPho2', 'miemCrea', 'miemDesc')
+    list_display = ('id', 'name1', 'name2', 'surname1', 'surname2', 'ocupation', 'member_image','phone1','phone2', 'creation_date', 'description','status')
 
 
 class EventoAdmin(admin.ModelAdmin):
@@ -32,11 +26,7 @@ class EventoAdmin(admin.ModelAdmin):
 class CasaOracionAdmin(admin.ModelAdmin):
     list_display= ('id','place','responsable','frecuency','day','initial_time','final_time','description')
 
-@admin.register(Oracion)
-class OracionAdmin(admin.ModelAdmin):
-    search_fields= ['name','surname']
 
-    list_display=('id','name','surname','created')
 
 class GruposAdmin(admin.ModelAdmin):
     search_fields = ['groupName']
@@ -51,12 +41,12 @@ class MinisterioAdmin(admin.ModelAdmin):
 
 
 class ActividadesAdmin(admin.ModelAdmin):
-    search_fields = ['actName']
+    search_fields = ['name']
 
-    list_display = ('id', 'actName', 'actPhoto', 'actDesc', 'actDate', 'actTimei', 'actTimef', 'actDir', 'actPers', 'actPhono', 'actPhono2', 'actMail', 'actStatus')
+    list_display = ('id', 'name', 'activity_image', 'description', 'date', 'initial_hour', 'finish_hour', 'direction', 'in_charge', 'phone1', 'phone2', 'mail', 'status')
 
 
-class O_PAdmin(admin.ModelAdmin):
+class FormularioRecursosAdmin(admin.ModelAdmin):
     search_fields = ['section_category','title']
     list_display = ('title','name_person','section_category','mail_persona','description','status')
 
@@ -71,13 +61,10 @@ class RecursoAdmin(admin.ModelAdmin):
 
 
 
-admin.site.register(Categoria,CategoriaAdmin)
-admin.site.register(Autor,AutorAdmin)
 admin.site.register(Miembro,MiembroAdmin)
 admin.site.register(Evento,EventoAdmin)
 admin.site.register(Groups,GruposAdmin)
 admin.site.register(Ministry,MinisterioAdmin)
-admin.site.register(Activities,ActividadesAdmin)
-admin.site.register(Post)
-admin.site.register(O_P,O_PAdmin)
+admin.site.register(Actividades,ActividadesAdmin)
+admin.site.register(FormularioRecursos,FormularioRecursosAdmin)
 admin.site.register(Recurso,RecursoAdmin)

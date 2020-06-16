@@ -1,0 +1,6 @@
+
+pagina/aplicaciones/__pycache__/
+
+pagina/aplicaciones/Post/__pycache__/
+
+pagina/aplicaciones/Post/migrations/__pycache__/

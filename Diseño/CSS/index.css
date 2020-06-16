@@ -10,6 +10,13 @@
     --h3: white;
     --LETRA: 'Source Sans Pro', sans-serif;
     --SECTION1: linear-gradient(to bottom, #262626, #030202);
+
+}
+
+*{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 12;
+
 }
 
 body {
@@ -373,7 +380,25 @@ img.recurso {
     line-height: 25px;
 }
 
+/* ----------------------------------CSS EDIFICADORES */
 
+.edsec1{
+  background-image: url("../images/muro.jpg");
+  background-position: center;
+  background-attachment:fixed;
+  background-repeat: no-repeat;
+  background-size: 100%;
+
+}
+
+
+.edsec1 .card {
+    opacity: 0.8;
+    filter: alpha(opacity=60);
+    /* IE < 9.0 */
+
+
+}
 /*-------------------------------CSS ACTIVIDADES Y EVENTOS */
 
 btnt btn-withe {}
@@ -585,8 +610,8 @@ div#tramo1 {
 
 #footer {
     /*background: linear-gradient(90deg, #1c3643, #273b47 25%, #1e5372);*/
-    background: linear-gradient(to bottom, #262626, #030202); 
-    /*background: linear-gradient(to bottom, #7e562c, 25%, #1a1108);*/
+    /* background: linear-gradient(to bottom, #262626, #030202);  */
+    background: linear-gradient(to bottom, #7e562c, 25%, #1a1108);
 }
 
 #footer div {
@@ -888,7 +913,7 @@ li {
     background: #000;
 }
 
-.card:hover {
+.grupos .card:hover {
     background: #F1BE38;
 }
 
@@ -957,6 +982,7 @@ p {
 #CasaBlog {
     background: url("../images/Casa_oracion4.jpg");
     border-top: 2px solid white;
+	border-bottom: 2px solid white;
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
