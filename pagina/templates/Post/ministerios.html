@@ -1,0 +1,123 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block titulo %}
+        <title>Ministerios</title>
+{% endblock titulo %}
+{% block carousel %}
+<main id="main">
+        <div id="carousel" class="carousel slide carousel-fade" data-ride="carousel" data-pause="false">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src= {% static 'images/carruselministterios1.jpg' %} class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src={% static 'images/carruselministterios2.jpg' %} class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src={% static 'images/carruselministterios3.jpg' %} class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src={% static 'images/cruz.jpeg' %} class="d-block w-100" alt="...">
+                </div>
+                <div class="overlay">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col text-center">
+                                <h1>Ministerios</h1>
+                                <p class="d-none d-md-block">Pequeña frase referente. Pequeña frase referente. Pequeña frase referente.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+{% endblock carousel %}
+{% block publicidad %}
+
+{% endblock publicidad %}
+{% block container %}
+<div class="ministries-area">
+
+<section class="section pt-md-5 pb-md-5 element-animate fadeInUp element-animated">
+  <div class="container">
+	    <div class="container h-100">
+        <div class="row justify-content-center h-100">
+			
+            <div class="col-sm-8 align-self-center text-center">
+                <div class="cardm shadow">
+                    <div class="card-bodym">           
+                      <h1 class="m-5 pt-2">MINISTERIOS</h1>
+						<p class="m-5 pb-4">Descripción de ministerios. Descripción de ministerios. Descripción de ministerios. Descripción de ministerios. Descripción de ministerios. Descripción de ministerios. Descripción de ministerios. Descripción de ministerios. Descripción de ministerios. Descripción de ministerios. Descripción de ministerios. Descripción de ministerios. Descripción de ministerios. 
+						</p>
+                    </div>
+                </div>
+        	</div>
+			</div>
+    </div>    
+
+  </div>
+
+</section>
+
+
+
+	
+	
+	
+    <section class="section-padding-100-0 pt-5 pb-5">
+        <div class="container">
+
+            <div class="row">
+
+                <!-- AREA 1  -->
+				
+				<div class="col-12 col-md-6 pb-3">
+					<div class="opacitym"> 
+                    <div class="single-ministry mb-100" align="center">
+                        <img src={% static 'images/ministerios.jpg' %} class="img-fluid" alt="Responsive image" >
+                        <div class="ministry-content col-xl-12">
+                            <h1>Ministerio de Niños</h1>
+							<h6></br>Lugar de Reunión:</h6>
+                            <span>Local Reuniones</span>
+							<h6>Responsable:</h6>
+                            <span>Fernando Manzano Sonia palacios</span>
+							<h6>Frecuencia:</h6>
+                            <span>Semanal</span>
+							<h6>Colaboradores:</h6>
+                            <span>8 Maestros</span>
+							
+                            <p align="justify">Pequeña explicación de lo que se realiza. Pequeña explicación de lo que se realiza. Pequeña explicación de lo que se realiza. Pequeña explicación de lo que se realiza. Pequeña explicación de lo que se realiza. Pequeña explicación de lo que se realiza. </p>
+							
+                        </div>
+                    </div>
+                </div>
+				</div>
+               <!-- AREA 2 -->
+				
+                <div class="col-12 col-md-6">
+					<div class="opacitym">
+                    <div class="single-ministry mb-100" align="center">
+                        <img src={% static 'images/ministerios.jpg' %} class="img-fluid" alt="Responsive image">
+                        <div class="ministry-content col-xl-12">
+                            <h1>Ministerio de Ujieres</h1>
+							<h6></br>Lugar de Reunión:</h6>
+                            <span>Local Reuniones</span>
+							<h6>Responsable:</h6>
+                            <span>Cecilia Pazmiño</span>
+							<h6>Frecuencia:</h6>
+                            <span>Semanal</span>
+							<h6>Colaboradores:</h6>
+                            <span>10 Obreros</span>
+							
+                            <p align="justify">Pequeña explicación de lo que se realiza. Pequeña explicación de lo que se realiza. Pequeña explicación de lo que se realiza. Pequeña explicación de lo que se realiza. Pequeña explicación de lo que se realiza. Pequeña explicación de lo que se realiza. </p>
+							
+                        </div>
+                    </div>
+                </div>
+				</div>
+
+            </div>
+        </div>
+    </section>
+{% endblock container %}

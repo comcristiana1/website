@@ -32,7 +32,7 @@ def mostrar_actividades(request):
 
 def mostrar_ministerio(request):
     ministerio = Ministry.objects.all()
-    return render(request,'ministerios.html',{'ministerio':ministerio})    
+    return render(request,'POST/ministerios.html',{'ministerio':ministerio})    
 
 
 def oracion_peticion(request):
@@ -62,4 +62,4 @@ def mostrar_eventos(request):
 
 def mostrar_grupos(request):
     grupos = Groups.objects.all()
-    return render(request,'grupos.html',{'grupos':grupos})
+    return render(request,'POST/grupos.html',{'grupos':grupos})
