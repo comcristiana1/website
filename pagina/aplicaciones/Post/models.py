@@ -87,36 +87,42 @@ class CasaOracion(models.Model):
 
 class Groups(models.Model):
     id = models.AutoField(primary_key=True)
-    groupName = models.CharField('Nombre Grupo',max_length = 30,null = False,blank = False)
-    grouPhoto = models.ImageField('Imagen Grupo',upload_to='group_image',null=False,blank=False)
-    groupDir = models.CharField('Direccion',max_length=100,null=False,blank=False)
-    groupStatus = models.BooleanField('Estado Activado/Desactivado',default = True)
+    name = models.CharField('Nombre Grupo',max_length = 30,null = False,blank = False)
+    group_image = models.ImageField('Imagen Grupo',upload_to='group_image',null=False,blank=False)
+    direction = models.CharField('Direccion',max_length=100,null=False,blank=False)
+    responsible_person = models.CharField('Responsable',max_length=80,null=False,blank=False)
+    frequency = models.CharField('Frecuencia',max_length=20,null=False,blank=False)
+    date = models.DateField('Fecha',auto_now=False,auto_now_add=False, null=False, blank=False)
+    initial_hour = models.TimeField('Hora Inicio',auto_now=False, auto_now_add=False)
+    finish_hour = models.TimeField('Hora Fin',auto_now=False, auto_now_add=False)
+    collaborators = models.CharField('Colaboradores',max_length=20,null=False,blank=False)
+    status = models.BooleanField('Estado Activado/Desactivado',default = True)
 
     class Meta:
         verbose_name = 'Grupo'
         verbose_name_plural = 'Grupos'
 
     def __str__(self):
-        return "%s %s" % (self.groupName,self.groupDir)
+        return "%s %s %s %s %s %s %s %s %s %s" % (self.name,self.group_image,self.direction,self.responsible_person,self.frequency,self.date,self.initial_hour,self.finish_hour,self.collaborators,self.status)
 
 #Creacion tabla Ministerios
 class Ministry(models.Model):
     id = models.AutoField(primary_key=True)
-    minisName = models.CharField('Nombre Ministerio',max_length=40,null=False,blank=False)
-    minisDir = models.CharField('Lugar de Reunión',max_length=100,null=False,blank=False)
-    minisPers = models.CharField('Responsable',max_length=80,null=False,blank=False)
-    minisFrec = models.CharField('Frecuencia',max_length=20,null=False,blank=False)
-    minisCola = models.CharField('Colaboradores',max_length=20,null=False,blank=False)
-    minisPhoto = models.ImageField('Imagen Ministerio',upload_to='minis_image',null=False,blank=False)
-    minisDesc = models.CharField('Descripción',max_length = 200,null = False, blank = True)
-    miniStatus = models.BooleanField('Estado Activado/Desactivado',default = True)
+    name = models.CharField('Nombre Ministerio',max_length=40,null=False,blank=False)
+    direction = models.CharField('Lugar de Reunión',max_length=100,null=False,blank=False)
+    responsible_person = models.CharField('Responsable',max_length=80,null=False,blank=False)
+    frequency = models.CharField('Frecuencia',max_length=20,null=False,blank=False)
+    collaborators = models.CharField('Colaboradores',max_length=20,null=False,blank=False)
+    ministry_image = models.ImageField('Imagen Ministerio',upload_to='minis_image',null=False,blank=False)
+    description = models.CharField('Descripción',max_length = 200,null = False, blank = True)
+    status = models.BooleanField('Estado Activado/Desactivado',default = True)
 
     class Meta:
         verbose_name = 'Ministerios'
         verbose_name_plural = 'Ministerios'
 
     def __str__(self):
-        return "%s %s %s %s %s %s %s" % (self.minisName,self.minisDir,self.minisPers,self.minisFrec,self.minisCola,self.minisDesc,self.miniStatus)
+        return "%s %s %s %s %s %s %s %s" % (self.name,self.direction,self.responsible_person,self.frequency,self.collaborators,self.ministry_image,self.description,self.status)
 
 #Creacion tabla Actividades
 class Actividades(models.Model):
