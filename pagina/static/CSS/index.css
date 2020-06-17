@@ -1,0 +1,997 @@
+/*VARIABLES*/
+
+:root {
+    --NAVBAR: transparent;
+    --SECTION2: #262626;
+    --BUTTOM: #FFC107;
+    --COLOR_LETRA: #F4F4F4;
+    --COLOR_LETRA2: #FFC107;
+    --FOOTER: #262626;
+    --h3: white;
+    --LETRA: 'Source Sans Pro', sans-serif;
+    --SECTION1: linear-gradient(to bottom, #262626, #030202);
+
+}
+
+*{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 12;
+
+}
+
+body {
+    font-family: VAR(--LETRA);
+}
+
+
+/*-------------------------CSS NAVBAR*/
+
+.navbar {
+    background: transparent;
+    min-height: 6px;
+}
+
+.navbar-brand {
+    color: white;
+}
+
+.navbar-brand:hover {
+    color: white;
+}
+
+.nav-link {
+    color: white;
+}
+
+.nav-link:hover {
+    color: white;
+}
+
+ion-icon {
+    color: white;
+}
+
+.c_color {
+    transition: all 1s ease;
+    background: linear-gradient(to bottom, #262626, #030202);
+}
+
+
+/*-------------------------CSS PUBLICACIONES*/
+
+#publicaciones {
+    background-color: var(--SECTION2);
+    color: VAR(--COLOR_LETRA);
+}
+
+#publicaciones h2 {
+    color: white;
+}
+
+#publicaciones p {
+    color: white;
+}
+
+.esp {
+    padding: 5% 0% 10%;
+}
+
+.row {
+    margin-right: 0%;
+}
+
+.col-md-1 {
+    background-size: 100% 100%;
+    margin-right: 10%;
+}
+
+img.mediana {
+    height: 100%;
+    width: 100%;
+    border-radius: 3%;
+}
+
+img.zoom:hover {
+    -webkit-transform: scale(1.3);
+    transform: scale(0.9);
+    overflow: hidden;
+}
+
+img.mediana {
+    height: 80%;
+    width: 100%;
+    border-radius: 3%;
+}
+
+.letra {
+    color: VAR(--COLOR_LETRA2);
+    font-family: VAR(--LETRA);
+}
+
+
+/*-------------------CSS QUIENES SOMOS */
+
+.imgqs:hover,
+.imgqs:focus {
+    box-shadow: 0 5px 10px #FFC107;
+}
+
+.secc1 {
+    /* background-color: #262626; */
+    /* background: linear-gradient(to right, #262626,#223940); */
+    /*background: linear-gradient(to bottom,50% #262626,#153038);*/
+    /* background: linear-gradient(to bottom, #262626 45%,#0f2127,#254e5a); */
+    background: linear-gradient(to bottom, #1a1108, 55%, #7e562c);
+}
+
+.secc1 p {
+    color: white;
+}
+
+.secc2 .card-deck {
+    opacity: 0.8;
+    filter: alpha(opacity=60);
+    /* IE < 9.0 */
+}
+
+.secc2 {
+    background-image: url("../images/ale.jpg");
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.secc1 h1 {
+    color: white;
+}
+
+.secc2 h1 {
+    color: white;
+}
+
+.secc1 h2 {
+    color: #f6c941;
+}
+
+.secc2 h2 {
+    color: white;
+}
+
+
+/*-------------------------------CSS RECURSOS - PDF */
+
+.sec1rec {
+    border-top: 2px solid white;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.card-body {
+    width: 100%;
+}
+
+.card-body p {
+    color: white;
+}
+
+.btn-yellow1 {
+    background-color: var(--BUTTOM);
+    float: right;
+}
+.stroke {
+text-shadow: -2px -2px 1px #000, 2px 2px 1px #000, -2px 2px 1px #000, 2px -2px 1px #000;
+}
+
+/*-------------------------------CSS RECURSOS - FORMULARIO */
+
+.tit h2 {
+    text-align: center;
+    color: white;
+}
+
+.form-group {
+    background-color: #000;
+    height: 0%;
+    padding: 10% 10% 10% 10%;
+    width: 140%;
+    color: #FFF;
+}
+
+img.recurso {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    margin: 8% auto;
+    display: block;
+}
+
+.fondo {
+    background-size: 100% 100%;
+    filter: grayscale(50%);
+}
+
+.card-img {
+    background-size: 100% 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.f {
+    padding: 4% 0% 0% 0%;
+    margin-left: 30%;
+    margin-right: auto;
+    margin-bottom: 0%;
+}
+
+.opacity {
+    opacity: 0.85;
+    filter: alpha(opacity=60);
+    /* IE < 9.0 */
+    width: 30%;
+}
+
+.esp1 {
+    padding: 6%;
+    position: relative;
+}
+
+/*-------------------------------CSS GALERIA */
+
+#galeria {
+    background-image: url("../images/backgaleria.jpg");
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.btn-yellow:hover {
+    background-color: var(--BUTTOM);
+}
+
+.galery-brand {
+    color: white;
+}
+
+.btnt {
+    color: white;
+    background-color: black;
+    -webkit-box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 1);
+    box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 1);
+    border-radius: 20px 20px 20px 20px;
+    -moz-border-radius: 20px 20px 20px 20px;
+    -webkit-border-radius: 20px 20px 20px 20px;
+    border: 3px none #000000;
+}
+
+.t-g h1 {
+    color: white;
+    align-content: center;
+}
+
+.col-md img {
+    -webkit-box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 1);
+    box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 1);
+}
+
+.col-md-4 img {
+    -webkit-box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 1);
+    box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 1);
+}
+
+
+/**/
+
+.galeria {
+    width: 90%;
+    margin: auto;
+    list-style: none;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.galeria li {
+    margin: 2px;
+}
+
+.galeria img {
+    width: 165px;
+    height: 120px;
+    -webkit-box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 1);
+    box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 1);
+}
+
+
+/*Estilos del modal*/
+
+.modal {
+    display: none;
+}
+
+.modal:target {
+    display: block;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.8);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.modal h3 {
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+    margin: 15px 0;
+}
+
+.imagen {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagen a {
+    color: #fff;
+    font-size: 40px;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.imagen a:nth-child(2) {
+    margin: 0;
+    height: 100%;
+    flex-shrink: 2;
+}
+
+.imagen img {
+    width: 500px;
+    height: 100%;
+    max-width: 100%;
+    border: 3px solid white;
+    box-sizing: border-box;
+}
+
+.cerrar {
+    display: block;
+    background: #FFC107;
+    width: 35px;
+    height: 35px;
+    margin: 15px auto;
+    text-align: center;
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+    padding: 5px;
+    border-radius: 50%;
+    line-height: 25px;
+}
+
+/* ----------------------------------CSS EDIFICADORES */
+
+.edsec1{
+  background-image: url("../images/muro.jpg");
+  background-position: center;
+  background-attachment:fixed;
+  background-repeat: no-repeat;
+  background-size: 100%;
+
+}
+
+
+.edsec1 .card {
+    opacity: 0.8;
+    filter: alpha(opacity=60);
+    /* IE < 9.0 */
+}
+
+.fondo1 {
+    background-size: 100% 100%;
+}
+.opacity1 {
+    opacity: 0.75;
+    filter: alpha(opacity=60);
+    /* IE < 9.0 */
+    width: 30%;
+}
+/*-------------------------------CSS ACTIVIDADES Y EVENTOS */
+
+btnt btn-withe {}
+
+.btne {
+    color: #000;
+    background-color: white;
+    -webkit-box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 1);
+    box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 1);
+    border-radius: 20px 20px 20px 20px;
+    -moz-border-radius: 20px 20px 20px 20px;
+    -webkit-border-radius: 20px 20px 20px 20px;
+    border: 3px none #000000;
+}
+
+.contenedor {
+    margin: auto;
+    padding: var(--margenes) 0;
+    width: 90%;
+    max-width: 1000px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.botones-work {
+    overflow: hidden;
+}
+
+.botones-work li {
+    display: inline-block;
+    text-align: center;
+    margin-left: var(--espacios);
+    margin-bottom: var(--espacios-contenido);
+    padding: 6px 12px;
+    border: 2px solid var(--color1);
+    list-style: none;
+    color: var(--color1);
+}
+
+.botones-work li:hover {
+    background: var(--color1);
+    color: white;
+    cursor: pointer;
+}
+
+.botones-work .active {
+    background: var(--color1);
+    color: white;
+}
+
+.galeria-work {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.galeria-work .cont-work {
+    width: 31%;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
+    height: 300px;
+    overflow: hidden;
+    margin-bottom: var(--espacios-contenido);
+}
+
+.img-work {
+    height: 90%;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.5);
+}
+
+.img-work>img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.hover-galeria {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    transform: scale(0);
+    background: rgba(0, 0, 0, 0.507);
+    transition: transform .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.img-work:hover .hover-galeria {
+    transform: scale(1);
+}
+
+.img-work:hover .textos-work {
+    transform: scale(0);
+}
+
+
+/*.textos-work{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: transform .5s;
+    background: rgba(0, 0, 0, 0.507);
+}*/
+
+
+/*.textos-work{
+    height: 10%;
+}*/
+
+.textos-work h4 {
+    line-height: 50px;
+    font-weight: 700;
+}
+
+div#tramo1 {
+    background-color: #FFF;
+    width: 100%;
+    height: 3px;
+}
+
+.opaciac {
+    /* IE < 9.0 */
+    width: 70%;
+    padding: 4% 0% 0% 0%;
+    margin-left: 17%;
+    margin-right: auto;
+    margin-bottom: 0%;
+}
+
+.opaciact {
+    opacity: 0.8;
+    filter: alpha(opacity=60);
+    /* IE < 9.0 */
+}
+
+/*.acts {
+    background-color: ;
+    box-shadow: ;
+}*/
+
+.acts-brand {
+    color: white;
+}
+
+.acts-brand-2 {
+    color: var(--COLOR_LETRA2);
+}
+
+.acts-brand-3 {
+    color: black;
+}
+
+.acts span {
+    color: whitesmoke;
+    font-size: 13px;
+    font-family: "Lora", serif;
+    font-style: italic;
+    margin-bottom: 25px;
+}
+
+
+/*-------------------------------CSS CAROUSEL - MAIN */
+
+#main .carousel-inner img {
+    max-height: 100vh;
+    object-fit: cover;
+    filter: grayscale(30%);
+}
+
+#carousel {
+    position: relative;
+}
+
+#carousel p {
+    color: white;
+}
+
+#carousel .overlay {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: var(--COLOR_LETRA);
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#carousel .overlay .container,
+#carousel .overlay .row {
+    height: 100%;
+}
+
+
+/*-------------------------------CSS FOOTER */
+
+#footer {
+    /*background: linear-gradient(90deg, #1c3643, #273b47 25%, #1e5372);*/
+    /* background: linear-gradient(to bottom, #262626, #030202);  */
+    background: linear-gradient(to bottom, #7e562c, 25%, #1a1108);
+}
+
+#footer div {
+    color: white;
+}
+
+#footer a {
+    color: #F1BE38;
+}
+
+#footer b {
+    color: white;
+}
+
+#footer p {
+    color: white;
+}
+
+#footer h3 {
+    color: white;
+}
+
+#footer .letraf {
+    color: white;
+}
+
+
+/*-------------------------------INICIO CSS CONTACT*/
+
+.header {
+    color: VAR(--COLOR_LETRA);
+    font-size: 27px;
+    padding: 8px;
+}
+
+.bigicon {
+    font-size: 20px;
+    color: VAR(--COLOR_LETRA);
+}
+
+.dir-contacto {
+    padding-top: 2px;
+    font-size: 15px;
+    color: VAR(--COLOR_LETRA);
+}
+
+.body {
+    background: var(--SECTION1);
+    border: 1px solid black;
+    padding: 25px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+
+/* MINISTERIOS*/
+
+.sec1min {
+    background: url("../images/backmin1.jpg");
+    background-position: center;
+    /* Center the image */
+    background-repeat: no-repeat;
+    /* Do not repeat the image */
+    background-size: cover;
+    /* Resize the background image to cover the entire container */
+}
+
+.card-bodym {
+    background-color: black;
+    opacity: 0.8;
+    filter: alpha(opacity=100);
+    zoom: 1;
+}
+
+.card-bodym h1 {
+    color: white;
+}
+
+.card-bodym p {
+    color: white;
+}
+
+.ministries-area {
+    background: url("../images/backmin.jpg");
+    border-top: 2px solid white;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.section-padding-100-0 {
+    border-bottom: 2px solid white;
+}
+
+.single-ministry {
+    position: relative;
+    z-index: 1;
+    background-color: black;
+    -webkit-transition-duration: 500ms;
+    transition-duration: 500ms;
+}
+
+.single-ministry img {
+    align-items: center;
+    width: auto;
+    height: auto;
+}
+
+.single-ministry .ministry-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    -webkit-transition-duration: 500ms;
+    transition-duration: 500ms;
+    padding: 50px 30px 110px;
+    border-bottom: 2px solid transparent;
+    border-right: 2px solid transparent;
+    border-left: 2px solid transparent;
+}
+
+.single-ministry .ministry-content h6 {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.single-ministry .ministry-content span {
+    font-size: 13px;
+    margin-bottom: 40px;
+    display: block;
+    color: white;
+}
+
+.single-ministry .ministry-content h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: white;
+}
+
+.single-ministry .ministry-content p {
+    margin-bottom: 0;
+    color: white;
+}
+
+.single-ministry .ministry-content .ministry-btn {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: -15px;
+}
+
+.single-ministry:hover,
+.single-ministry:focus {
+    box-shadow: 0 5px 10px #FFC107;
+}
+
+.single-ministry:hover .ministry-content,
+.single-ministry:focus .ministry-content {
+    border-bottom-color: #FFC107;
+    border-right-color: #FFC107;
+    border-left-color: #FFC107;
+}
+
+.opacitym {
+    background-color: black;
+    opacity: 0.8;
+    filter: alpha(opacity=100);
+    zoom: 1;
+}
+
+
+/*---------------------
+	GRUPOS
+-----------------------*/
+
+.titt h2 {
+    text-align: center;
+    color: #F1BE38;
+}
+
+div#tramo {
+    background-color: #FFF;
+    width: 100%;
+    height: 3px;
+}
+
+.opacityy {
+    /* IE < 9.0 */
+    width: 70%;
+    padding: 4% 0% 0% 0%;
+    margin-left: 17%;
+    margin-right: auto;
+    margin-bottom: 0%;
+}
+
+.opacityyy {
+    opacity: 0.8;
+    filter: alpha(opacity=60);
+    /* IE < 9.0 */
+}
+
+.groups-list-section {
+    background: white;
+}
+
+.groups-section h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: white;
+    margin: 0;
+    font-weight: 600;
+    font-family: "Open Sans", sans-serif;
+}
+
+.groups-section h1 {
+    font-size: 60px;
+}
+
+.groups-section h2 {
+    font-size: 36px;
+    line-height: 1.2;
+}
+
+.groups-section h3 {
+    font-size: 30px;
+}
+
+.groups-section h4 {
+    font-size: 24px;
+}
+
+.groups-section h5 {
+    font-size: 14px;
+}
+
+.groups-info p {
+    font-size: 20px;
+    color: #FFC107;
+    line-height: 1.8;
+}
+
+.groups-item img {
+    width: 300px;
+    height: 260px;
+    align-content: center;
+}
+
+.groups-section ul,
+ol,
+li {
+    padding: 0;
+    margin: 0;
+    color: #f4f4f4;
+}
+
+
+/*.groups-section {
+	padding-bottom: 5;
+	padding-top: 5;
+}
+*/
+
+.groups-info {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.groups-info li {
+    font-size: 18px;
+    font-family: "Lora", serif;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.groups-info li span {
+    color: #dd3e3e;
+}
+
+.groups-itemf {
+    background: black;
+}
+
+
+/*.container{
+	border-color: #FFC107;
+   	border-width: 2px;
+   	border-style: solid;
+
+*/
+
+.card {
+    background: #000;
+}
+
+.grupos .card:hover {
+    background: #F1BE38;
+}
+
+
+/*.container{
+	border-color: #FFC107;
+   	border-width: 2px;
+   	border-style: solid;
+
+*/
+
+.card-title {
+    color: #F1BE38;
+}
+
+div#sep {
+    width: 100%;
+    height: 70px;
+}
+
+
+/*---------------------
+	GRUPOS
+-----------------------*/
+
+
+/*CASA DE ORACIÓN*/
+
+#CasaBlog .container {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+#Casablog h1,
+h2,
+h3,
+p {
+    color: white;
+}
+
+#CasaBlog a {
+    color: #F1BE38;
+}
+
+#CasaBlog .btn {
+    border-color: white;
+    color: white;
+}
+
+#CasaBlog .btn:hover {
+    background-color: white;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+#CasaBlog .font-italic {
+    color: white;
+}
+
+#CasaBlog aside {
+    border-left: 1px solid white;
+}
+
+#CasaBlog .borde {
+    border-bottom: 1px solid white;
+}
+
+#CasaBlog {
+    background: url("../images/Casa_oracion4.jpg");
+    border-top: 2px solid white;
+	border-bottom: 2px solid white;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}

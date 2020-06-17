@@ -1,0 +1,12 @@
+{% extends 'index.html' %}
+{%block title%}
+Grupos
+{%endblock title%}    
+{%block content%}
+    {% for i in grupos%}
+     <p>Nombre: {{i.groupName}}</p>
+     <p>Dirección: {{i.groupDir}}</p>
+     <img src="{{i.grouPhoto.url}}" width = "10%"/>
+    {% endfor %}
+{%endblock content%}
+

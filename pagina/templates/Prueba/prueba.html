@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <title>Formulario</title>
+</head>
+<body>
+    <h1>HOLA PDFS XD</h1>
+
+    {% for i in recursos %}
+        <a download="{{ i.title }}" href="{{ i.pdf.url }}" >{{ i.title }}</a>
+    
+    
+    {% endfor %}
+
+
+
+
+    <form method="POST">
+        {% csrf_token %}
+        <div class="form-group">
+            {{ datos.name_person.label }}
+            <input type="text" name="name_person" id="">
+        </div>
+        <div class="form-group">
+            {{ datos.mail_persona.label }}
+            <input type="text" name="mail_persona" id="">
+        </div>
+        <div class="form-group">
+            {{ datos.section_category.label }}
+            {{ datos.section_category }}
+        </div>
+        <div class="form-group">
+            {{ datos.title.label }}
+            <input type="text" name="title" id="">
+        </div>
+        <div class="form-group">
+            {{ datos.description.label }}
+            <input type="text" name="description" id="">
+        </div>
+
+        <button type="submit">Enviar</button>
+    </form>
+    
+    
+</body>
+</html>

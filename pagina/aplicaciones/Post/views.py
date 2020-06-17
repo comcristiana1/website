@@ -9,6 +9,10 @@ from django.conf import settings
 
 
 
+def home(request):
+    return render(request,'base.html')
+
+
 
 def mostrar_pastor(request):
     mostrar = Miembro.objects.all()
@@ -49,7 +53,7 @@ def oracion_peticion(request):
     else:
         O_P_form = O_PForm()
 
-    return render(request,'prueba.html',{'datos':O_P_form,'recursos':libros})
+    return render(request,'Post/recursos.html',{'datos':O_P_form,'recursos':libros})
 
 
 def mostrar_eventos(request):
