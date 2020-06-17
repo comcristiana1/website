@@ -10,13 +10,11 @@
     --h3: white;
     --LETRA: 'Source Sans Pro', sans-serif;
     --SECTION1: linear-gradient(to bottom, #262626, #030202);
-
 }
 
-*{
+* {
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 12;
-
 }
 
 body {
@@ -181,9 +179,11 @@ img.mediana {
     background-color: var(--BUTTOM);
     float: right;
 }
+
 .stroke {
-text-shadow: -2px -2px 1px #000, 2px 2px 1px #000, -2px 2px 1px #000, 2px -2px 1px #000;
+    text-shadow: -2px -2px 1px #000, 2px 2px 1px #000, -2px 2px 1px #000, 2px -2px 1px #000;
 }
+
 
 /*-------------------------------CSS RECURSOS - FORMULARIO */
 
@@ -237,6 +237,7 @@ img.recurso {
     padding: 6%;
     position: relative;
 }
+
 
 /*-------------------------------CSS GALERIA */
 
@@ -379,17 +380,16 @@ img.recurso {
     line-height: 25px;
 }
 
+
 /* ----------------------------------CSS EDIFICADORES */
 
-.edsec1{
-  background-image: url("../images/muro.jpg");
-  background-position: center;
-  background-attachment:fixed;
-  background-repeat: no-repeat;
-  background-size: 100%;
-
+.edsec1 {
+    background-image: url("../images/muro.jpg");
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100%;
 }
-
 
 .edsec1 .card {
     opacity: 0.8;
@@ -400,12 +400,15 @@ img.recurso {
 .fondo1 {
     background-size: 100% 100%;
 }
+
 .opacity1 {
     opacity: 0.75;
     filter: alpha(opacity=60);
     /* IE < 9.0 */
     width: 30%;
 }
+
+
 /*-------------------------------CSS ACTIVIDADES Y EVENTOS */
 
 btnt btn-withe {}
@@ -553,6 +556,7 @@ div#tramo1 {
     filter: alpha(opacity=60);
     /* IE < 9.0 */
 }
+
 
 /*.acts {
     background-color: ;
@@ -953,7 +957,7 @@ div#sep {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-#Casablog h1,
+#CasaBlog h1,
 h2,
 h3,
 p {
@@ -964,14 +968,18 @@ p {
     color: #F1BE38;
 }
 
-#CasaBlog .btn {
+#CasaBlog .btn-outline-primary {
     border-color: white;
     color: white;
 }
 
-#CasaBlog .btn:hover {
+#CasaBlog .btn-outline-primary:hover {
     background-color: white;
     color: rgba(0, 0, 0, 0.7);
+}
+
+#CasaBlog .btn-outline-secondary:hover {
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 #CasaBlog .font-italic {
@@ -989,9 +997,63 @@ p {
 #CasaBlog {
     background: url("../images/Casa_oracion4.jpg");
     border-top: 2px solid white;
-	border-bottom: 2px solid white;
+    border-bottom: 2px solid white;
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: 100% 100%;
+}
+
+
+/*PagBLOG*/
+
+#PagBlog .container {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+#PagBlog h1,
+h2,
+h3,
+p {
+    color: black;
+}
+
+#PagBlog a {
+    color: #F1BE38;
+}
+
+#PagBlog .btn-outline-primary {
+    border-color: white;
+    color: white;
+}
+
+#PagBlog .btn-outline-primary:hover {
+    background-color: white;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+#PagBlog .btn-outline-secondary:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#PagBlog .font-italic {
+    color: black;
+}
+
+#PagBlog aside {
+    border-left: 1px solid white;
+}
+
+#PagBlog .borde {
+    border-bottom: 1px solid white;
+}
+
+#PagBlog {
+    background: url("../images/Casa_oracion4.jpg");
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
