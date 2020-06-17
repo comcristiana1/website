@@ -42,7 +42,7 @@ class Miembro(models.Model):
         verbose_name_plural = 'Miembros'
     
     def __str__(self):
-        return "%s %s %s %s %s %s %s %s %s" % (self.name1,self.name2,self.surname1,self.surname2,self.ocupation,self.member_image,self.phone1,self.phone2,self.creation_date,self.description)
+        return "%s %s %s %s %s %s %s %s %s %s %s %s" % (self.id,self.name1,self.name2,self.surname1,self.surname2,self.ocupation,self.member_image,self.phone1,self.phone2,self.creation_date,self.description,self.status)
 
 class Evento(models.Model):
     id = models.AutoField(primary_key = True)
