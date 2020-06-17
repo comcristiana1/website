@@ -28,7 +28,7 @@ def casa_oracion(request):
 
 def mostrar_actividades(request):
     actividad = Actividades.objects.all()
-    return render(request,'actividades.html',{'actividad':actividad})
+    return render(request,'POST/actividades.html',{'actividad':actividad})
 
 def mostrar_ministerio(request):
     ministerio = Ministry.objects.all()
@@ -58,7 +58,7 @@ def oracion_peticion(request):
 
 def mostrar_eventos(request):
     eventos = Evento.objects.all()
-    return render(request,'eventos.html',{'eventos':eventos})
+    return render(request,'POST/eventos.html',{'eventos':eventos})
 
 def mostrar_grupos(request):
     grupos = Groups.objects.all()
