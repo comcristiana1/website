@@ -11,6 +11,14 @@
     --LETRA: 'Source Sans Pro', sans-serif;
     --SECTION1: linear-gradient(to bottom, #262626, #030202);
 }
+/*
+
+	background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+*/
 
 * {
     font-family: 'Source Sans Pro', sans-serif;
@@ -58,8 +66,12 @@ ion-icon {
 /*-------------------------CSS PUBLICACIONES*/
 
 #publicaciones {
-    background-color: var(--SECTION2);
     color: VAR(--COLOR_LETRA);
+	background-image: url("../images/index5.jpeg");
+	background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #publicaciones h2 {
@@ -134,10 +146,10 @@ img.mediana {
 
 .secc2 {
     background-image: url("../images/ale.jpg");
-    background-position: center;
+	background-position: center center;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
 }
 
 .secc1 h1 {
@@ -161,10 +173,11 @@ img.mediana {
 
 .sec1rec {
     border-top: 2px solid white;
-    background-position: center;
+	background-image: url("../images/11.jpg");
+	background-position: center center;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
 }
 
 .card-body {
@@ -186,6 +199,14 @@ img.mediana {
 
 
 /*-------------------------------CSS RECURSOS - FORMULARIO */
+
+.fondo_esp{
+	background-image: url("../images/orar12.jpg");
+		background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 .tit h2 {
     text-align: center;
@@ -243,10 +264,10 @@ img.recurso {
 
 #galeria {
     background-image: url("../images/backgaleria.jpg");
-    background-position: center;
+    background-position: center center;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
 }
 
 .btn-yellow:hover {
@@ -385,10 +406,10 @@ img.recurso {
 
 .edsec1 {
     background-image: url("../images/muro.jpg");
-    background-position: center;
+	background-position: center center;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
 }
 
 .edsec1 .card {
@@ -682,12 +703,10 @@ div#tramo1 {
 
 .sec1min {
     background: url("../images/backmin1.jpg");
-    background-position: center;
-    /* Center the image */
+	background-position: center center;
+    background-attachment: fixed;
     background-repeat: no-repeat;
-    /* Do not repeat the image */
     background-size: cover;
-    /* Resize the background image to cover the entire container */
 }
 
 .card-bodym {
@@ -708,10 +727,10 @@ div#tramo1 {
 .ministries-area {
     background: url("../images/backmin.jpg");
     border-top: 2px solid white;
-    background-position: center;
+	background-position: center center;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
 }
 
 .section-padding-100-0 {
@@ -801,6 +820,15 @@ h6 {
 /*---------------------
 	GRUPOS
 -----------------------*/
+
+.grupos{
+	background-image: url("../images/grupocarru2.jpeg");
+		background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+		
+}
 
 .titt h2 {
     text-align: center;
@@ -998,10 +1026,10 @@ p {
     background: url("../images/Casa_oracion4.jpg");
     border-top: 2px solid white;
     border-bottom: 2px solid white;
-    background-position: center;
+	background-position: center center;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: cover;
 }
 
 
@@ -1052,8 +1080,8 @@ p {
     background: url("../images/Casa_oracion4.jpg");
     border-top: 2px solid white;
     border-bottom: 2px solid white;
-    background-position: center;
+	background-position: center center;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: cover;
 }
