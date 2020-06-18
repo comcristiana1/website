@@ -953,7 +953,9 @@ li {
 }
 
 .grupos .card:hover {
-    background: #F1BE38;
+	border-color:#F1BE38;
+   
+	
 }
 
 
