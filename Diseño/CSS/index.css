@@ -442,6 +442,16 @@ img.recurso {
 	
 }
 
+.eventos{
+	
+	background-image: url("../images/event.jpeg");
+		background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+	
+}
+
 
 btnt btn-withe {}
 
