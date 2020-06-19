@@ -1178,3 +1178,52 @@ div#sep {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+/*----Peticiones--constructores del Muro */
+
+.peticionesm{
+	background-image: url("../images/peticionesc1.jpg");
+		background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.tit h2 {
+    text-align: center;
+    color: white;
+}
+
+
+.card-img {
+    background-size: 100% 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.opacity {
+    opacity: 0.85;
+    filter: alpha(opacity=60);
+    /* IE < 9.0 */
+    width: 30%;
+}
+
+.peticionesm .btn-outline-primary {
+    border-color: white;
+    color: white;
+}
+
+.peticionesm .btn-outline-primary:hover {
+    background-color: white;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.peticionesm .btn-outline-secondary:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+div#tramo2 {
+   /* background-color: #FFF;*/
+    width: 100%;
+    height: 50px;
+}
