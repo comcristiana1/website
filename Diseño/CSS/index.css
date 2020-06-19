@@ -410,7 +410,7 @@ img.recurso {
 
 /* ----------------------------------CSS EDIFICADORES */
 
-.edsec1 {
+.bgedsec1 {
     background-image: url("../images/muro.jpg");
 	background-position: center center;
     background-attachment: fixed;
@@ -418,15 +418,69 @@ img.recurso {
     background-size: cover;
 }
 
-.edsec1 .card {
-    opacity: 0.8;
-    filter: alpha(opacity=60);
-    /* IE < 9.0 */
+
+#imagen1 img{
+  max-width: 100%;
 }
+
+
+#edsec1 {
+      background-color: rgba(0, 0, 0, 0.8);
+
+}
+#edsec1 p{
+
+  padding-top: 50px;
+  padding-bottom: 40px;
+  padding-left: 40px;
+  padding-right: 60px;
+  color: #daccc1 ;
+
+}
+
+
+
+#imagen2 img{
+  max-width: 100%;
+}
+
+#edsec2 {
+      background-color: rgba(255, 255, 255, 0.8);
+
+}
+#edsec2 p{
+
+  padding-top: 50px;
+  padding-bottom: 40px;
+  padding-left: 40px;
+  padding-right: 60px;
+  color: #272525 ;
+
+}
+
+
+#imagen3 img{
+  max-width: 100%;
+}
+
+#edsec3 {
+      background-color: rgba(0, 0, 0, 0.8);
+
+}
+#edsec3 p{
+
+  padding-top:60px;
+  padding-bottom: 40px;
+  padding-left: 40px;
+  padding-right: 60px;
+  color: #daccc1 ;
+
+}
+
 
 .fondo1 {
     background-size: 100% 100%;
-	
+
 }
 .f1{
 	padding: 4% 0% 0% 0%;
@@ -448,13 +502,13 @@ img.recurso {
 /*-------------------------------CSS ACTIVIDADES Y EVENTOS */
 
 .actividades{
-	
+
 	background-image: url("../images/bosque1.jpeg");
 		background-position: center center;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
-	
+
 }
 
 
@@ -853,7 +907,7 @@ h6 {
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
-		
+
 }
 
 .titt h2 {
@@ -980,8 +1034,8 @@ li {
 
 .grupos .card:hover {
 	border-color:#F1BE38;
-   
-	
+
+
 }
 
 
