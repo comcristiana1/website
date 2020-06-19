@@ -10,13 +10,19 @@
     --h3: white;
     --LETRA: 'Source Sans Pro', sans-serif;
     --SECTION1: linear-gradient(to bottom, #262626, #030202);
-
 }
+/*
 
-*{
+	background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+*/
+
+* {
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 12;
-
 }
 
 body {
@@ -60,8 +66,12 @@ ion-icon {
 /*-------------------------CSS PUBLICACIONES*/
 
 #publicaciones {
-    background-color: var(--SECTION2);
     color: VAR(--COLOR_LETRA);
+	background-image: url("../images/index5.jpeg");
+	background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #publicaciones h2 {
@@ -136,10 +146,10 @@ img.mediana {
 
 .secc2 {
     background-image: url("../images/ale.jpg");
-    background-position: center;
+	background-position: center center;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
 }
 
 .secc1 h1 {
@@ -163,10 +173,11 @@ img.mediana {
 
 .sec1rec {
     border-top: 2px solid white;
-    background-position: center;
+	background-image: url("../images/11.jpg");
+	background-position: center center;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
 }
 
 .card-body {
@@ -181,11 +192,21 @@ img.mediana {
     background-color: var(--BUTTOM);
     float: right;
 }
+
 .stroke {
-text-shadow: -2px -2px 1px #000, 2px 2px 1px #000, -2px 2px 1px #000, 2px -2px 1px #000;
+    text-shadow: -2px -2px 1px #000, 2px 2px 1px #000, -2px 2px 1px #000, 2px -2px 1px #000;
 }
 
+
 /*-------------------------------CSS RECURSOS - FORMULARIO */
+
+.fondo_esp{
+	background-image: url("../images/orar12.jpg");
+		background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 .tit h2 {
     text-align: center;
@@ -238,14 +259,15 @@ img.recurso {
     position: relative;
 }
 
+
 /*-------------------------------CSS GALERIA */
 
 #galeria {
-    background-image: url("../images/backgaleria.jpg");
-    background-position: center;
+    background-image: url("../images/flores.jpg");
+    background-position: center center;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
 }
 
 .btn-yellow:hover {
@@ -379,17 +401,16 @@ img.recurso {
     line-height: 25px;
 }
 
+
 /* ----------------------------------CSS EDIFICADORES */
 
-.edsec1{
-  background-image: url("../images/muro.jpg");
-  background-position: center;
-  background-attachment:fixed;
-  background-repeat: no-repeat;
-  background-size: 100%;
-
+.edsec1 {
+    background-image: url("../images/muro.jpg");
+	background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
-
 
 .edsec1 .card {
     opacity: 0.8;
@@ -400,13 +421,27 @@ img.recurso {
 .fondo1 {
     background-size: 100% 100%;
 }
+
 .opacity1 {
     opacity: 0.75;
     filter: alpha(opacity=60);
     /* IE < 9.0 */
     width: 30%;
 }
+
+
 /*-------------------------------CSS ACTIVIDADES Y EVENTOS */
+
+.actividades{
+	
+	background-image: url("../images/bosque1.jpeg");
+		background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+	
+}
+
 
 btnt btn-withe {}
 
@@ -554,6 +589,7 @@ div#tramo1 {
     /* IE < 9.0 */
 }
 
+
 /*.acts {
     background-color: ;
     box-shadow: ;
@@ -678,12 +714,10 @@ div#tramo1 {
 
 .sec1min {
     background: url("../images/backmin1.jpg");
-    background-position: center;
-    /* Center the image */
+	background-position: center center;
+    background-attachment: fixed;
     background-repeat: no-repeat;
-    /* Do not repeat the image */
     background-size: cover;
-    /* Resize the background image to cover the entire container */
 }
 
 .card-bodym {
@@ -704,10 +738,10 @@ div#tramo1 {
 .ministries-area {
     background: url("../images/backmin.jpg");
     border-top: 2px solid white;
-    background-position: center;
+	background-position: center center;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
 }
 
 .section-padding-100-0 {
@@ -797,6 +831,15 @@ h6 {
 /*---------------------
 	GRUPOS
 -----------------------*/
+
+.grupos{
+	background-image: url("../images/grupocarru2.jpeg");
+		background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+		
+}
 
 .titt h2 {
     text-align: center;
@@ -921,7 +964,9 @@ li {
 }
 
 .grupos .card:hover {
-    background: #F1BE38;
+	border-color:#F1BE38;
+   
+	
 }
 
 
@@ -953,7 +998,7 @@ div#sep {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-#Casablog h1,
+#CasaBlog h1,
 h2,
 h3,
 p {
@@ -964,14 +1009,18 @@ p {
     color: #F1BE38;
 }
 
-#CasaBlog .btn {
+#CasaBlog .btn-outline-primary {
     border-color: white;
     color: white;
 }
 
-#CasaBlog .btn:hover {
+#CasaBlog .btn-outline-primary:hover {
     background-color: white;
     color: rgba(0, 0, 0, 0.7);
+}
+
+#CasaBlog .btn-outline-secondary:hover {
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 #CasaBlog .font-italic {
@@ -989,9 +1038,63 @@ p {
 #CasaBlog {
     background: url("../images/Casa_oracion4.jpg");
     border-top: 2px solid white;
-	border-bottom: 2px solid white;
-    background-position: center;
+    border-bottom: 2px solid white;
+	background-position: center center;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
+}
+
+
+/*PagBLOG*/
+
+#PagBlog .container {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+#PagBlog h1,
+h2,
+h3,
+p {
+    color:black;
+}
+
+#PagBlog a {
+    color: #F1BE38;
+}
+
+#PagBlog .btn-outline-primary {
+    border-color: white;
+    color: white;
+}
+
+#PagBlog .btn-outline-primary:hover {
+    background-color: white;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+#PagBlog .btn-outline-secondary:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#PagBlog .font-italic {
+    color: black;
+}
+
+#PagBlog aside {
+    border-left: 1px solid white;
+}
+
+#PagBlog .borde {
+    border-bottom: 1px solid white;
+}
+
+#PagBlog {
+    background: url("../images/Casa_oracion4.jpg");
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+	background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
