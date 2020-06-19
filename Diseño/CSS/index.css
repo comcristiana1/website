@@ -242,16 +242,22 @@ img.recurso {
 
 .f {
     padding: 4% 0% 0% 0%;
-    margin-left: 30%;
-    margin-right: auto;
-    margin-bottom: 0%;
+	background-size:100% 100%;
+}
+.cont-f{
+	 display: -webkit-box;
+  	display: -webkit-flex;
+  	display: -moz-box;
+  	display: -ms-flexbox;
+  	display: flex;
+  	flex-wrap: wrap;
+	display: flex;
+  	justify-content: center;
 }
 
 .opacity {
     opacity: 0.85;
     filter: alpha(opacity=60);
-    /* IE < 9.0 */
-    width: 30%;
 }
 
 .esp1 {
@@ -420,13 +426,22 @@ img.recurso {
 
 .fondo1 {
     background-size: 100% 100%;
+	
+}
+.f1{
+	padding: 4% 0% 0% 0%;
+	margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0%;
+	background-size:100% 100%;
 }
 
-.opacity1 {
-    opacity: 0.75;
-    filter: alpha(opacity=60);
-    /* IE < 9.0 */
-    width: 30%;
+.form-group1 {
+    background-color: #000;
+    height: 0%;
+    padding: 10% 10% 10% 10%;
+    width: 120%;
+    color: #FFF;
 }
 
 
@@ -435,6 +450,16 @@ img.recurso {
 .actividades{
 	
 	background-image: url("../images/bosque1.jpeg");
+		background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+	
+}
+
+.eventos{
+	
+	background-image: url("../images/event.jpeg");
 		background-position: center center;
     background-attachment: fixed;
     background-repeat: no-repeat;
