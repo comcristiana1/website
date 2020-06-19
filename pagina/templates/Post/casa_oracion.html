@@ -27,7 +27,6 @@
                         <div class="row align-items-center">
                             <div class="col text-center">
                                 <h1>Casa de Oración</h1>
-
                             </div>
                         </div>
                     </div>
@@ -54,7 +53,7 @@
                     <div class="blog-post blog">
                         <h2 class="blog-post-title">Oración n</h2>
                         <p class="blog-post-meta">Junio 11, 2020 by <a href="#">Persona1</a></p>
-                        <img src={% static 'images/persona.jpg' %} alt="Imagen" width="100" height="100">
+                        <img src="images/persona.jpg" alt="Imagen" width="100" height="100">
                         <p> Cum sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras
                             mattis consectetur purus sit amet fermentum.</p>
                         <blockquote>
@@ -74,14 +73,12 @@
                 <div class="col-md-2"></div>
                 <aside class="col-md-3 blog-sidebar">
                     <div class="p-4">
-                        <h4 class="font-italic">Última Oración</h4>
+                        <h4 class="font-italic">{{last.title}}</h4>
                         <ol class="list-unstyled mb-0">
                             <li>
-                                <p class="pt-3"> Abre nuestros ojos, Señor, para que podamos verte a ti en nuestros hermanos y hermanas. Danos otra vez tu Espíritu, Señor, para que nos volvamos un sólo corazón y una sola alma en tu nombre. Amén.
+                                <p class="pt-3"> {{last.prayer}}
                                 </p>
                             </li>
-
-
                         </ol>
                     </div>
                     <div class="input-group mb-3 p-4">

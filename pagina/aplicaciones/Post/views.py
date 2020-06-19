@@ -20,7 +20,8 @@ def mostrar_pastor(request):
 
 def casa_oracion(request):
     oracion = CasaOracion.objects.all()
-    return render(request,'Post/casa_oracion.html',{'oracion':oracion})
+    last = len(oracion)-1
+    return render(request,'Post/casa_oracion.html',{'oracion':oracion,'last':oracion[last]})
 
 
 
