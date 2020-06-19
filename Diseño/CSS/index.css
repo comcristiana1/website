@@ -269,7 +269,7 @@ img.recurso {
 /*-------------------------------CSS GALERIA */
 
 #galeria {
-    background-image: url("../images/backgaleria.jpg");
+    background-image: url("../images/flores.jpg");
     background-position: center center;
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -446,6 +446,17 @@ img.recurso {
 
 
 /*-------------------------------CSS ACTIVIDADES Y EVENTOS */
+
+.actividades{
+	
+	background-image: url("../images/bosque1.jpeg");
+		background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+	
+}
+
 
 btnt btn-withe {}
 
@@ -1060,7 +1071,7 @@ p {
 h2,
 h3,
 p {
-    color: black;
+    color:black;
 }
 
 #PagBlog a {
