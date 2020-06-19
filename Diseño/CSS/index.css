@@ -271,6 +271,7 @@ img.recurso {
     justify-content: center;
 }
 
+
 .esp1 {
     padding: 6%;
     position: relative;
@@ -490,7 +491,11 @@ img.recurso {
 
 
 .fondo1 {
-    background-size: 100% 100%;
+	background-image: url("../images/edificadores.jpg");
+	background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
 
 }
 
