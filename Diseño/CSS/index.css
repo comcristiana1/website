@@ -11,6 +11,8 @@
     --LETRA: 'Source Sans Pro', sans-serif;
     --SECTION1: linear-gradient(to bottom, #262626, #030202);
 }
+
+
 /*
 
 	background-position: center center;
@@ -67,8 +69,8 @@ ion-icon {
 
 #publicaciones {
     color: VAR(--COLOR_LETRA);
-	background-image: url("../images/index5.jpeg");
-	background-position: center center;
+    background-image: url("../images/index5.jpeg");
+    background-position: center center;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -146,7 +148,7 @@ img.mediana {
 
 .secc2 {
     background-image: url("../images/ale.jpg");
-	background-position: center center;
+    background-position: center center;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -173,8 +175,8 @@ img.mediana {
 
 .sec1rec {
     border-top: 2px solid white;
-	background-image: url("../images/11.jpg");
-	background-position: center center;
+    background-image: url("../images/11.jpg");
+    background-position: center center;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -200,9 +202,9 @@ img.mediana {
 
 /*-------------------------------CSS RECURSOS - FORMULARIO */
 
-.fondo_esp{
-	background-image: url("../images/orar12.jpg");
-		background-position: center center;
+.fondo_esp {
+    background-image: url("../images/orar12.jpg");
+    background-position: center center;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -242,17 +244,18 @@ img.recurso {
 
 .f {
     padding: 4% 0% 0% 0%;
-	background-size:100% 100%;
+    background-size: 100% 100%;
 }
-.cont-f{
-	 display: -webkit-box;
-  	display: -webkit-flex;
-  	display: -moz-box;
-  	display: -ms-flexbox;
-  	display: flex;
-  	flex-wrap: wrap;
-	display: flex;
-  	justify-content: center;
+
+.cont-f {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
 }
 
 .opacity {
@@ -412,7 +415,7 @@ img.recurso {
 
 .bgedsec1 {
     background-image: url("../images/muro.jpg");
-	background-position: center center;
+    background-position: center center;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -482,12 +485,13 @@ img.recurso {
     background-size: 100% 100%;
 
 }
-.f1{
-	padding: 4% 0% 0% 0%;
-	margin-left: auto;
+
+.f1 {
+    padding: 4% 0% 0% 0%;
+    margin-left: auto;
     margin-right: auto;
     margin-bottom: 0%;
-	background-size:100% 100%;
+    background-size: 100% 100%;
 }
 
 .form-group1 {
@@ -501,16 +505,21 @@ img.recurso {
 
 /*-------------------------------CSS ACTIVIDADES Y EVENTOS */
 
-.actividades{
-
-	background-image: url("../images/bosque1.jpeg");
-		background-position: center center;
+.actividades {
+    background-image: url("../images/bosque1.jpeg");
+    background-position: center center;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
-
 }
 
+.eventos {
+    background-image: url("../images/event.jpeg");
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 btnt btn-withe {}
 
@@ -783,7 +792,7 @@ div#tramo1 {
 
 .sec1min {
     background: url("../images/backmin1.jpg");
-	background-position: center center;
+    background-position: center center;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -807,7 +816,7 @@ div#tramo1 {
 .ministries-area {
     background: url("../images/backmin.jpg");
     border-top: 2px solid white;
-	background-position: center center;
+    background-position: center center;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -901,9 +910,9 @@ h6 {
 	GRUPOS
 -----------------------*/
 
-.grupos{
-	background-image: url("../images/grupocarru2.jpeg");
-		background-position: center center;
+.grupos {
+    background-image: url("../images/grupocarru2.jpeg");
+    background-position: center center;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1068,9 +1077,9 @@ div#sep {
 }
 
 #CasaBlog h1,
-h2,
-h3,
-p {
+#CasaBlog h2,
+#CasaBlog h3,
+#CasaBlog p {
     color: white;
 }
 
@@ -1108,7 +1117,7 @@ p {
     background: url("../images/Casa_oracion4.jpg");
     border-top: 2px solid white;
     border-bottom: 2px solid white;
-	background-position: center center;
+    background-position: center center;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1118,14 +1127,16 @@ p {
 /*PagBLOG*/
 
 #PagBlog .container {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: #ece2c6;
+    opacity: 0.8;
 }
 
 #PagBlog h1,
-h2,
-h3,
-p {
-    color:black;
+#PagBlog h2,
+#PagBlog h3,
+#PagBlog .h1,
+#PagBlog p {
+    color: black;
 }
 
 #PagBlog a {
@@ -1133,8 +1144,8 @@ p {
 }
 
 #PagBlog .btn-outline-primary {
-    border-color: white;
-    color: white;
+    border-color: black;
+    color: black;
 }
 
 #PagBlog .btn-outline-primary:hover {
@@ -1162,7 +1173,7 @@ p {
     background: url("../images/Casa_oracion4.jpg");
     border-top: 2px solid white;
     border-bottom: 2px solid white;
-	background-position: center center;
+    background-position: center center;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
