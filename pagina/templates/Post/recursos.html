@@ -36,6 +36,7 @@
 {% block publicidad %}
 {% endblock publicidad %}
 {% block container %}
+     <!--Inicio Recursos PDF--> 
      <div class="sec1rec" style="background-image:url({% static 'images/11.jpg' %})">
 <div class="container esp">
 <div class="tit" style="color:#FFF">
@@ -46,7 +47,7 @@
     <div class="card mb-3" style="background-color:#262626">
   <div class="row no-gutters">
     <div class="col-md-4">
-      <img src={% static 'images/1.jpg' %} class="card-img" alt="...">
+      <img src="{% static 'images/1.jpg' %}" class="card-img" alt="...">
     </div>
     <div class="col-md-8">
       <div class="card-body">
@@ -62,7 +63,7 @@
  <div class="card mb-3" style="background-color:#262626">
   <div class="row no-gutters">
     <div class="col-md-4">
-      <img src={% static 'images/oracion.jpg' %} class="card-img" alt="...">
+      <img src="{% static 'images/oracion.jpg' %}" class="card-img" alt="...">
     </div>
     <div class="col-md-8">
       <div class="card-body">
@@ -78,7 +79,7 @@
  <div class="card mb-3" style="background-color:#262626">
   <div class="row no-gutters">
     <div class="col-md-4">
-      <img src={% static 'images/cruz.jpg' %} class="card-img" alt="...">
+      <img src="{% static 'images/cruz.jpg' %}" class="card-img" alt="...">
     </div>
     <div class="col-md-8">
       <div class="card-body">
@@ -98,13 +99,14 @@
 
 
     <!--Inicio Formulario-->
-	<div class="fondo esp" style="background-image:url({% static 'images/orar12.jpg' %})">
+    <div id="tramo">
+    </div>
+	<div class="fondo_esp esp">
     <div class="tit">
     
-	<p align="center"><h2>Formulario para solicitar oración o petición</h2></p></div>
-				<div class="f opacity"> 
-  <form>
-  <div class="form-group">
+	<p align="center "><h2>Formulario para solicitar oración o petición</h2></p></div>
+    <div class="cont-f">
+  <form class="formstyle">
   <!--<p align="center"><i>“Clama a mí y te responderé, y te daré a conocer cosas grandes y ocultas que tú no sabes.”</i></p><p align="center">Jeremías 33:3</p>-->
   <label> Nombre </label>
   <input class="form-control" type="text" id="nombre" > 
@@ -124,9 +126,9 @@
     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
     <br>
   <button style="color:white" class="btn btn-yellow pt-2 pb-2 btn-lg btn-block galery-brand" type="submit">Enviar</button>
-  
-  </div>
+
 </form></div><br>
 </div>
-
+  <div id="tramo">
+    </div>
 {% endblock container %}
