@@ -42,24 +42,30 @@
 {% block container %}
 <div id="tramo1">
 </div>
-<section class="eventos" style="background-image:url({% static 'images/event.jpeg'%})">
-<section class="work contenedor" id="trabajo" >
+<div class="eventos">
+<section class="work contenedor pb-5" id="trabajo" >
                 <h3 style="color:#FFF">&nbsp;</h3>
                 <h3 style="color:#FFF">Eventos                    </h3>
                 <h5 style="color:#FFF">Cuando tus rodillas toquen el suelo, tu corazón tocará el cielo.</h5>
                 <p style="color:#FFF">&nbsp;</p>
-<button type="button" class=".btn-outline-*-primary btne ">Todos   </button>
-<br></br>
-<button type="button" class=".btn-outline-*-secondary btne">Seminario</button>
-<br></br>>
-<button type="button" class=".btn-outline-*-success btne">Encuentro</button>
-<br></br>
-<button type="button" class=".btn-outline-*-danger btne">Retiro</button>
+<form action="" method="post">
+<button type="submit" class=".btn-outline-*-primary btne ">Todos   </button> 
+<button type="submit" class=".btn-outline-*-secondary btne">Eventos Espirituales </button>
+<button type="submit" class=".btn-outline-*-success btne">Eventos sociales</button> 
+</form>
+
+
+
+
+
+
+
                 <p>&nbsp;</p>
                 <div class="galeria-work">
                     <!--Galeria Base de Datos-->
                     <div class="cont-work seminario">
                         <div class="img-work">
+                        <p style="color:#000">Eventos Espirituales</p>
                             <img src={% static 'images/nature1.jpeg' %} alt="">
                             
                             <div class="hover-galeria">
@@ -78,9 +84,11 @@
                     <div class="cont-work encuentro">
                         
                         <div class="img-work">
+                        <p style="color:#000">Eventos Espirituales</p>
                             <img src={% static 'images/nature1.jpeg' %} alt="">
                             
                             <div class="hover-galeria">
+                           
                                 <h4>Encuentro
                                     de
                                     Padres <br>
@@ -96,9 +104,11 @@
                     <div class="cont-work retiro">
                         
                         <div class="img-work">
+                         <p style="color:#000">Eventos Espiritules</p>
                             <img src={% static 'images/nature1.jpeg' %} alt="">
                             
                             <div class="hover-galeria">
+                            
                                 <h4>Retiro
                                     de 
                                     Jovenenes<br>
@@ -113,9 +123,11 @@
                     
                     <div class="cont-work seminario">
                         <div class="img-work">
+                        <p style="color:#000">Eventos Sociales</p>
                             <img src={% static 'images/nature1.jpeg' %} alt="">
                             
                             <div class="hover-galeria">
+                            
                                 <h4>Seminario
                                     de
                                     Perdón<br>
@@ -129,10 +141,13 @@
                     </div>
                     
                     <div class="cont-work seminario">
+                    
                         <div class="img-work">
+                        <p style="color:#000">Eventos Sociales</p>
                             <img src={% static 'images/nature1.jpeg' %} alt="">
                             
                             <div class="hover-galeria">
+                            
                                 <h4>Seminario
                                     de
                                     Perdón<br>
@@ -148,11 +163,14 @@
                     
                     <div class="cont-work seminario">
                         <div class="img-work">
+                        <p style="color:#000">Eventos Sociales</p>
                             <img src={% static 'images/nature1.jpeg' %} alt="">
                             
                             <div class="hover-galeria">
+                            <p>Eventos Sociales</p>
                                 <h4>Seminario
                                     de
+
                                     Perdón<br>
                                     Junio 19, 2020</h4>
                                 <p>Lugar: Iglesia</br>
@@ -172,7 +190,7 @@
                 </div>
             </section>
 
-</section>
+</div>
  <div id="tramo1">
 </div>
 {% endblock container %}

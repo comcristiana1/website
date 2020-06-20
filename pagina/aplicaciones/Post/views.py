@@ -29,7 +29,7 @@ def casa_oracion(request):
 
 def mostrar_actividades(request):
     actividad = Actividades.objects.all()
-    return render(request,'POST/actividades.html',{'actividad':actividad})
+    return render(request,'Post/actividades.html',{'actividad':actividad})
 
 def mostrar_ministerio(request):
     ministerio = Ministry.objects.all()
