@@ -1195,7 +1195,7 @@ div#sep {
 
 .peticionesm{
 	background-image: url("../images/peticionesc1.jpg");
-		background-position: center center;
+	background-position: center center;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1238,4 +1238,21 @@ div#tramo2 {
    /* background-color: #FFF;*/
     width: 100%;
     height: 50px;
+}
+
+
+.oracion{
+	background-image:url("../images/1.jpg");
+	background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.oracion .btn-outline-primary {
+    border-color: #F1BE38;
+    color: #F1BE38;
+}
+.oracion .btn-outline-primary:hover {
+    background-color: white;
+    color: rgba(0, 0, 0, 0.7);
 }
