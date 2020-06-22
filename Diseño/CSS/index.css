@@ -1066,6 +1066,66 @@ div#sep {
 	GRUPOS
 -----------------------*/
 
+/*Blog 2*/
+
+#PagBlog2 .container {
+    background-color: white;
+    opacity: 0.9;
+}
+
+#PagBlog2 h1,
+#PagBlog2 h2,
+#PagBlog2 h3,
+#PagBlog2 .h1,
+#PagBlog2 p {
+    color: black;
+}
+
+#PagBlog2 a {
+    color: #F1BE38;
+}
+
+#PagBlog2 .btn-outline-primary {
+    border-color: black;
+    color: black;
+}
+
+#PagBlog2 .btn-outline-primary:hover {
+    background-color: white;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+#PagBlog2 .btn-outline-secondary:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#PagBlog2 .font-italic {
+    color: black;
+}
+
+#PagBlog2 aside {
+    border-left: 1px solid black;
+}
+
+#PagBlog2 .borde {
+    border-bottom: 1px solid black;
+}
+
+#PagBlog2 {
+    background: url("../images/backblog2.jpg");
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+
+/*Blog 2*/
+
 
 /*CASA DE ORACIÓN*/
 
@@ -1278,62 +1338,3 @@ div#tramo2 {
 
 
 
-/*Blog 2*/
-
-#PagBlog2 .container {
-    background-color: white;
-    opacity: 0.9;
-}
-
-#PagBlog2 h1,
-#PagBlog2 h2,
-#PagBlog2 h3,
-#PagBlog2 .h1,
-#PagBlog2 p {
-    color: black;
-}
-
-#PagBlog2 a {
-    color: #F1BE38;
-}
-
-#PagBlog2 .btn-outline-primary {
-    border-color: black;
-    color: black;
-}
-
-#PagBlog2 .btn-outline-primary:hover {
-    background-color: white;
-    color: rgba(0, 0, 0, 0.7);
-}
-
-#PagBlog2 .btn-outline-secondary:hover {
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
-#PagBlog2 .font-italic {
-    color: black;
-}
-
-#PagBlog2 aside {
-    border-left: 1px solid black;
-}
-
-#PagBlog2 .borde {
-    border-bottom: 1px solid black;
-}
-
-#PagBlog2 {
-    background: url("../images/backblog2.jpg");
-    border-top: 2px solid white;
-    border-bottom: 2px solid white;
-    background-position: center center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-
-
-
-/*Blog 2*/
