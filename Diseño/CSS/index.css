@@ -1188,9 +1188,15 @@ div#sep {
 
 /*----Peticiones--constructores del Muro */
 
+<<<<<<< HEAD
 .peticionesm {
     background-image: url("../images/peticionesc1.jpg");
     background-position: center center;
+=======
+.peticionesm{
+	background-image: url("../images/peticiones1.jpg");
+	background-position: center center;
+>>>>>>> 57881d7461b36059b28c094f7cd31e293dbdd459
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1214,9 +1220,11 @@ div#sep {
     width: 30%;
 }
 
+
 .peticionesm .btn-outline-primary {
     border-color: #F1BE38;
-    color: #F1BE38;
+	color:#000;
+    /*color: #F1BE38;*/
 }
 
 .peticionesm .btn-outline-primary:hover {
@@ -1234,9 +1242,23 @@ div#tramo2 {
     height: 50px;
 }
 
+<<<<<<< HEAD
 .oracion {
     background-image: url("../images/1.jpg");
     background-position: center center;
+=======
+/*----Fin Peticiones--constructores del Muro */
+
+
+/*----Oraciones--constructores del Muro */
+
+
+
+
+.oracion{
+	background-image:url("../images/1.jpg");
+	background-position: center center;
+>>>>>>> 57881d7461b36059b28c094f7cd31e293dbdd459
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1251,3 +1273,67 @@ div#tramo2 {
     background-color: white;
     color: rgba(0, 0, 0, 0.7);
 }
+
+
+
+
+
+/*Blog 2*/
+
+#PagBlog2 .container {
+    background-color: white;
+    opacity: 0.9;
+}
+
+#PagBlog2 h1,
+#PagBlog2 h2,
+#PagBlog2 h3,
+#PagBlog2 .h1,
+#PagBlog2 p {
+    color: black;
+}
+
+#PagBlog2 a {
+    color: #F1BE38;
+}
+
+#PagBlog2 .btn-outline-primary {
+    border-color: black;
+    color: black;
+}
+
+#PagBlog2 .btn-outline-primary:hover {
+    background-color: white;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+#PagBlog2 .btn-outline-secondary:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#PagBlog2 .font-italic {
+    color: black;
+}
+
+#PagBlog2 aside {
+    border-left: 1px solid black;
+}
+
+#PagBlog2 .borde {
+    border-bottom: 1px solid black;
+}
+
+#PagBlog2 {
+    background: url("../images/backblog2.jpg");
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+
+/*Blog 2*/
