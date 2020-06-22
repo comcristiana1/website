@@ -1248,15 +1248,13 @@ div#sep {
 
 /*----Peticiones--constructores del Muro */
 
-<<<<<<< HEAD
 .peticionesm {
     background-image: url("../images/peticionesc1.jpg");
     background-position: center center;
-=======
+}
 .peticionesm{
 	background-image: url("../images/peticiones1.jpg");
 	background-position: center center;
->>>>>>> 57881d7461b36059b28c094f7cd31e293dbdd459
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1302,11 +1300,11 @@ div#tramo2 {
     height: 50px;
 }
 
-<<<<<<< HEAD
+
 .oracion {
     background-image: url("../images/1.jpg");
     background-position: center center;
-=======
+}
 /*----Fin Peticiones--constructores del Muro */
 
 
@@ -1318,7 +1316,6 @@ div#tramo2 {
 .oracion{
 	background-image:url("../images/1.jpg");
 	background-position: center center;
->>>>>>> 57881d7461b36059b28c094f7cd31e293dbdd459
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
