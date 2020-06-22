@@ -47,27 +47,27 @@
                     <h3 class="pb-4 mb-4 borde mt-5">
                         Que es la "Casa de Oracion"
                     </h3>
-                    <p class="borde pb-4"> Texto explicando que es la casa de oración: Cum sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere
+                    <p class="borde pb-4 text-justify"> Texto explicando que es la casa de oración: Cum sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere
                         consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</p>
-
+                    
                     <div class="blog-post blog">
-                        <h2 class="blog-post-title">Oración n</h2>
-                        <p class="blog-post-meta">Junio 11, 2020 by <a href="#">Persona1</a></p>
-                        <img src="images/persona.jpg" alt="Imagen" width="100" height="100">
-                        <p> Cum sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras
-                            mattis consectetur purus sit amet fermentum.</p>
-                        <blockquote>
-                            <p>Curabitur blandit tempus porttitor. <strong>Nullam quis risus eget urna mollis</strong> ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                        </blockquote>
-                        <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
-                        <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                        {% for i in oracion %}
+                        <h2 class="blog-post-title">{{i.title}}</h2>
+                        <p class="blog-post-meta">{{i.created_date}} <a href="#">{{i.author}}</a></p>
+                        <img src={% static 'images/persona.jpg' %} alt="Imagen" width="100" height="100">
+                        <p class='text-justify'>{{i.prayer}}</p>
+                        {% endfor %}
+                        
                     </div>
                     <!-- /.blog-post -->
                     <nav class="blog-pagination mb-5">
-                        <a class="btn btn-outline-primary" href="#">Atras</a>
-                        <a class="btn btn-outline-primary " href="#" tabindex="-1" aria-disabled="true">Siguiente</a>
+                        {% if oracion.has_previous %}
+                            <a class="btn btn-outline-primary" href="?page={{oracion.previous_page_number}}">Atras</a>
+                        {% endif %}
+                        {% if oracion.has_next  %}
+                            <a class="btn btn-outline-primary" href="?page={{oracion.next_page_number}}">Siguiente</a>
+                        {% endif %}
                     </nav>
-
                 </div>
                 <!-- /.blog-main -->
                 <div class="col-md-2"></div>

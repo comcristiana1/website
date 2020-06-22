@@ -5,6 +5,7 @@ from .models import Miembro
 from .forms import O_PForm
 from django.core.mail import send_mail
 from django.conf import settings
+from django.core.paginator import Paginator
 # Create your views here.
 
 
@@ -21,7 +22,11 @@ def mostrar_pastor(request):
 def casa_oracion(request):
     oracion = CasaOracion.objects.all()
     last = len(oracion)-1
-    return render(request,'Post/casa_oracion.html',{'oracion':oracion,'last':oracion[last]})
+    last_prayer = oracion[last] 
+    paginator = Paginator(oracion,1)
+    page = request.GET.get('page')
+    oracion = paginator.get_page(page)
+    return render(request,'Post/casa_oracion.html',{'oracion':oracion,'last':last_prayer})
 
 
 
