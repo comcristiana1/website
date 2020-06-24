@@ -48,145 +48,33 @@
                 <h3 style="color:#FFF">Eventos                    </h3>
                 <h5 style="color:#FFF">Cuando tus rodillas toquen el suelo, tu corazón tocará el cielo.</h5>
                 <p style="color:#FFF">&nbsp;</p>
-<form action="" method="post">
-<button type="submit" class=".btn-outline-*-primary btne ">Todos   </button> 
-<button type="submit" class=".btn-outline-*-secondary btne">Eventos Espirituales </button>
-<button type="submit" class=".btn-outline-*-success btne">Eventos sociales</button> 
+<form action="" method="GET">
+<button type="submit" class=".btn-outline-*-primary btne "  > <a href="{% url 'Post:Eventos' %}">Todos</a>  </button> 
+<button type="submit" class=".btn-outline-*-secondary btne" > <a href="{% url 'Post:Eventos_Espirituales' %}">Eventos Espirituales</a>     </button>
+<button type="submit" class=".btn-outline-*-success btne">  <a href="{% url 'Post:Eventos_Sociales' %}"> Eventos sociales</a>   </button> 
 </form>
-
-
-
-
-
-
 
                 <p>&nbsp;</p>
                 <div class="galeria-work">
                     <!--Galeria Base de Datos-->
+                    {% for i in eventos %}
                     <div class="cont-work seminario">
-                        <div class="img-work">
-                        <p style="color:#000">Eventos Espirituales</p>
-                            <img src={% static 'images/nature1.jpeg' %} alt="">
-                            
-                            <div class="hover-galeria">
-                                <h4>Seminario
-                                    de
-                                    Perdón<br>
-                                    Junio 19, 2020</h4>
-                                <p>Lugar: Iglesia</br>
-                                    Invitado: ------</br>
-                                    Hora: 19h30</br>
-                                    Descripción: General</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="cont-work encuentro">
                         
-                        <div class="img-work">
-                        <p style="color:#000">Eventos Espirituales</p>
-                            <img src={% static 'images/nature1.jpeg' %} alt="">
+                            <div class="img-work">
+                            <p style="color:#000">Eventos {{i.category}}</p>
+                                <img src= {{i.image_ev.url}}  alt="">
                             
-                            <div class="hover-galeria">
-                           
-                                <h4>Encuentro
-                                    de
-                                    Padres <br>
-                                    Junio 20, 2020</h4>
-                                <p>Lugar: Iglesia</br>
-                                    Invitado: ------</br>
-                                    Hora: 19h30</br>
-                                    Descripción: General</p>
+                                <div class="hover-galeria">
+                                    <h4>{{i.name}}<br>
+                                        {{i.event_date}}</h4>
+                                    <p>Lugar: {{i.primary_street}},{{i.secondary_street}},{{i.house_number}}</br>
+                                        Invitado:{{i.invited}}</br>
+                                        Hora: {{i.event_time}}</br>
+                                        Descripción: {{i.description}}</p>
+                                </div>
                             </div>
-                        </div>
                     </div>
-                    
-                    <div class="cont-work retiro">
-                        
-                        <div class="img-work">
-                         <p style="color:#000">Eventos Espiritules</p>
-                            <img src={% static 'images/nature1.jpeg' %} alt="">
-                            
-                            <div class="hover-galeria">
-                            
-                                <h4>Retiro
-                                    de 
-                                    Jovenenes<br>
-                                    Julio 06, 2020</h4>
-                                <p>Lugar: Iglesia</br>
-                                    Invitado: ------</br>
-                                    Hora: 19h30</br>
-                                    Descripción: General</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="cont-work seminario">
-                        <div class="img-work">
-                        <p style="color:#000">Eventos Sociales</p>
-                            <img src={% static 'images/nature1.jpeg' %} alt="">
-                            
-                            <div class="hover-galeria">
-                            
-                                <h4>Seminario
-                                    de
-                                    Perdón<br>
-                                    Junio 19, 2020</h4>
-                                <p>Lugar: Iglesia</br>
-                                    Invitado: ------</br>
-                                    Hora: 19h30</br>
-                                    Descripción: General</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="cont-work seminario">
-                    
-                        <div class="img-work">
-                        <p style="color:#000">Eventos Sociales</p>
-                            <img src={% static 'images/nature1.jpeg' %} alt="">
-                            
-                            <div class="hover-galeria">
-                            
-                                <h4>Seminario
-                                    de
-                                    Perdón<br>
-                                    Junio 19, 2020</h4>
-                                <p>Lugar: Iglesia</br>
-                                    Invitado: ------</br>
-                                    Hora: 19h30</br>
-                                    Descripción: General</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    
-                    <div class="cont-work seminario">
-                        <div class="img-work">
-                        <p style="color:#000">Eventos Sociales</p>
-                            <img src={% static 'images/nature1.jpeg' %} alt="">
-                            
-                            <div class="hover-galeria">
-                            <p>Eventos Sociales</p>
-                                <h4>Seminario
-                                    de
-
-                                    Perdón<br>
-                                    Junio 19, 2020</h4>
-                                <p>Lugar: Iglesia</br>
-                                    Invitado: ------</br>
-                                    Hora: 19h30</br>
-                                    Descripción: General</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    
-                    
-                    
-    
-                    
-                    
+                    {% endfor %}
                 </div>
             </section>
 

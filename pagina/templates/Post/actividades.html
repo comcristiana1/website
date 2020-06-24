@@ -66,42 +66,23 @@
 </section>
 
     
-<section class="pb-5">
-    <div class="opaciac opaciact">
-      <div class="container acts">	
-        <div class="card-deck">
-<div class="card">
-<img class="card-img-top" src={% static 'images/soccer.jpg' %} alt="Card image cap">
-<div class="card-body">
-  <h5 class="card-title">Partidos de Fútbol</h5>
-  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
- 
+<section class="pb-5">    
+<div class="opaciac opaciact">
+    <div class="container acts">	
+        <div class="card-deck">  
+{% for a in actividad %}
+            <div class="card">
+                <img class="card-img-top" src={{a.activity_image.url}} alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">{{a.name}}</h5>
+                    <p class="card-text">{{a.description}}</p>
+                </div>
+            </div>
+{% endfor %}
+        </div>
+    </div>
 </div>
-</div>
-<div class="card">
-<img class="card-img-top" src={% static 'images/hornado.jpg' %} alt="Card image cap">
-<div class="card-body">
-  <h5 class="card-title">Hornado Solidario</h5>
-  <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-  
-</div>
-</div>
-<div class="card">
-<img class="card-img-top" src={% static 'images/concert.jpg' %} alt="Card image cap">
-<div class="card-body">
-  <h5 class="card-title">Conciertos</h5>
-  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-  
-</div>
-</div>
-</div>
-
-
-</div>
-
-</div>
-
 </section>
-     <div id="tramo1">
+<div id="tramo1">
 </div>
 {% endblock container %}

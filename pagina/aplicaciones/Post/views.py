@@ -66,6 +66,14 @@ def mostrar_eventos(request):
     eventos = Evento.objects.all()
     return render(request,'POST/eventos.html',{'eventos':eventos})
 
+def mostrar_eventosEspirituales(request):
+    eventos = Evento.objects.all().filter(category = 'Espirituales');
+    return render(request,'POST/eventos.html',{'eventos':eventos})    
+
+def mostrar_eventosSociales(request):
+    eventos = Evento.objects.all().filter(category = 'Sociales');
+    return render(request,'POST/eventos.html',{'eventos':eventos})
+
 def mostrar_grupos(request):
     grupos = Groups.objects.all()
     return render(request,'POST/grupos.html',{'grupos':grupos})

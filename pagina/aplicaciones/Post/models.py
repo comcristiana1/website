@@ -44,13 +44,20 @@ class Miembro(models.Model):
     def __str__(self):
         return "%s %s %s %s %s %s %s %s %s %s %s %s" % (self.id,self.name1,self.name2,self.surname1,self.surname2,self.ocupation,self.member_image,self.phone1,self.phone2,self.creation_date,self.description,self.status)
 
+Events_Choices = (
+    ('Espirituales','Espirituales'),
+    ('Sociales','Sociales')
+)
+
 class Evento(models.Model):
     id = models.AutoField(primary_key = True)
+    category = models.CharField("Categoria",max_length=30,null=False,blank=False,choices=Events_Choices)
     name = models.CharField("Nombre", max_length=100,null=False,blank=False)
     event_date = models.DateField('Fecha del evento',auto_now=False,auto_now_add=False, null=False, blank=False)
     event_time = models.TimeField('Hora del Evento',auto_now=False, auto_now_add=False)
+    invited = models.CharField('Invitado',max_length=100,null=False, blank=False,default='Ninguno')
     primary_street = models.CharField('Calle principal',max_length=100,null=False, blank=False)
-    secondary_street = models.CharField('Calle secundaria',max_length=100,null=True, blank=True)
+    secondary_street = models.CharField('Calle secundaria',max_length=100,null=False, blank=False,default='')
     house_number = models.CharField('Numero Domicilio',max_length=100,null=False, blank=False)
     city = models.CharField('Ciudad',max_length=50,null=False,blank=False)
     description = models.TextField(max_length=200,null=False, blank=False)
@@ -145,7 +152,7 @@ class Actividades(models.Model):
         verbose_name_plural = 'Actividades'
         
     def __str__(self):
-        return "%s %s %s %s %s %s %s %s %s %s %s" % (self.name,self.activity_image,self.description,self.date,self.initial_hour,self.finish_hour,self.direction,self.in_charge,self.phone1, self.phone2, self.mail, self.status)
+        return "%s %s %s %s %s %s %s %s %s %s %s %s" % (self.name,self.activity_image,self.description,self.date,self.initial_hour,self.finish_hour,self.direction,self.in_charge,self.phone1, self.phone2, self.mail, self.status)
         
 
     
