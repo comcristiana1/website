@@ -1248,12 +1248,8 @@ div#sep {
 
 /*----Peticiones--constructores del Muro */
 
-.peticionesm {
-    background-image: url("../images/peticionesc1.jpg");
-    background-position: center center;
-}
 .peticionesm{
-	background-image: url("../images/peticiones1.jpg");
+	background-image: url("../images/bg-01.jpg");
 	background-position: center center;
     background-attachment: fixed;
     background-repeat: no-repeat;
