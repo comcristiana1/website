@@ -1300,6 +1300,12 @@ div#tramo2 {
     height: 50px;
 }
 
+.opacipet{
+/*background-color: rgb(0,0,255); */
+opacity: 0.5;
+filter: alpha(opacity=100);
+}
+
 
 .oracion {
     background-image: url("../images/1.jpg");
