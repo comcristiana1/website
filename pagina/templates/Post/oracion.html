@@ -55,68 +55,43 @@
   <div class="container esp">
     <!--INICIO-->
     <div class="row">
-      <div class="card-deck">
-        <div class="opaciora">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-titlep" align="center" style="color: #f1be38;">
-                Título de la Oración
-              </h5>
-              <p>Nombre del Orador:</p>
-              <p></p>
-              <p class="card-textpt" align="justify">
-                Texto de la Oración.Texto de la Oración.Texto de la
-                Oración.Texto de la Oración.Texto de la Oración.Texto de la
-                Oración.Texto de la Oración.Texto de la Oración.Texto de la
-                Oración.Texto de la Oración.Texto de la Oración.Texto de la
-                Oración.
-              </p>
+      {% for i in oracion %}
+        <div class="card-deck">
+          <div class="opaciora">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-titlep" align="center" style="color: #f1be38;">
+                  {{i.title}}
+                </h5>
+                <p>Nombre del Orador: {{ i.name_person }}</p>
+                <p></p>
+                <p class="card-textpt" align="justify">
+                  {{ i.description }}
+                </p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div id="tramo2"></div>
-
-      <div class="card-deck">
-        <div class="opaciora">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-titlep" align="center" style="color: #f1be38;">
-                Título de la Oración
-              </h5>
-              <p>Nombre del Orador:</p>
-              <p></p>
-              <p class="card-textpt" align="justify">
-                Texto de la Oración.Texto de la Oración.Texto de la
-                Oración.Texto de la Oración.Texto de la Oración.Texto de la
-                Oración.Texto de la Oración.Texto de la Oración.Texto de la
-                Oración.Texto de la Oración.Texto de la Oración.Texto de la
-                Oración.Texto de la Oración.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
+        <div id="tramo2"></div>
+      {% endfor %}
     </div>
 
-    <div id="tramo2"></div>
-
     <div>
-      <h5 align="center" style="color: #f1be38;">Página 1 de 4</h5>
+      <h5 align="center" style="color: #000;">Página {{oracion.number}} de {{paginator.num_pages}}</h5>
       <br />
       <nav class="peticiones-pagination mb-5">
         <center>
-          <a class="btn btn-outline-primary" href="#">1</a>
-          <a class="btn btn-outline-primary" href="#">2</a>
-          <a
-            class="btn btn-outline-primary"
-            href="#"
-            tabindex="-1"
-            aria-disabled="true"
-            >Siguiente</a
-          >
+          {% if oracion.has_previous %}
+            <a class="btn btn-outline-primary" href="?page={{oracion.previous_page_number}}">Atras</a>
+          {% endif %}
+            <a class="btn btn-outline-primary" href="#">{{oracion.number}}</a>
+          {% if oracion.has_next  %}
+            <a class="btn btn-outline-primary" href="?page={{oracion.next_page_number}}">Siguiente</a>
+          {% endif %}
         </center>
+        
       </nav>
+
     </div>
   </div>
 </div>

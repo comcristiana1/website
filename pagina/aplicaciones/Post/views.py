@@ -2,6 +2,7 @@ from django.shortcuts import render,redirect
 from .models import CasaOracion,Ministry,Evento,Groups,Recurso,Contactos
 from .models import Actividades
 from .models import Miembro
+from .models import FormularioRecursos
 from .forms import O_PForm
 from django.core.mail import send_mail
 from django.conf import settings
@@ -79,10 +80,18 @@ def mostrar_grupos(request):
     return render(request,'POST/grupos.html',{'grupos':grupos})
 
 def mostrar_oracion(request):
-    return render(request,'Post/oracion.html')
+    prayer = FormularioRecursos.objects.filter(section_category='Oracion')
+    paginator = Paginator(prayer,2)
+    page = request.GET.get('page')
+    prayer = paginator.get_page(page)
+    return render(request,'Post/oracion.html',{'oracion': prayer,'paginator':paginator})
 
 def mostrar_peticion(request):
-    return render(request,'Post/peticion.html')
+    peticion = FormularioRecursos.objects.filter(section_category='Peticion')
+    paginator = Paginator(peticion,2)
+    page = request.GET.get('page')
+    peticion = paginator.get_page(page)
+    return render(request,'Post/peticion.html',{'peticion': peticion,'paginator':paginator})
 
 def mostrar_contactos(request):
     contactos = Contactos.objects.all()
