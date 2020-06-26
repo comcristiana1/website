@@ -38,66 +38,42 @@
 {% block container %}
      <!--Inicio Recursos PDF--> 
      <div class="sec1rec" style="background-image:url({% static 'images/11.jpg' %})">
-<div class="container esp">
-<div class="tit" style="color:#FFF">
+      <div class="container esp">
+        <div class="tit" style="color:#FFF">
     
-	 <h1 class="t-g stroke" align="center"><b>Informate</b></h1></div><br>
+	         <h1 class="t-g stroke" align="center"><b>Informate</b></h1></div><br>
+
+           {% for i in recursos %}
+
+               <div class="card mb-3" style="background-color:#262626">
+                  <div class="row no-gutters">
+                    <div class="col-md-4">
+                      <img src="{% static 'images/1.jpg' %}" class="card-img" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body">
+                        <h5 class="card-title"> {{ i.tittle }} </h5>
+                        <p class="card-text" align="justify"> {{ i.description_r | safe }} </p>
+                        <button type="button" class="btnt btn-yellow pt-2 pb-2 btn-lg ">
+                           <a download="{{ i.title }}" href="{{ i.pdf.url }}" >Descargar PDF</a>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+           
+           
+           
+           {% endfor %}
     
-    
-    <div class="card mb-3" style="background-color:#262626">
-  <div class="row no-gutters">
-    <div class="col-md-4">
-      <img src="{% static 'images/1.jpg' %}" class="card-img" alt="...">
-    </div>
-    <div class="col-md-8">
-      <div class="card-body">
-        <h5 class="card-title">Oraciones Semanales</h5>
-        <p class="card-text" align="justify">Su Palabra dice: “No se inquieten por cosa alguna, sino que en todo, por oración y ruego junto con acción de gracias, dense a conocer sus peticiones a Dios; y la paz de Dios que supera a todo pensamiento guardará sus corazones y sus facultades mentales mediante Cristo Jesús” (Filipenses 4:6, 7).</p>
-        <button type="button" class="btnt btn-yellow pt-2 pb-2 btn-lg ">Descargar PDF</button>
-      </div>
-    </div>
-  </div>
-</div>
+  
 
-
- <div class="card mb-3" style="background-color:#262626">
-  <div class="row no-gutters">
-    <div class="col-md-4">
-      <img src="{% static 'images/oracion.jpg' %}" class="card-img" alt="...">
-    </div>
-    <div class="col-md-8">
-      <div class="card-body">
-        <h5 class="card-title">El ofrecimiento de la vida</h5>
-        <p class="card-text" align="justify">Una de las mejores maneras de acercarse a Dios es ofrecerle la vida y cada uno de los días que vivimos. Para ello podemos hacer de nosotros mismos una ofrenda viva que tenga una acción de cambio para el bien en el mundo. Cada día podemos ofrecer nuestro trabajo para que el mundo conozca a Dios y se acerque a Él. 
-        </p>
-        <button type="button" class="btnt btn-yellow pt-2 pb-2 btn-lg ">Descargar PDF</button>
-      </div>
-    </div>
-  </div>
-</div>
-
- <div class="card mb-3" style="background-color:#262626">
-  <div class="row no-gutters">
-    <div class="col-md-4">
-      <img src="{% static 'images/cruz.jpg' %}" class="card-img" alt="...">
-    </div>
-    <div class="col-md-8">
-      <div class="card-body">
-        <h5 class="card-title">Las pequeñas buenas acciones</h5>
-        <p class="card-text" align="justify">Parece que hacer el bien es difícil, y parece que de poco sirve si nuestras acciones son pequeñas y no tienen mucha resonancia. Sin embargo una de las acciones que más podemos gozar en cierto sentido es la de hacer el bien sólo por Dios. Dios es el Padre Óptimo, por lo que nos podemos acercar y parecer a Él si hacemos el bien.</p>
-        <button type="button" class="btnt btn-yellow pt-2 pb-2 btn-lg ">Descargar PDF</button>
-      </div>
     </div>
   </div>
 </div>
     
-    
+   
 </div>
-
-
-
-
-
     <!--Inicio Formulario-->
     <div id="tramo">
     </div>
@@ -106,24 +82,21 @@
     
 	<p align="center "><h2>Formulario para solicitar oración o petición</h2></p></div>
     <div class="cont-f">
-  <form class="formstyle">
+  <form method="POST" class="formstyle">
+        {% csrf_token %}
+
   <!--<p align="center"><i>“Clama a mí y te responderé, y te daré a conocer cosas grandes y ocultas que tú no sabes.”</i></p><p align="center">Jeremías 33:3</p>-->
   <label> Nombre </label>
-  <input class="form-control" type="text" id="nombre" > 
+  <input name="name_person" class="form-control" type="text" id="nombre" > 
     <label for="exampleInputEmail1"> Email </label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <input name="mail_persona" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
 
 	<label> Petición/Oración</label>
-  <select class="custom-select custom-select-sm">
-  
-  <option selected>Seleccionar</option>
-  <option value="Petición">Petición</option>
-  <option value="Oración">Oración</option>
-</select>
+  {{ datos.section_category }}
   <label> Título </label>
-  <input class="form-control" type="text" id="titulo" >
+  <input  name="title" class="form-control" type="text" id="titulo" >
     <label for="exampleFormControlTextarea1">Escriba aquí</label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    <textarea name="description" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
     <br>
   <button style="color:white" class="btn btn-yellow pt-2 pb-2 btn-lg btn-block galery-brand" type="submit">Enviar</button>
 

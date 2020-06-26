@@ -1,9 +1,30 @@
 from django.contrib import admin
-from .models import Evento,Groups,Ministry,CasaOracion,FormularioRecursos,Recurso,Contactos,Edificadores
+from .models import Evento,Groups,Ministry,CasaOracion,FormularioRecursos,Recurso,Contactos,Edificadores,CategoriaPost,AutorPost,PostBlog
 from .models import Actividades
 from .models import Miembro
 
 # Register your models here.
+
+@admin.register(CategoriaPost)
+class CategoriaPostAdmin(admin.ModelAdmin):
+    search_fields = ['name']
+    list_display = ('id','name')
+
+
+@admin.register(AutorPost)
+class AutorPostAdmin(admin.ModelAdmin):
+    search_fields = ['firts_name','id','last_name']
+    list_display = ('id','firts_name','last_name','mail','status')
+
+
+@admin.register(PostBlog)
+class PostBlog(admin.ModelAdmin):
+    search_fields = ['title']
+    list_display = ('id','title','content','picture','auth_post','category_post')
+
+
+
+
 
 class MiembroAdmin(admin.ModelAdmin):
     search_fields = ['name1']

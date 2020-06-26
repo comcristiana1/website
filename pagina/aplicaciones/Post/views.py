@@ -56,7 +56,7 @@ def oracion_peticion(request):
             send_mail(subject,message,email_from,recipient_list)
 
             O_P_form.save()
-            return redirect('Post:orar')
+            return redirect('Post:Oracion')
     else:
         O_P_form = O_PForm()
 

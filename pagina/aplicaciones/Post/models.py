@@ -173,6 +173,7 @@ class Contactos(models.Model):
 class Recurso(models.Model):
     id = models.AutoField(primary_key=True),
     title = models.CharField("Titulo del PDF", max_length=50,null=False,blank=False)
+    description_r =RichTextField()
     pdf = models.FileField(upload_to="Recursos PDF", max_length=254)
 
     class Meta:
@@ -199,3 +200,55 @@ class Edificadores(models.Model):
         return "%s %s %s %s" % (self.tipe,self.name,self.mail,self.description)
 
 
+
+#Creacio tabla categoria de un POST
+
+class CategoriaPost(models.Model):
+    id = models.AutoField(primary_key = True)
+    name = models.CharField('Nombre de la Categoria',max_length=100,null=False,blank=False)
+    status = models.BooleanField('Categoria Activada/Categoria no Activada', default=True)
+    create_date = models.DateField('Fecha de Creación',auto_now=False,auto_now_add=True)
+
+    class Meta:
+        verbose_name = 'CategoriaPost'
+        verbose_name_plural = 'CategoriasPosts'
+
+    def __str__(self):
+        return self.name
+
+
+class AutorPost(models.Model):
+    id = models.AutoField(primary_key=True)
+    firts_name = models.CharField('Nombres de Autor',max_length=255,null=False,blank=False)
+    last_name= models.CharField('Apellidos de Autor',max_length=255,null=False,blank=False)
+    mail = models.EmailField('Correo Electronico',null=False,blank=False)
+    status = models.BooleanField('Autor Activo/No Activo',default=True)
+    create_date = models.DateField('Fecha de creación',auto_now=False,auto_now_add=True)
+
+
+    class Meta:
+        verbose_name='AutorPost'
+        verbose_name_plural = 'AutoresPosts'
+    
+    def __str__(self):
+        return "{0},{1}".format(self.last_name,self.firts_name)
+
+
+class PostBlog(models.Model):
+    id = models.AutoField(primary_key= True)
+    title = models.CharField('Titulo',max_length=90,blank=False,null=False)
+    slug = models.CharField('Slug',max_length=100,blank=False,null=False)
+    content = RichTextField()
+    picture = models.URLField(max_length=255,blank=False,null=False)
+    auth_post = models.ForeignKey(AutorPost,on_delete=models.CASCADE)
+    category_post = models.ForeignKey(CategoriaPost,on_delete=models.CASCADE)
+    status = models.BooleanField('Publicado/No publicado',default=True)
+    create_date = models.DateField('Fecha de Creación',auto_now=False,auto_now_add=True)
+
+
+    class Meta:
+        verbose_name = 'PostBlog'
+        verbose_name_plural = 'PostsBlog'
+
+    def __str__(self):
+        return self.title

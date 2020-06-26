@@ -11,7 +11,7 @@
 
     {% for i in recursos %}
         <a download="{{ i.title }}" href="{{ i.pdf.url }}" >{{ i.title }}</a>
-    
+    <a download="{{ i.title }}" href="{{ i.pdf.url }}" >Descargar</a>
     
     {% endfor %}
 
@@ -44,6 +44,37 @@
         <button type="submit">Enviar</button>
     </form>
     
+
+<!--Prueba FORM-->
+
+  <form method="POST" class="formstyle">
+        {% csrf_token %}
+        <div class="form-group">
+            <label> Nombre </label>
+            <input class="form-control" type="text" id="nombre" name="name_person">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1" name="mail_persona"> Email </label>
+            <input  type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="mail_persona">
+        </div>
+        <div class="form-group">
+            <label> Petición/Oración</label>
+            {{ datos.section_category }}
+        </div>
+        <div class="form-group">
+            <label> Título </label>
+            <input  class="form-control" type="text" id="titulo" name="title">
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1">Escriba aquí</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"  name="description"></textarea>
+
+        </div>
+        <br>
+        <button type="submit" style="color:white" class="btn btn-yellow pt-2 pb-2 btn-lg btn-block galery-brand">Enviar</button>
+    </form>  
+
+
     
 </body>
 </html>
