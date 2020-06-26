@@ -54,8 +54,9 @@
                       <div class="card-body">
                         <h5 class="card-title"> {{ i.tittle }} </h5>
                         <p class="card-text" align="justify"> {{ i.description_r | safe }} </p>
+                        <br>
                         <button type="button" class="btnt btn-yellow pt-2 pb-2 btn-lg ">
-                           <a download="{{ i.title }}" href="{{ i.pdf.url }}" >Descargar PDF</a>
+                           <a style="color:white;" download="{{ i.title }}" href="{{ i.pdf.url }}" >Descargar PDF</a>
                         </button>
                       </div>
                     </div>
