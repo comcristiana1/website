@@ -1264,6 +1264,7 @@ div#sep {
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
+	
 }
 
 .tit h2 {
@@ -1329,6 +1330,8 @@ div#tramo2 {
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
+	border-right: 8px solid transparent;
+    border-left: 16px solid transparent;
 }
 
 .card-bodypetic p {
@@ -1353,15 +1356,6 @@ div#tramo2 {
 }
 
 
-
-
-
-
-
-.oracion {
-    background-image: url("../images/1.jpg");
-    background-position: center center;
-}
 /*----Fin Peticiones--constructores del Muro */
 
 
