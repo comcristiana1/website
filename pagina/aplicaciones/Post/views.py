@@ -1,5 +1,5 @@
 from django.shortcuts import render,redirect
-from .models import CasaOracion,Ministry,Evento,Groups,Recurso
+from .models import CasaOracion,Ministry,Evento,Groups,Recurso,Contactos
 from .models import Actividades
 from .models import Miembro
 from .forms import O_PForm
@@ -83,3 +83,7 @@ def mostrar_oracion(request):
 
 def mostrar_peticion(request):
     return render(request,'Post/peticion.html')
+
+def mostrar_contactos(request):
+    contactos = Contactos.objects.all()
+    return render(request,'POST/contactos.html',{'contactos':contactos})

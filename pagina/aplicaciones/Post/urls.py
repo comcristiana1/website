@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import mostrar_pastor, casa_oracion,oracion_peticion,mostrar_actividades,mostrar_ministerio,mostrar_eventos,mostrar_eventosEspirituales,mostrar_eventosSociales,mostrar_grupos
+from .views import mostrar_pastor,mostrar_contactos, casa_oracion,oracion_peticion,mostrar_actividades,mostrar_ministerio,mostrar_eventos,mostrar_eventosEspirituales,mostrar_eventosSociales,mostrar_grupos
 from .views import mostrar_oracion,mostrar_peticion
 
 
@@ -14,5 +14,6 @@ urlpatterns = [
     path('eventos-sociales/',mostrar_eventosSociales,name='Eventos_Sociales'),
     path('grupos/',mostrar_grupos,name='Grupos'),
     path('oracion/', mostrar_oracion,name='Oracion'),
-    path('peticion/',mostrar_peticion,name='Peticion')
+    path('peticion/',mostrar_peticion,name='Peticion'),
+    path('contactos/',mostrar_contactos,name='Contactos'),
 ]

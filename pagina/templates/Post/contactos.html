@@ -1,0 +1,97 @@
+ {% extends 'base.html' %}
+ {% load static %}
+ {% block titulo %}
+        <title>Contacto</title>
+{% endblock titulo %}
+{% block publicidad %}
+
+{% endblock publicidad %}
+{% block container %}
+<div class="container-contact100">
+		<div class="wrap-contact100">
+			<form class="contact100-form validate-form" method="POST" >
+				<span class="contact100-form-title">
+					¡Contactanos!
+				</span>
+
+				<label class="label-input100" for="first-name">Ingresa tú Nombre y Apellido *</label>
+				<div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate="Type first name">
+					<input id="first-name" class="input100" type="text" name="first-name" placeholder="Nombre">
+					<span class="focus-input100"></span>
+				</div>
+				<div class="wrap-input100 rs2-wrap-input100 validate-input" data-validate="Type last name">
+					<input class="input100" type="text" name="last-name" placeholder="Apellido">
+					<span class="focus-input100"></span>
+				</div>
+
+				<label class="label-input100" for="email">Ingresa tú Correo Electrónico *</label>
+				<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+					<input id="email" class="input100" type="text" name="email" placeholder="Ej. ejemplo@email.com">
+					<span class="focus-input100"></span>
+				</div>
+
+				<label class="label-input100" for="message">Mesaje *</label>
+				<div class="wrap-input100 validate-input" data-validate = "Message is required">
+					<textarea id="message" class="input100" name="message" placeholder="Escribe aquí tú mensaje"></textarea>
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="container-contact100-form-btn">
+					<button class="contact100-form-btn">
+						Enviar Mensaje
+					</button>
+				</div>
+			</form>
+
+			<div class="contact100-more flex-col-c-m" style="background-image: url({% static 'images/bg-01.jpg' %});">
+				<div class="flex-w size1 p-b-47">
+					<div class="txt1 p-r-25">
+						<span class="lnr lnr-map-marker"></span>
+					</div>
+
+					<div class="flex-col size2">
+						<span class="txt1 p-b-20">
+							Dirección
+						</span>
+
+						<span class="txt2">
+							Calle n76 , 585 Calle n85,</br>Quito-Ecuador , UIO 10018 EC
+						</span>
+					</div>
+				</div>
+
+				<div class="dis-flex size1 p-b-47">
+					<div class="txt1 p-r-25">
+						<span class="lnr lnr-phone-handset"></span>
+					</div>
+
+					<div class="flex-col size2">
+						<span class="txt1 p-b-20">
+							Llámanos
+						</span>
+
+						<span class="txt3">
+							+593 (02) 5266525
+						</span>
+					</div>
+				</div>
+
+				<div class="dis-flex size1 p-b-47">
+					<div class="txt1 p-r-25">
+						<span class="lnr lnr-envelope"></span>
+					</div>
+
+					<div class="flex-col size2">
+						<span class="txt1 p-b-20">
+							Correo Institucional
+						</span>
+
+						<span class="txt3">
+							contact@example.com
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock container %}

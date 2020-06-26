@@ -154,9 +154,21 @@ class Actividades(models.Model):
     def __str__(self):
         return "%s %s %s %s %s %s %s %s %s %s %s %s" % (self.name,self.activity_image,self.description,self.date,self.initial_hour,self.finish_hour,self.direction,self.in_charge,self.phone1, self.phone2, self.mail, self.status)
         
-
+#Creación tabla Contacto
+class Contactos(models.Model):
+    id = models.AutoField(primary_key=True)
+    name = models.CharField('Nombre',max_length=40,null=False,blank=False)
+    surname = models.CharField('Apellido',max_length=40,null=False,blank=False)
+    mail = models.EmailField('Correo Electrónico ',max_length = 40,unique = True,null = False, blank = False)
+    message = models.TextField('Mensaje',blank=False,null=False);
+    status = models.BooleanField('Estado Activado/Desactivado',default = True)
     
-
+    class Meta:
+        verbose_name = 'Contactos'
+        verbose_name_plural = 'Contactos'
+        
+    def __str__(self):
+        return "%s %s %s %s %s" % (self.name,self.surname,self.mail,self.message,self.status)
 
 class Recurso(models.Model):
     id = models.AutoField(primary_key=True),
