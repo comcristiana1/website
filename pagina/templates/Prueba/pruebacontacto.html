@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<form method="POST">
+    {% csrf_token %}
+    {% if error %}
+    <p> {{ error }} </p>
+    
+    {% endif %}
+
+    <input type="text" name="name" value="Ingrese nombre">
+    <input type="text" name="surname">
+    <input type="text" name="mail">
+    <input type="text" name="message">
+
+
+    <button type="submit">Enviar</button>
+
+
+</form>
+    
+</body>
+</html>

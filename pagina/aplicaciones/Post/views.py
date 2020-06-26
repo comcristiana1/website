@@ -3,7 +3,7 @@ from .models import CasaOracion,Ministry,Evento,Groups,Recurso,Contactos
 from .models import Actividades
 from .models import Miembro
 from .models import FormularioRecursos
-from .forms import O_PForm
+from .forms import O_PForm,ContactosForm
 from django.core.mail import send_mail
 from django.conf import settings
 from django.core.paginator import Paginator
@@ -17,7 +17,7 @@ def home(request):
 
 
 def mostrar_pastor(request):
-    mostrar = Miembro.objects.all()
+    mostrar = Miembro.objects.filter(status=True)
     return render(request,'Post/quienessomos.html',{'mostrar':mostrar})
 
 def casa_oracion(request):
@@ -96,3 +96,27 @@ def mostrar_peticion(request):
 def mostrar_contactos(request):
     contactos = Contactos.objects.all()
     return render(request,'POST/contactos.html',{'contactos':contactos})
+
+
+
+def contactanos(request):
+    if request.method == 'POST':
+        datos = ContactosForm(request.POST)
+        if datos.is_valid():
+            datos.save()
+            return redirect('index')
+        else:
+            return render(request,'Prueba/pruebacontacto.html',{"error":"Campos no validos"})
+
+
+    else:
+        datos = ContactosForm()
+    
+    
+    return render(request,'Prueba/pruebacontacto.html',{"datos":datos})
+
+
+
+
+
+

@@ -1,5 +1,5 @@
 from django import forms
-from .models import FormularioRecursos
+from .models import FormularioRecursos,Contactos
 
 class O_PForm(forms.ModelForm):
     class Meta:
@@ -50,3 +50,12 @@ class O_PForm(forms.ModelForm):
                 }
             )
         }
+
+
+
+
+class ContactosForm(forms.ModelForm):
+    class Meta:
+        model = Contactos
+        fields = ['name','surname','mail','message']
+
