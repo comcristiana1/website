@@ -256,6 +256,13 @@ img.recurso {
     margin-right: auto;
 }
 
+.card-img-top {
+    width: 100%;
+    height:auto;
+    object-fit: cover;
+}
+
+
 .f {
     padding: 4% 0% 0% 0%;
     background-size: 100% 100%;
