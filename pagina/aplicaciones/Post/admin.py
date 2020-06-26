@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Evento,Groups,Ministry,CasaOracion,FormularioRecursos,Recurso,Contactos
+from .models import Evento,Groups,Ministry,CasaOracion,FormularioRecursos,Recurso,Contactos,Edificadores
 from .models import Actividades
 from .models import Miembro
 
@@ -53,7 +53,9 @@ class RecursoAdmin(admin.ModelAdmin):
     search_fields = ['id','title']
     list_display = ('id','title','pdf')
     
-
+class EdificadoresAdmin(admin.ModelAdmin):
+    search_fields = ['tipe','name']
+    list_display = ('id','tipe','name','mail','description')
 
 
 
@@ -66,3 +68,4 @@ admin.site.register(Actividades,ActividadesAdmin)
 admin.site.register(FormularioRecursos,FormularioRecursosAdmin)
 admin.site.register(Recurso,RecursoAdmin)
 admin.site.register(Contactos,ContactosAdmin)
+admin.site.register(Edificadores,EdificadoresAdmin)

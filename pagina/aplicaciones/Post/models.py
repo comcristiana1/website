@@ -182,3 +182,20 @@ class Recurso(models.Model):
     def __str__(self):
         return self.title
 
+
+#Creacion tabla edificadores
+class Edificadores(models.Model):
+    id = models.AutoField(primary_key=True)
+    tipe = models.CharField("Tipo", max_length=15, null=False, blank=False)
+    name = models.CharField("Nombre", max_length=80, null=False, blank=False)
+    mail = models.EmailField("Email", max_length=50, null=False, blank=False)
+    description = models.CharField('Descripcion', max_length=200,null=False, blank=False)
+
+    class Meta:
+        verbose_name = "Edificadores"
+        verbose_name_plural = "Edificadores"
+
+    def __str__(self):
+        return "%s %s %s %s" % (self.tipe,self.name,self.mail,self.description)
+
+
