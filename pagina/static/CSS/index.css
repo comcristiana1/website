@@ -119,19 +119,21 @@ img.mediana {
     color: VAR(--COLOR_LETRA2);
     font-family: VAR(--LETRA);
 }
-.formstyle{
-	width:550px;
-	background-color:#000;
-	padding:4%;
-	opacity: 0.85;
+
+.formstyle {
+    width: 550px;
+    background-color: #000;
+    padding: 4%;
+    opacity: 0.85;
     filter: alpha(opacity=60);
-	color:#FFF;
-	alignment-adjust:central;
+    color: #FFF;
+    alignment-adjust: central;
 }
-form input[type="text"]{
-	width:100%;
-	
-	}
+
+form input[type="text"] {
+    width: 100%;
+}
+
 
 /*-------------------CSS QUIENES SOMOS */
 
@@ -260,7 +262,7 @@ img.recurso {
 }
 
 .cont-f {
-	padding:7%;
+    padding: 7%;
     display: -webkit-box;
     display: -webkit-flex;
     display: -moz-box;
@@ -270,7 +272,6 @@ img.recurso {
     display: flex;
     justify-content: center;
 }
-
 
 .esp1 {
     padding: 6%;
@@ -430,72 +431,59 @@ img.recurso {
     background-size: cover;
 }
 
-
-#imagen1 img{
-  max-width: 100%;
+#imagen1 img {
+    max-width: 100%;
 }
-
 
 #edsec1 {
-      background-color: rgba(0, 0, 0, 0.8);
-
-}
-#edsec1 p{
-
-  padding-top: 50px;
-  padding-bottom: 40px;
-  padding-left: 40px;
-  padding-right: 60px;
-  color: #daccc1 ;
-
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
+#edsec1 p {
+    padding-top: 50px;
+    padding-bottom: 40px;
+    padding-left: 40px;
+    padding-right: 60px;
+    color: #daccc1;
+}
 
-
-#imagen2 img{
-  max-width: 100%;
+#imagen2 img {
+    max-width: 100%;
 }
 
 #edsec2 {
-      background-color: rgba(255, 255, 255, 0.8);
-
-}
-#edsec2 p{
-
-  padding-top: 50px;
-  padding-bottom: 40px;
-  padding-left: 40px;
-  padding-right: 60px;
-  color: #272525 ;
-
+    background-color: rgba(255, 255, 255, 0.8);
 }
 
+#edsec2 p {
+    padding-top: 50px;
+    padding-bottom: 40px;
+    padding-left: 40px;
+    padding-right: 60px;
+    color: #272525;
+}
 
-#imagen3 img{
-  max-width: 100%;
+#imagen3 img {
+    max-width: 100%;
 }
 
 #edsec3 {
-      background-color: rgba(0, 0, 0, 0.8);
-
-}
-#edsec3 p{
-
-  padding-top:60px;
-  padding-bottom: 40px;
-  padding-left: 40px;
-  padding-right: 60px;
-  color: #daccc1 ;
-
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
+#edsec3 p {
+    padding-top: 60px;
+    padding-bottom: 40px;
+    padding-left: 40px;
+    padding-right: 60px;
+    color: #daccc1;
+}
 
 .fondo1 {
-	background-image: url("../images/forestal.jpg");
+    background-image: url("../images/forestal.jpg");
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
-
 }
 
 .f1 {
@@ -928,7 +916,6 @@ h6 {
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
-
 }
 
 .titt h2 {
@@ -1054,9 +1041,7 @@ li {
 }
 
 .grupos .card:hover {
-	border-color:#F1BE38;
-
-
+    border-color: #F1BE38;
 }
 
 
@@ -1080,6 +1065,66 @@ div#sep {
 /*---------------------
 	GRUPOS
 -----------------------*/
+
+/*Blog 2*/
+
+#PagBlog2 .container {
+    background-color: white;
+    opacity: 0.9;
+}
+
+#PagBlog2 h1,
+#PagBlog2 h2,
+#PagBlog2 h3,
+#PagBlog2 .h1,
+#PagBlog2 p {
+    color: black;
+}
+
+#PagBlog2 a {
+    color: #F1BE38;
+}
+
+#PagBlog2 .btn-outline-primary {
+    border-color: black;
+    color: black;
+}
+
+#PagBlog2 .btn-outline-primary:hover {
+    background-color: white;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+#PagBlog2 .btn-outline-secondary:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#PagBlog2 .font-italic {
+    color: black;
+}
+
+#PagBlog2 aside {
+    border-left: 1px solid black;
+}
+
+#PagBlog2 .borde {
+    border-bottom: 1px solid black;
+}
+
+#PagBlog2 {
+    background: url("../images/backblog2.jpg");
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+
+/*Blog 2*/
 
 
 /*CASA DE ORACIÓN*/
@@ -1139,7 +1184,7 @@ div#sep {
 /*PagBLOG*/
 
 #PagBlog .container {
-    background-color: #ece2c6;
+    background-color: black;
     opacity: 0.8;
 }
 
@@ -1148,7 +1193,7 @@ div#sep {
 #PagBlog h3,
 #PagBlog .h1,
 #PagBlog p {
-    color: black;
+    color: white;
 }
 
 #PagBlog a {
@@ -1191,11 +1236,21 @@ div#sep {
     background-size: cover;
 }
 
+#PagBlog .imagblog {
+    background: url("../images/Casa_oracion4.jpg");
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
 /*----Peticiones--constructores del Muro */
 
 .peticionesm{
-	background-image: url("../images/peticionesc1.jpg");
-		background-position: center center;
+	background-image: url("../images/bg-01.jpg");
+	background-position: center center;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1206,13 +1261,11 @@ div#sep {
     color: white;
 }
 
-
 .card-img {
     background-size: 100% 100%;
     margin-left: auto;
     margin-right: auto;
 }
-
 
 .opacity {
     opacity: 0.85;
@@ -1221,9 +1274,11 @@ div#sep {
     width: 30%;
 }
 
+
 .peticionesm .btn-outline-primary {
-    border-color: white;
-    color: white;
+    border-color: #F1BE38;
+	color:#000;
+    /*color: #F1BE38;*/
 }
 
 .peticionesm .btn-outline-primary:hover {
@@ -1234,8 +1289,55 @@ div#sep {
 .peticionesm .btn-outline-secondary:hover {
     background-color: rgba(0, 0, 0, 0.5);
 }
+
 div#tramo2 {
-   /* background-color: #FFF;*/
+    /* background-color: #FFF;*/
     width: 100%;
     height: 50px;
 }
+
+.opacipet{
+/*background-color: rgb(0,0,255); */
+opacity: 0.5;
+filter: alpha(opacity=100);
+}
+
+
+.oracion {
+    background-image: url("../images/1.jpg");
+    background-position: center center;
+}
+/*----Fin Peticiones--constructores del Muro */
+
+
+/*----Oraciones--constructores del Muro */
+
+
+
+
+.oracion{
+	background-image:url("../images/1.jpg");
+	background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.oracion .btn-outline-primary {
+    border-color: #F1BE38;
+    color: #F1BE38;
+}
+
+.oracion .btn-outline-primary:hover {
+    background-color: white;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.opaciora{
+/*background-color: rgb(0,0,255); */
+opacity: 0.5;
+}
+
+
+
+
