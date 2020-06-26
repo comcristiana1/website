@@ -77,3 +77,9 @@ def mostrar_eventosSociales(request):
 def mostrar_grupos(request):
     grupos = Groups.objects.all()
     return render(request,'POST/grupos.html',{'grupos':grupos})
+
+def mostrar_oracion(request):
+    return render(request,'Post/oracion.html')
+
+def mostrar_peticion(request):
+    return render(request,'Post/peticion.html')
