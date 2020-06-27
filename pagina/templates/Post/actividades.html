@@ -70,15 +70,50 @@
 <div class="opaciac opaciact">
     <div class="container acts">	
         <div class="card-deck">  
+{% if actividad %}
 {% for a in actividad %}
+            
             <div class="card">
                 <img class="card-img-top" src={{a.activity_image.url}} alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title">{{a.name}}</h5>
-                    <p class="card-text">{{a.description}}</p>
+                    <p class="card-text">Día: {{a.day}}
+                    <br/>
+                    Encargado/os: {{a.in_charge}}
+                    <br/>
+                    Frecuencia: {{a.frecuency}}
+                    <br/>
+                    Hora de inicio: {{a.initial_hour}}
+                    <br/>
+                    Hora de finalización: {{a.finish_hour}}
+                    <br/>
+                    Dirección: {{a.direction}}
+                    <br/>
+                    Encargado: {{a.in_charge}}
+                    <br/>
+                    Descripción: {{a.description}}
+                    <br/>
+                    {% if a.phone1 is None  %}
+                    {% elif a.phone2 is None %}
+                    Número de contacto: {{a.phone1}}
+                    <br/>
+                    {% else %}
+                    Números de contacto: {{a.phone1}} , {{a.phone2}} 
+                    <br/>
+                    {% endif %}
+                    {% if a.mail%}
+                    Mail: {{a.mail}}
+                    {% endif %}
+                    </p>
                 </div>
             </div>
 {% endfor %}
+{% else %}
+                        <div class="col text-center">
+                            <h1 style="color:#FFF;" >No hay actividades</h1>
+                        </div>
+
+{% endif %}
         </div>
     </div>
 </div>

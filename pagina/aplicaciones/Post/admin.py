@@ -58,7 +58,7 @@ class MinisterioAdmin(admin.ModelAdmin):
 class ActividadesAdmin(admin.ModelAdmin):
     search_fields = ['name']
 
-    list_display = ('id', 'name', 'activity_image', 'description', 'date', 'initial_hour', 'finish_hour', 'direction', 'in_charge', 'phone1', 'phone2', 'mail', 'status')
+    list_display = ('id', 'name', 'activity_image', 'description', 'day', 'frecuency' ,'initial_hour', 'finish_hour', 'direction', 'in_charge', 'phone1', 'phone2', 'mail', 'status')
 
 
 class FormularioRecursosAdmin(admin.ModelAdmin):

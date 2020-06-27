@@ -7,16 +7,19 @@
 </head>
 <body>
 
-<form method="POST">
+	<form method="POST">
     {% csrf_token %}
     {% if error %}
     <p> {{ error }} </p>
     
     {% endif %}
-
+<label class="label-input100" for="first-name">Ingresa tú Nombre y Apellido *</label>
     <input type="text" name="name" value="Ingrese nombre">
+	<label class="label-input100" for="first-name">Ingresa tú Nombre y Apellido *</label>
     <input type="text" name="surname">
+	<label class="label-input100" for="first-name">Ingresa tú Nombre y Apellido *</label>
     <input type="text" name="mail">
+	<label class="label-input100" for="first-name">Ingresa tú Nombre y Apellido *</label>
     <input type="text" name="message">
 
 

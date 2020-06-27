@@ -130,6 +130,14 @@ class Ministry(models.Model):
 
     def __str__(self):
         return "%s %s %s %s %s %s %s %s" % (self.name,self.direction,self.responsible_person,self.frequency,self.collaborators,self.ministry_image,self.description,self.status)
+Days_Choices = (
+    ('Todos los días','Todos los días'),
+    ('Lunes','Lunes'),
+    ('Martes','Martes'),
+    ('Miercoles','Miercoles'),
+    ('Jueves','Jueves'),
+    ('Viernes','Viernes')
+)
 
 #Creacion tabla Actividades
 class Actividades(models.Model):
@@ -137,14 +145,15 @@ class Actividades(models.Model):
     name = models.CharField('Nombre Actividad',max_length=40,null=False,blank=False)
     activity_image = models.ImageField('Imagen Actividad',upload_to='activ_image',null=False,blank=True)
     description = models.CharField('Descripcion', max_length=200,null=True, blank=True)
-    date = models.DateField('Fecha Actividad',auto_now=False,auto_now_add=False, null=False, blank=False)
+    day = models.CharField("Día",max_length=20,null=False,blank=False,choices=Days_Choices,default='Todos los días')
+    frecuency = models.CharField('Frecuencia',max_length=40, null=False, blank=False)
     initial_hour = models.TimeField('Hora Inicio',auto_now=False, auto_now_add=False)
     finish_hour = models.TimeField('Hora Fin',auto_now=False, auto_now_add=False)
     direction = models.CharField('Dirección',max_length=100,null=False,blank=False)
     in_charge = models.CharField('Encargado', max_length=60, null=False, blank=False)
     phone1 = models.CharField('Teléfono Celular ',max_length = 10, null = True, blank = True)
     phone2 = models.CharField('Teléfono Convencional ',max_length = 10, null = True, blank = True)
-    mail = models.EmailField('Correo Electrónico ',max_length = 30,unique = True,null = True, blank = True)
+    mail = models.EmailField('Correo Electrónico ',max_length = 30,unique = False,null = True, blank = True)
     status = models.BooleanField('Estado Activado/Desactivado',default = True)
 
     class Meta:
@@ -152,7 +161,7 @@ class Actividades(models.Model):
         verbose_name_plural = 'Actividades'
         
     def __str__(self):
-        return "%s %s %s %s %s %s %s %s %s %s %s %s" % (self.name,self.activity_image,self.description,self.date,self.initial_hour,self.finish_hour,self.direction,self.in_charge,self.phone1, self.phone2, self.mail, self.status)
+        return "%s %s %s %s %s %s %s %s %s %s %s %s %s" % (self.name,self.activity_image,self.description,self.day,self.frecuency,self.initial_hour,self.finish_hour,self.direction,self.in_charge,self.phone1, self.phone2, self.mail, self.status)
         
 #Creación tabla Contacto
 class Contactos(models.Model):

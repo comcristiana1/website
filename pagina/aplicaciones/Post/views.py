@@ -19,7 +19,14 @@ from .models import PostBlog, CategoriaPost, AutorPost
 
 
 def home(request):
-    return render(request,'base.html')
+    ultimo = Evento.objects.last()
+    aux = Evento.objects.values_list(flat=True).last()
+    pen = Evento.objects.all();
+    aux = len(pen)
+    penultimo = pen[aux-2]
+    print(aux-1)
+    #evento2 = Evento.objects.filter(creation_date =  ultimo-1)
+    return render(request,'base.html',{'ultimo':ultimo,'penultimo':penultimo})
 
 
 
@@ -41,7 +48,7 @@ def casa_oracion(request):
 
 
 def mostrar_actividades(request):
-    actividad = Actividades.objects.all()
+    actividad = Actividades.objects.filter(status= True)
     return render(request,'Post/actividades.html',{'actividad':actividad})
 
 def mostrar_ministerio(request):
@@ -71,7 +78,7 @@ def oracion_peticion(request):
 
 
 def mostrar_eventos(request):
-    eventos = Evento.objects.all()
+    eventos = Evento.objects.filter(status= True)
     return render(request,'POST/eventos.html',{'eventos':eventos})
 
 def mostrar_eventosEspirituales(request):
@@ -113,20 +120,15 @@ def mostrar_edificadores(request):
 def contactanos(request):
     if request.method == 'POST':
         datos = ContactosForm(request.POST)
+        print(datos)
         if datos.is_valid():
             datos.save()
             return redirect('index')
         else:
-            return render(request,'Prueba/pruebacontacto.html',{"error":"Campos no validos"})
-
-
+            return render(request,'Post/contactos.html',{"error":"Campos no validos"})
     else:
         datos = ContactosForm()
-    
-    
-    return render(request,'Prueba/pruebacontacto.html',{"datos":datos})
-
-
+    return render(request,'Post/contactos.html',{"datos":datos})
 #JORGE
 
 
