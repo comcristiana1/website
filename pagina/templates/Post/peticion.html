@@ -33,9 +33,6 @@
           <div class="row align-items-center">
             <div class="col text-center">
               <h1>Peticiones</h1>
-              <p class="d-none d-md-block">
-                Frase.Frase.Frase.Frase.Frase.Frase
-              </p>
             </div>
           </div>
         </div>
@@ -47,65 +44,23 @@
 {% block publicidad %} 
 {% endblock publicidad %} 
 {% block container %}
-<div class="peticionesm">
+<div class="peticionesm" id="peticiones">
   <div id="tramo"></div>
 
   <div id="tramo2"></div>
 
+  {% if peticiones %}
   <div class="container esp">
-    <!--pastor-->
 
-    <div class="opacipet">
-      <div class="card mb-3">
-        <div class="row no-gutters">
-          <div class="col-md-4">
-            <img src={% static 'images/persona.jpg' %} class="card-img"
-            alt="Card image cap" height="250" width="150">
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <p class="card-text" align="justify">
-                En esta sección algún miembro de la comunidad escribirá una
-                cadena de oración, para todas las peticiones que se enviarán
-                medianto el formulario de recursos. En esta sección algún
-                miembro de la comunidad escribirá una cadena de oración, para
-                todas las peticiones que se enviarán medianto el formulario de
-                recursos. En esta sección algún miembro de la comunidad
-                escribirá una cadena de oración, para todas las peticiones que
-                se enviarán medianto el formulario de recursos.
-              </p>
-              <p style="color: #f1be38;">Nombre y Apellido:</p>
-              <p style="color: #f1be38;">Fecha:</p>
-              <p style="color: #f1be38;">Cargo</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div id="tramo2"></div>
-    <div id="tramo2"></div>
-
-    
-    <!--dos primeras-->
     <div class="row">
       {% for i in peticion  %}
-      <div class="card-deck">
-        <div class="opacipet">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-titlep" align="center" style="color: #f1be38;">
-                {{i.title}}
-              </h5>
-              <p style="color: #f1be38;">Nombre y Apellido: {{ i.name_person }}</p>
-              <p style="color: #f1be38;">Fecha: </p>
-              <p class="card-textpt" align="justify">
-                {{i.description}}
-              </p>
-              <p class="card-textp" align="center" style="color: #f1be38;">
-                Amén
-              </p>
-            </div>
+      <div class="card-deck w-100">
+        <div class="card">
+          <div class="card-bodyptt">
+            <h5 class="card-titlep p-2" align="center" style="color:#F1BE38">{{ i.title }}</h5>
+            <div class="col-xl-4"><span>Pedido por:</span> {{ i.name_person }}</div>
+            <div class="col-xl-4"><span>Fecha de Petición:</span> {{ i.creation_date }} </div>
+            <p class="card-textpt p-3" align="justify" >{{ i.description }}</p>
           </div>
         </div>
       </div>
@@ -125,18 +80,24 @@
       <nav class="peticiones-pagination mb-5">
         <center>
           {% if peticion.has_previous %}
-            <a class="btn btn-outline-primary" href="?page={{peticion.previous_page_number}}">Atras</a>
+            <a class="btn btn-outline-primary" href="?page={{peticion.previous_page_number}}#peticiones">Atras</a>
           {% endif %}
-            <a class="btn btn-outline-primary" href="#">{{peticion.number}}</a>
+            <a class="btn btn-outline-primary" href="?page={{peticion.number}}#peticiones">{{peticion.number}}</a>
           {% if peticion.has_next  %}
-            <a class="btn btn-outline-primary" href="?page={{peticion.next_page_number}}">Siguiente</a>
+            <a class="btn btn-outline-primary" href="?page={{peticion.next_page_number}}#peticiones">Siguiente</a>
           {% endif %}
         </center>
         
       </nav>
 
     </div>
-  </div>
+  </div>  
+  {% else %}
+    <div class="blog-post blog text-center">
+      <h2 class="blog-post-title my-5">No hay peticiones disponibles</h2>
+    </div>
+  {% endif %}
+  <div id="tramo"></div>
 </div>
 <div id="tramo"></div>
 {% endblock container %}

@@ -4,39 +4,45 @@
 <title>Quienes Somos</title>
 {% endblock titulo %} 
 {% block carousel %}
-  <main id="main">
-        <div id="carousel" class="carousel slide carousel-fade" data-ride="carousel" data-pause="false">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src={% static 'images/sol.jpg' %} class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src={% static 'images/biblia1.jpg' %} class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src={% static 'images/orar1.jpg' %} class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src={% static 'images/unidos.jpeg' %} class="d-block w-100" alt="...">
-                </div>
-                <div class="overlay">
-                    <div class="container">
-                        <div class="row align-items-center">
-                            <div class="col text-center">
-                                <h1>¿Quiénes somos?</h1>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
+<main id="main">
+  <div
+    id="carousel"
+    class="carousel slide carousel-fade"
+    data-ride="carousel"
+    data-pause="false"
+  >
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src={% static 'images/sol.jpg' %} class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src={% static 'images/biblia1.jpg' %} class="d-block w-100"
+        alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src={% static 'images/orar1.jpg' %} class="d-block w-100"
+        alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src={% static 'images/unidos.jpeg' %} class="d-block w-100"
+        alt="...">
+      </div>
+      <div class="overlay">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col text-center">
+              <h1>¿Quiénes somos?</h1>
             </div>
+          </div>
         </div>
-    </main>
+      </div>
+    </div>
+  </div>
+</main>
 {% endblock carousel %} 
-
-{% block publicidad %} {% endblock publicidad %} 
-
-{%block container %}
+{% block publicidad %} 
+{% endblock publicidad %} 
+{% block container %}
 <!-- SECCION 1 -->
 <div class="secc1">
   <section
@@ -96,10 +102,9 @@
         </div>
 
         <div class="col-md-6">
-          <div class="imgqs">
-            <img src={% static 'images/founder.jpg' %} alt="" class="img-fluid" />
+          <div class="imgqs mt-3 mb-3 ml-3 mr-3" align="center">
+            <img src={% static 'images/founder.jpg' %} alt="" class="img-fluid">
           </div>
-          <br>
         </div>
       </div>
     </div>
@@ -116,59 +121,48 @@
         class="row mb-5 justify-content-center element-animate fadeInUp element-animated"
       >
         <div class="col-md-12">
-          <h1>Pastores</h1>
-          <h2>Conoce a nuestros Pastores</h2>
+          <h1 class = "text-center mb-2">Miembros</h1>
+          <h2>Conoce a nuestros miembros</h2>
         </div>
       </div>
 
       <div class="row">
-        <!-- Miembros -->
-
+        <!-- Pastor 1 -->
         {% for i in mostrar %}
-        
-        <div class="col-lg-4 col-md-6 col-sm-12 pb-3">
-           <div class="card">
+        <div
+          class="col-lg-4 col-md-6 col-sm-12 pb-3 offset-1 col-11 offset-xl-0 offset-lg-0 offset-sm-0 col-sm-12"
+        >
+          <div class="card-deck">
+            <div class="card" style='height:400px'>
               {% if i.member_image %}
-                <img src="../media/{{i.member_image}}" class="card-img-top" alt="..." />
-              {% else %}
-                <img src={% static 'images/persona.jpg' %} class="card-img-top" alt="..." />
+                <img src="../media/{{i.member_image}}" class="card-img-top" alt="..." style="height:250px;"/>
+              {% else %} 
+              <img src={% static 'images/persona.jpg' %} class="card-img-top" alt="..." style="height:250px;"/> 
               {% endif %}
-              
+
               <div class="card-body">
-                <h5 class="card-title">
-                  {{i.name1}} 
-                  {% if i.name2 %}
-                    {{i.name2}} 
-                  {% endif %}
-                  {{i.surname1}} 
-                  {% if i.surname2 %}
-                    {{i.surname2}}
-                  {% endif %}
+                <h5 class="card-title text-center mb-3">
+                  {{i.name1}} {% if i.name2 %} {{i.name2}} {% endif %} 
+                  {{i.surname1}} {% if i.surname2 %} {{i.surname2}} {% endif %}
                 </h5>
-                <h6 class="position">
+                <p class="card-text text-justify ">
                   {{i.ocupation}}
-                </h6>
-                <br />
-                {% if i.description %}
-                <p class="card-text">
-                  {{i.description}}
                 </p>
-                {% endif %}
               </div>
             </div>
-        
+          </div>
         </div>
-        
-        
-        {% endfor %}
-
+        {% endfor%}
       </div>
 
+      <br />
 
+      
     </div>
     <br />
     <br />
     <br />
   </section>
 </div>
-{% endblock container %}
+{% endblock container %} 
+

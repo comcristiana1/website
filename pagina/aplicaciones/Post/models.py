@@ -18,6 +18,7 @@ class FormularioRecursos(models.Model):
     title = models.CharField('Titulo de Oración/Petición',max_length=30,null=False,blank=False)
     description= models.CharField('Descripción de la Oración/Petición',max_length=255,null=False,blank=False)
     status = models.BooleanField('Estado Publicado/No_Publicado',default=False)
+    creation_date = models.DateField('Fecha de Creación',auto_now=False,auto_now_add=True)
 
 
      
@@ -29,8 +30,8 @@ class Miembro(models.Model):
     name2 = models.CharField('Segundo Nombre',max_length = 30,null = True,blank = True)
     surname1 = models.CharField('Primer Apellido',max_length = 30,null = False,blank = False)
     surname2 = models.CharField('Segundo Apellido',max_length = 30,null = True,blank = True)
-    ocupation = models.CharField('Ocupación',max_length = 30,null = False, blank = False)
-    member_image = models.ImageField('Imagen', upload_to='member_image',blank=True,null=False) 
+    ocupation = models.CharField('Ocupación',max_length = 200,null = False, blank = False)
+    member_image = models.ImageField('Imagen', upload_to='member_image',blank=False,null=False) 
     phone1 = models.CharField('Teléfono Convencional',max_length = 10,null = True, blank = True)
     phone2 = models.CharField('Teléfono Celular',max_length = 10, null = True, blank = True)
     creation_date = models.DateField('Fecha de Creación',auto_now=False,auto_now_add=True)
@@ -78,7 +79,7 @@ class CasaOracion(models.Model):
     id = models.AutoField("Id",primary_key=True)
     title = models.CharField("Titulo", max_length=100,null=False,blank=False)
     author = models.CharField("Autor", max_length=100, null=False,blank=False)
-    prayer = models.TextField("Oracion", max_length=500,null=False, blank=False)
+    prayer = models.TextField("Oracion", max_length=2048,null=False, blank=False)
     created_date = models.DateField('Fecha de Creación',auto_now=False,auto_now_add=True)
     status = models.BooleanField('Estado Activado/Desactivado',default=True)
 

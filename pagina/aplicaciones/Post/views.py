@@ -35,10 +35,13 @@ def mostrar_pastor(request):
     return render(request,'Post/quienessomos.html',{'mostrar':mostrar})
 
 def casa_oracion(request):
-    oracion = CasaOracion.objects.all()
-    last = len(oracion)-1
-    last_prayer = oracion[last] 
-    paginator = Paginator(oracion,1)
+    oracion = CasaOracion.objects.filter(status=True)
+    if oracion:
+        last = len(oracion)-1
+        last_prayer = oracion[last]
+    else:
+        last_prayer=False
+    paginator = Paginator(oracion,12)
     page = request.GET.get('page')
     oracion = paginator.get_page(page)
     return render(request,'Post/casa_oracion.html',{'oracion':oracion,'last':last_prayer})
@@ -94,15 +97,15 @@ def mostrar_grupos(request):
     return render(request,'POST/grupos.html',{'grupos':grupos})
 
 def mostrar_oracion(request):
-    prayer = FormularioRecursos.objects.filter(section_category='Oracion')
-    paginator = Paginator(prayer,2)
+    prayer = FormularioRecursos.objects.filter(section_category='Oracion',status=True)
+    paginator = Paginator(prayer,20)
     page = request.GET.get('page')
     prayer = paginator.get_page(page)
     return render(request,'Post/oracion.html',{'oracion': prayer,'paginator':paginator})
 
 def mostrar_peticion(request):
-    peticion = FormularioRecursos.objects.filter(section_category='Peticion')
-    paginator = Paginator(peticion,2)
+    peticion = FormularioRecursos.objects.filter(section_category='Peticion',status=True)
+    paginator = Paginator(peticion,20)
     page = request.GET.get('page')
     peticion = paginator.get_page(page)
     return render(request,'Post/peticion.html',{'peticion': peticion,'paginator':paginator})
