@@ -256,6 +256,13 @@ img.recurso {
     margin-right: auto;
 }
 
+.card-img-top {
+    width: 100%;
+    height:auto;
+    object-fit: cover;
+}
+
+
 .f {
     padding: 4% 0% 0% 0%;
     background-size: 100% 100%;
@@ -1076,6 +1083,9 @@ div#sep {
 #PagBlog2 h1,
 #PagBlog2 h2,
 #PagBlog2 h3,
+#PagBlog2 h4,
+#PagBlog2 h5,
+#PagBlog2 h6,
 #PagBlog2 .h1,
 #PagBlog2 p {
     color: black;
@@ -1254,6 +1264,7 @@ div#sep {
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
+	
 }
 
 .tit h2 {
@@ -1277,7 +1288,7 @@ div#sep {
 
 .peticionesm .btn-outline-primary {
     border-color: #F1BE38;
-	color:#000;
+	color:#F1BE38;
     /*color: #F1BE38;*/
 }
 
@@ -1296,17 +1307,55 @@ div#tramo2 {
     height: 50px;
 }
 
-.opacipet{
-/*background-color: rgb(0,0,255); */
-opacity: 0.5;
-filter: alpha(opacity=100);
+.card-bodyptt {
+    width: 100%;
+}
+
+.card-bodyptt p {
+    color: white;
+	font-size: 16px;
+}
+
+.card-bodyptt{
+	
+	
+	background-image:     linear-gradient(
+      rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0.8)
+    ), 
+	
+	url("../images/backpeti.jpg");
+	
+	background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+	border-right: 8px solid transparent;
+    border-left: 16px solid transparent;
+}
+
+.card-bodypetic p {
+    color: #FFC107;
+	font-size: 15px;
+}
+
+.card-bodyptt span {
+    color: darkgray;
+	font-size: 12px;
 }
 
 
-.oracion {
-    background-image: url("../images/1.jpg");
-    background-position: center center;
+.card-titlepeticc {
+    color: #F1BE38;
+	font-size: 20px;
 }
+
+.card-titlepeticc1 {
+    color: #F1BE38;
+	font-size: 18px;
+}
+
+
 /*----Fin Peticiones--constructores del Muro */
 
 
