@@ -1,101 +1,23 @@
-<!doctype html>
-<html lang="en">
-
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="CSS/index.css">
-    <!--<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>-->
-    <link href="https://fonts.googleapis.com/css?family=Ropa+Sans" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
-
-	    <link href="social_icons_from_Techandallcom.css" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="css/util-contact.css">
-    <link rel="stylesheet" type="text/css" href="css/main-contact.css">
-    <link rel="stylesheet" type="text/css" href="CSS/publicidad.css">
-    <title>Comunidad Cristiana</title>
-</head>
-
-<body>
-	
-    <!--Inicio Navbar-->
-    <nav id="navbarcc" class="navbar navbar-expand-lg fixed-top ">
-        <div class="container">
-            <a class="navbar-brand" href="#">Com. Crist. "La Magdalena"</a>
-            <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
-              	<ion-icon name="menu"></ion-icon>
-      		</button>
-
-            <div class="collapse navbar-collapse" id="collapsibleNavId">
-                <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-                    <li class="nav-item mr-auto">
-                        <a class="nav-link" href="index.html" id="Inicio">Inicio </a>
-                    </li>
-                    <li class="nav-item dropdown mr-auto" id="Tu_Iglesia">
-                        <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tu Iglesia</a>
-                        <div class="dropdown-menu" aria-labelledby="dropdownId">
-
-                            <a class="dropdown-item" href="quienessomos.html">¿Quienes somos?</a>
-                            <a class="dropdown-item" href="recursos.html">Recursos</a>
-                            <a class="dropdown-item" href="casa_de_oración.html">Casa de Oración</a>
-
-
-
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown mr-auto" id="Eventos">
-                        <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Actos</a>
-                        <div class="dropdown-menu" aria-labelledby="dropdownId">
-                            <a class="dropdown-item" href="actividades.html">Actividades</a>
-                            <a class="dropdown-item" href="eventos.html">Eventos</a>
-                        </div>
-                    </li>
-                    <li class="nav-item mr-auto">
-                        <a class="nav-link" href="ministries.html" id="Ministerios">Ministerios </a>
-                    </li>
-                    <li class="nav-item mr-auto">
-                        <a class="nav-link" href="groups.html" id="Grupos">Grupos </a>
-                    </li>
-                    <li class="nav-item mr-auto">
-                        <a class="nav-link" href="blog.html" id="Blog">Blog </a>
-                    </li>
-                    <li class="nav-item dropdown mr-auto" id="Muro Espiritual">
-                        <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Constructores del Muro</a>
-                        <div class="dropdown-menu" aria-labelledby="dropdownId">
-                            <a class="dropdown-item" href="edificadores.html">Edificadores y Protectores del Muro</a>
-                            <a class="dropdown-item" href="oracion.html">Oración</a>
-                            <a class="dropdown-item" href="peticiones.html" id="Peticiones">Petición</a>
-
-                        </div>
-                    </li>
-                    <li class="nav-item mr-auto">
-                        <a class="nav-link" href="contact.html">Contactos</a>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <!--Fin Navbar-->
-
-
-    <!-- Inicio Carousel -->
-    <main id="main">
+{% extends 'base.html'%}
+{% load static %}
+{% block titulo %}
+        <title>Com. Cris. "La Magdalena" | Edificadores</title>
+{% endblock titulo %}
+{% block carousel %}
+<main id="main">
         <div id="carousel" class="carousel slide carousel-fade" data-ride="carousel" data-pause="false">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="images/i1.jpg" class="d-block w-100" alt="...">
+                    <img src={% static 'images/i1.jpg' %} class="d-block w-100" alt="...">
                 </div>
                 <div class="carousel-item">
-                    <img src="images/i2.jpg" class="d-block w-100" alt="...">
+                    <img src={% static 'images/i2.jpg' %} class="d-block w-100" alt="...">
                 </div>
                 <div class="carousel-item">
-                    <img src="images/i3.jpg" class="d-block w-100" alt="...">
+                    <img src={% static 'images/i3.jpg' %} class="d-block w-100" alt="...">
                 </div>
                 <div class="carousel-item">
-                    <img src="images/unidos.jpeg" class="d-block w-100" alt="...">
+                    <img src={% static 'images/unidos.jpeg' %} class="d-block w-100" alt="...">
                 </div>
                 <div class="overlay">
                     <div class="container">
@@ -110,12 +32,11 @@
             </div>
         </div>
     </main>
-    <!--Fin Carousel -->
+{% endblock carousel %}
+{% block publicidad %}
 
-
-
-
-
+{% endblock publicidad %}
+{% block container %}
 <!-- SECCION 1 -->
 	<section> 
   <div id="tramo">
@@ -125,7 +46,7 @@
   <div class="container pt-md-5 pb-md-5 pt-4 pb-4">
     <div id="imagen1" class="row pl-3">
       <div class="col-12 col-md-6 pl-0 pr-0 d-none d-md-block">
-          <img src="images/ed1.jpg" class="img-fluid" alt="Responsive image">
+          <img src={% static 'images/ed1.jpg' %} class="img-fluid" alt="Responsive image">
       </div>
       <div id="edsec1" class="col-12 col-md-6 pl-md-0 pr-md-0 pl-1 pr-1">
         <p class="text-justify"> Se trata de un muro espiritual, cuya función es dar cobertura y protección a la iglesia local y de todo el mundo.
@@ -144,13 +65,13 @@
 
       </div>
       <div id="imagen2" class="col-12 col-md-6 pl-0 pr-0 d-none d-md-block" >
-        <img src="images/ed2.jpg" class="img-fluid" alt="Responsive image">
+        <img src={% static 'images/ed2.jpg' %} class="img-fluid" alt="Responsive image">
 
       </div>
     </div>
     <div id="imagen3" class="row pl-3">
       <div class="col-12 col-md-6 pl-0 pr-0 d-none d-md-block">
-          <img src="images/ed3.jpg" class="img-fluid" alt="Responsive image">
+          <img src={% static 'images/ed3.jpg' %} class="img-fluid" alt="Responsive image">
       </div>
       <div id="edsec3" class="col-12 col-md-6 pl-0 pr-0">
         <p class="text-justify">
@@ -508,22 +429,23 @@
 	<h2 class="t-g stroke" align="center">PERTENECER AL MURO</h2>
 	</div>
     <div class="cont-f">
-  <form class="formstyle">
+  <form  method="POST" class="formstyle" ac>
+  {% csrf_token %}
   <!--<p align="center"><i>“Clama a mí y te responderé, y te daré a conocer cosas grandes y ocultas que tú no sabes.”</i></p><p align="center">Jeremías 33:3</p>-->
    <label>Persona o Institución</label>
-  <select class="custom-select custom-select-sm" name="">
+  <select class="custom-select custom-select-sm" name="tipe">
 
   <option selected>Seleccionar</option>
   <option value="Persona Natural">Persona Natural</option>
   <option value="Institución">Institución</option>
 </select>
   <label> Nombre </label>
-  <input class="form-control" type="text" id="nombre" >
+  <input class="form-control" type="text" id="nombre" name="name">
     <label for="exampleInputEmail1"> Email </label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="mail">
 
     <label for="exampleFormControlTextarea1">¿A qué te dedicas?</label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="description"></textarea>
     <br>
   <button style="color:white" class="btn btn-yellow pt-2 pb-2 btn-lg btn-block galery-brand" type="submit">Unirse</button>
 
@@ -533,105 +455,4 @@
   <div id="tramo">
     </div>
 
-
-
-
-
-
-
-        <!--INICIO FOOTER -->
-        <footer id="footer" class="pt-1 pb-1">
-            <div class="container">
-                <div class="row mb-0">
-                    <div class="mb-5 col-xl-6 col-l-2 col-md-5">
-                        <h3 align="center"><b>Comunidad Cristiana</br>"La Magdalena"</b></h3>
-                        <p align="justify">Familia que quiere ayudar a la comunidad sin fines de lucro. Familia que quiere ayudar a la comunidad sin fines de lucro.Familia que quiere ayudar a la comunidad sin fines de lucro.Familia que quiere ayudar a la comunidad sin fines
-                            de lucro.</p>
-                    </div>
-
-
-                    <div class="mb-5 col-xl-2 offset-xl-0 offset-md-0 col-md-3 offset-sm-3 col-sm-7">
-                        <h3 align="center">Más Sobre Nosotros</h3>
-                        <ul class="lista_mas">
-                            <div align="center">
-                                <li><a href="#">Recursos</a></li>
-                                <li><a href="#">Ministerios</a></li>
-                                <li><a href="#">Eventos</a> </li>
-                                <li><a href="#">Contactanos</a> </li>
-                            </div>
-                        </ul>
-                    </div>
-
-
-                    <div class="col-md-0 mb-5 col-xl-4 offset-xl-0 col-l-2 col-md-4 offset-md-0 col-sm-7 offset-sm-3 offset-0 col-12">
-                        <h3 align="center">Contactos</h3>
-                        <ul class="list-unstyled footer-link">
-                            <li class="d-block offset-xl-4">
-                                <span class="d-block ">Direccion:</span>
-                                <span class="text-white ">Calle n76 y Calle n85</span></li>
-                            <li class="d-block offset-xl-4"><span class="d-block">Telefono:</span><span class="text-white">(02)2475213</span></li>
-                            <li class="d-block offset-xl-4"><span class="d-block">Email:</span><span class="text-white">info@email.com</span></li>
-                        </ul>
-                    </div>
-
-
-                    <div class="col col-xl-4 pb-2 offset-md-0 col-lg-8 offset-lg-2 offset-xl-4 offset-0 col-12" align="center">
-                        <div class="social-icons">
-                            <ul class="col-xl-10 col-md-6 offset-md-2 col-sm-8 offset-sm-1">
-                                <li class="twitter" style="background-color: #F1BE38">
-                                    <a href="http://www.twitter.com" target="_blank">Twitter</a>
-                                </li>
-
-                                <li class="facebook" style="background-color: #F1BE38">
-                                    <a href="http://www.twitter.com" target="_blank">Facebook</a>
-                                </li>
-
-                                <li class="youtube" style="background-color: #F1BE38">
-                                    <a href="http://www.twitter.com" target="_blank">YouTube</a>
-                                </li>
-
-                                <li class="googleplus" style="background-color: #F1BE38">
-                                    <a href="http://www.twitter.com" target="_blank">Google +r</a>
-                                </li>
-
-                                <li class="pinterest" style="background-color: #F1BE38">
-                                    <a href="http://www.twitter.com" target="_blank">Pinterest</a>
-                                </li>
-
-
-                                <li class="linkedin" style="background-color: #F1BE38">
-                                    <a href="http://www.twitter.com" target="_blank">LinkedIN</a>
-                                </li>
-
-                            </ul>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-
-        </footer>
-
-
-
-        <!--FIN FOOTER -->
-
-        <script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"></script>
-        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-        <script>
-            $(window).scroll(function() {
-                if ($("#navbarcc").offset().top > 532) {
-                    $("#navbarcc").addClass("c_color");
-                } else {
-                    $("#navbarcc").removeClass("c_color");
-                }
-            });
-        </script>
-
-
-</body>
-
-</html>
+{% endblock container %}

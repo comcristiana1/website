@@ -47,27 +47,35 @@
 
 	<p align="center"><h2>Nuestros grupos te ayudarán a integrarte a la comunidad</h2></p></div>
 
-               <div class="opacityy opacityyy">
-                <div class="row ml-58 mr-58">
+    {% for i in grupos  %}
+
+    <div class="opacityy opacityyy">
+        <div class="row ml-58 mr-58">
             <div class="card-deck">
-  <div class="card">
-    <img class="card-img-top" src={% static 'images/grupos.jpg' %} alt="Card image cap">
+                <div class="card">
+                    <img class="card-img-top" src={{i.group_image.url}} alt="Card image cap">
 
-    <div class="card-body">
-      <h5 class="card-title " align="center"> Grupo de Hogar</h5>
-      <p>No 1: Lugar Reunión: La Santiago </p>
-	  <p>Responsable: Fernando Manzano</p>
-      <p>No 2:Lugar Reunión: La Mena </p>
-	  <p>Responsable: Vicente Tixi</p>
-      <p>No 3:Lugar Reunión: La Magdalena</p>
-       <p>No 4:Lugar Reunión: La Ecuatoriana </p>
-	  <p>Responsable: Byron Quito</p>
+                      <div class="card-body">
+                          
+                          <h5 class="card-title " align="center"> {{i.name}}</h5>
+                          <p>Lugar Reunión: {{i.direction}} </p>
+	                        <p>Responsable: {{i.responsible_person}}</p>
+                          <p>Frecuencia: {{i.frequency}} </p>
+	                        <p>Dia: {{i.date}}</p>
+                          <p>Hora Inicio: {{i.initial_hour}} </p>
+                          <p>Hora Fin: {{i.finish_hour}} </p>
+	                        <p>Colaboradores:{{i.collaborators}} </p>
 
+                      </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
+    {% endfor %}
+               
 <!--modificado-->
 
-  <div class="card">
+  <!--div class="card">
     <img class="card-img-top" src={% static 'images/grupos.jpg' %} alt="Card image cap">
     <div class="card-body">
       <h5 class="card-title" align="center">Jóvenes Adolescentes</h5>
@@ -101,40 +109,46 @@
 
 
 <div class="card-deck">
-  <div class="card">
-    <img class="card-img-top" src={% static 'images/grupos.jpg' %} alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title" align="center">Hombres de Valor</h5>
+          <div class="card">
+            <img class="card-img-top" src={% static 'images/grupos.jpg' %} alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title" align="center">Hombres de Valor</h5>
 
-      <p>Lugar Reunión: Local Reuniones</p>
-								<p>Responsable: Byron Quit</p>
-								<p>Frecuencia: Semanal</p>
+              <p>Lugar Reunión: Local Reuniones</p>
+                        <p>Responsable: Byron Quit</p>
+                        <p>Frecuencia: Semanal</p>
 
-								<p align="center" >Miércoles 19:00-21:00</p>
-    </div>
-  </div>
-  <div class="card">
-    <img class="card-img-top" src={% static 'images/grupos.jpg' %} alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title" align="center">Mujeres</h5>
-    <p>Lugar Reunión: Local Reuniones</p>
-								<p>Responsable: Elena Flores</p>
-								<p>Frecuencia: Semanal</p>
+                        <p align="center" >Miércoles 19:00-21:00</p>
+            </div>
+          </div>
 
-								<p align="center" >Miércoles 19:00-21:00</p>
-    </div>
-  </div>
-  <div class="card">
-    <img class="card-img-top" src={% static 'images/grupos.jpg' %} alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title" align="center">Intercesores</h5>
-      <p>Lugar Reunión: Local Reuniones - casas</p>
-								<p>Responsable: Byron Quit</p>
-								<p>Frecuencia: Varias a la semana</p>
 
-								<p align="center" >Miércoles 19:00-21:00</p>
-    </div>
-  </div>
+
+          <div class="card">
+            <img class="card-img-top" src={% static 'images/grupos.jpg' %} alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title" align="center">Mujeres</h5>
+            <p>Lugar Reunión: Local Reuniones</p>
+                        <p>Responsable: Elena Flores</p>
+                        <p>Frecuencia: Semanal</p>
+
+                        <p align="center" >Miércoles 19:00-21:00</p>
+            </div>
+          </div>
+
+
+
+          <div class="card">
+            <img class="card-img-top" src={% static 'images/grupos.jpg' %} alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title" align="center">Intercesores</h5>
+              <p>Lugar Reunión: Local Reuniones - casas</p>
+                        <p>Responsable: Byron Quit</p>
+                        <p>Frecuencia: Varias a la semana</p>
+
+                        <p align="center" >Miércoles 19:00-21:00</p>
+            </div>
+          </div>
 </div>
 
 
@@ -149,7 +163,7 @@
 
         </div></div>
      <div id="tramo">
-    </div>
+    </div-->
 
     </div>
 {% endblock container %}

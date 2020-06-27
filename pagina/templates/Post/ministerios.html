@@ -71,51 +71,36 @@
             <div class="row">
 
                 <!-- AREA 1  -->
+
+                {% for i in ministerio%}
 				
 				<div class="col-12 col-md-6 pb-3">
 					<div class="opacitym"> 
                     <div class="single-ministry mb-100" align="center">
-                        <img src={% static 'images/ministerios.jpg' %} class="img-fluid" alt="Responsive image" >
+                        <img src={{i.ministry_image.url}} class="img-fluid" alt="Responsive image" style="height: 300px; width: 550px;">
                         <div class="ministry-content col-xl-12">
-                            <h1>Ministerio de Niños</h1>
+                            <h1>{{i.name}}</h1>
 							<h6></br>Lugar de Reunión:</h6>
-                            <span>Local Reuniones</span>
+                            <span>{{i.direction}}</span>
 							<h6>Responsable:</h6>
-                            <span>Fernando Manzano Sonia palacios</span>
+                            <span>{{i.responsible_person}}</span>
 							<h6>Frecuencia:</h6>
-                            <span>Semanal</span>
+                            <span>{{i.frequency}}</span>
 							<h6>Colaboradores:</h6>
-                            <span>8 Maestros</span>
+                            <span>{{i.collaborators}}</span>
 							
-                            <p align="justify">Pequeña explicación de lo que se realiza. Pequeña explicación de lo que se realiza. Pequeña explicación de lo que se realiza. Pequeña explicación de lo que se realiza. Pequeña explicación de lo que se realiza. Pequeña explicación de lo que se realiza. </p>
+                            <!--p align="justify">{{i.description}} </p-->
 							
                         </div>
                     </div>
                 </div>
 				</div>
+
+                {% endfor %}
+
                <!-- AREA 2 -->
 				
-                <div class="col-12 col-md-6">
-					<div class="opacitym">
-                    <div class="single-ministry mb-100" align="center">
-                        <img src={% static 'images/ministerios.jpg' %} class="img-fluid" alt="Responsive image">
-                        <div class="ministry-content col-xl-12">
-                            <h1>Ministerio de Ujieres</h1>
-							<h6></br>Lugar de Reunión:</h6>
-                            <span>Local Reuniones</span>
-							<h6>Responsable:</h6>
-                            <span>Cecilia Pazmiño</span>
-							<h6>Frecuencia:</h6>
-                            <span>Semanal</span>
-							<h6>Colaboradores:</h6>
-                            <span>10 Obreros</span>
-							
-                            <p align="justify">Pequeña explicación de lo que se realiza. Pequeña explicación de lo que se realiza. Pequeña explicación de lo que se realiza. Pequeña explicación de lo que se realiza. Pequeña explicación de lo que se realiza. Pequeña explicación de lo que se realiza. </p>
-							
-                        </div>
-                    </div>
-                </div>
-				</div>
+                
 
             </div>
         </div>

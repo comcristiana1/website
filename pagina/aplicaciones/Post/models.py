@@ -99,7 +99,7 @@ class Groups(models.Model):
     direction = models.CharField('Direccion',max_length=100,null=False,blank=False)
     responsible_person = models.CharField('Responsable',max_length=80,null=False,blank=False)
     frequency = models.CharField('Frecuencia',max_length=20,null=False,blank=False)
-    date = models.DateField('Fecha',auto_now=False,auto_now_add=False, null=False, blank=False)
+    date = models.CharField('Dia',max_length=20,null=False,blank=False)
     initial_hour = models.TimeField('Hora Inicio',auto_now=False, auto_now_add=False)
     finish_hour = models.TimeField('Hora Fin',auto_now=False, auto_now_add=False)
     collaborators = models.CharField('Colaboradores',max_length=20,null=False,blank=False)
@@ -121,7 +121,7 @@ class Ministry(models.Model):
     frequency = models.CharField('Frecuencia',max_length=20,null=False,blank=False)
     collaborators = models.CharField('Colaboradores',max_length=20,null=False,blank=False)
     ministry_image = models.ImageField('Imagen Ministerio',upload_to='minis_image',null=False,blank=False)
-    description = models.CharField('Descripción',max_length = 200,null = False, blank = True)
+    description = models.CharField('Descripción',max_length = 800,null = False, blank = True)
     status = models.BooleanField('Estado Activado/Desactivado',default = True)
 
     class Meta:

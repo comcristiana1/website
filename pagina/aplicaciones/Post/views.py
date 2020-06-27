@@ -1,9 +1,9 @@
 from django.shortcuts import render,redirect
-from .models import CasaOracion,Ministry,Evento,Groups,Recurso,Contactos
+from .models import CasaOracion,Ministry,Evento,Groups,Recurso,Contactos,Edificadores
 from .models import Actividades
 from .models import Miembro
 from .models import FormularioRecursos
-from .forms import O_PForm,ContactosForm
+from .forms import O_PForm,ContactosForm,EdificadoresForm
 from django.core.mail import send_mail
 from django.conf import settings
 from django.core.paginator import Paginator
@@ -104,6 +104,10 @@ def mostrar_contactos(request):
     contactos = Contactos.objects.all()
     return render(request,'POST/contactos.html',{'contactos':contactos})
 
+def mostrar_edificadores(request):
+    edificadores = Edificadores.objects.all()
+    return render(request,'Post/edificadores.html',{'edificadores':edificadores}) 
+
 
 
 def contactanos(request):
@@ -165,6 +169,21 @@ def contactanos(request):
 
 
 #KEVIN
+def edificadores(request):
+    if request.method == 'POST':
+        datos = EdificadoresForm(request.POST)
+        if datos.is_valid():
+            datos.save()
+            return redirect('index')
+        else:
+            return render(request,'Post/edificadores.html',{"error":"Campos no validos"})
+
+
+    else:
+        datos = EdificadoresForm()
+    
+    
+    return render(request,'Post/edificadores.html',{"datos":datos})
 
 
 

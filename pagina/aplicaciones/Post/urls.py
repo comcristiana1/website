@@ -24,4 +24,5 @@ urlpatterns = [
 
     path('blog/',views.blog,name='blog'),
     path('blog/<slug:slug>/',views.detalle_Post,name='detalle_post'),
+    path('edificadores/',views.edificadores,name='Edificadores')
 ]
