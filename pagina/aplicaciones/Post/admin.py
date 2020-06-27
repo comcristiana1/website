@@ -29,8 +29,8 @@ class PostBlog(admin.ModelAdmin):
 class MiembroAdmin(admin.ModelAdmin):
     search_fields = ['name1']
 
-    list_display = ('id', 'name1', 'name2', 'surname1', 'surname2', 'ocupation', 'member_image','phone1','phone2', 'creation_date', 'description','status')
-
+    list_display = ('id', 'name1', 'name2', 'surname1', 'surname2','phone1','phone2', 'ocupation','status')
+    list_editable = ['status']
 
 class EventoAdmin(admin.ModelAdmin):
     search_fields = ['event_date']
@@ -40,6 +40,7 @@ class EventoAdmin(admin.ModelAdmin):
 @admin.register(CasaOracion)
 class CasaOracionAdmin(admin.ModelAdmin):
     list_display= ('id','title','author','prayer','created_date','status')
+    list_editable=['title','author','status']
 
 
 
@@ -64,6 +65,7 @@ class ActividadesAdmin(admin.ModelAdmin):
 class FormularioRecursosAdmin(admin.ModelAdmin):
     search_fields = ['section_category','title']
     list_display = ('title','name_person','section_category','mail_persona','description','status')
+    list_editable = ['status']
 
 class ContactosAdmin(admin.ModelAdmin):
     search_fields = ['name']

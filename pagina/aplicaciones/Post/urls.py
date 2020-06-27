@@ -17,8 +17,8 @@ urlpatterns = [
     path('peticion/',views.mostrar_peticion,name='Peticion'),
     path('contactos/',views.contactanos,name='Contactos'),
 
-
-
+    
+    path('casaoracion/<slug:slug>/',views.detalle_casa_oracion,name='detalle_casa_oracion'),
 
 
 

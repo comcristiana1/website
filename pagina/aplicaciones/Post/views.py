@@ -35,7 +35,13 @@ def mostrar_pastor(request):
     return render(request,'Post/quienessomos.html',{'mostrar':mostrar})
 
 def casa_oracion(request):
+    queryset = request.GET.get("buscar")
     oracion = CasaOracion.objects.filter(status=True)
+    if queryset:
+        oracion = CasaOracion.objects.filter(
+            Q(title__icontains=queryset) |
+            Q(prayer__icontains=queryset)
+        ).distinct()
     if oracion:
         last = len(oracion)-1
         last_prayer = oracion[last]
@@ -243,7 +249,17 @@ def edificadores(request):
 
 #ANDRES
 
+def detalle_casa_oracion(request,slug):
+    oracion = get_object_or_404(CasaOracion,slug=slug)
+    oracion2 = CasaOracion.objects.filter(status=True)
+    if oracion:
+        last = len(oracion2)-1
+        last_prayer = oracion2[last]
+    else:
+        last_prayer=False
 
+
+    return render(request,'Post/casa_oracion2.html',{'oracion':oracion,'last':last_prayer})
 
 
 
