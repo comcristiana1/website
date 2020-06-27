@@ -1,5 +1,5 @@
 from django.shortcuts import render,redirect
-from .models import CasaOracion,Ministry,Evento,Groups,Recurso,Contactos
+from .models import CasaOracion,Ministry,Evento,Groups,Recurso,Contactos,Edificadores
 from .models import Actividades
 from .models import Miembro
 from .models import FormularioRecursos
@@ -97,6 +97,10 @@ def mostrar_contactos(request):
     contactos = Contactos.objects.all()
     return render(request,'POST/contactos.html',{'contactos':contactos})
 
+def mostrar_edificadores(request):
+    edificadores = Edificadores.objects.all()
+    return render(request,'POST/edificadores.html',{'edificadores':edificadores}) 
+
 
 
 def contactanos(request):
@@ -158,6 +162,7 @@ def contactanos(request):
 
 
 #KEVIN
+
 
 
 
