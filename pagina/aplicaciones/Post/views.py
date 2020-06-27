@@ -7,6 +7,13 @@ from .forms import O_PForm,ContactosForm
 from django.core.mail import send_mail
 from django.conf import settings
 from django.core.paginator import Paginator
+from django.shortcuts import get_object_or_404
+from django.db.models import Q
+
+
+from .models import PostBlog, CategoriaPost, AutorPost
+
+
 # Create your views here.
 
 
@@ -250,3 +257,29 @@ def contactanos(request):
 #Adrian
 
 
+def blog(request):
+    queryset = request.GET.get("buscar")
+    post = PostBlog.objects.filter(status=True)
+    last = len(post)-1
+    last_post = post[last] 
+    if queryset:
+        post = PostBlog.objects.filter(
+            Q(title__icontains=queryset) |
+            Q(description__icontains=queryset)
+        ).distinct()
+
+    paginator = Paginator(post,1)
+    page = request.GET.get('page')
+    post = paginator.get_page(page)
+    return render(request,'Post/blog.html',{"posts":post,"last":last_post})
+
+
+def detalle_Post(request,slug):
+    post = get_object_or_404(PostBlog,slug=slug)
+    post2 = PostBlog.objects.filter(status=True)
+    last = len(post2)-1
+    last_post = post2[last] 
+
+
+
+    return render(request,'Post/blog2.html',{'posts':post,'last':last_post})

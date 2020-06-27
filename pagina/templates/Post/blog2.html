@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block titulo %}
+    <title>Blog</title>
+{% endblock titulo %}
+
+{% block carousel %}
+{% endblock carousel %}
+
+{% block publicidad %}
+{% endblock publicidad %}
+
+{% block container %}
+   <!--Inicio Blog-->
+    <div id="PagBlog2" class="p-5">
+        <div role="main" class="container pt-2 pb-5">
+            <div class="row">
+                <div class="col-md-7 blog-main">
+					<img src="{{ posts.picture.url }}" height="350px" width="550px" class="fotoblog pb-4 mb-4 borde mt-4">
+                    
+                    <h3 class="pb-4 mb-4 borde"> {{ posts.title }} </h3>
+					
+                    <div class="blog-post blog">
+                        <span class="blog-post-meta"> {{ posts.create_date }} • Elaborado por: {{ posts.auth_post }}</span>
+
+                        <p>
+                        {{ posts.content | safe}}
+                        
+                        
+                        </p>
+
+
+                    </div>
+                    <!-- /.blog-post -->
+
+                </div>
+
+
+
+                <!-- /.blog-main -->
+                <div class="col-md-2"></div>
+                <aside class="col-md-3 blog-sidebar">
+
+                <div class="input-group mb-3 p-4">
+                    <div class="p-4">
+                        <h4 class="font-italic">Última publicacion</h4>
+                        <ol class="list-unstyled mb-0">
+                            <li>
+                            <li>
+                                <a href="{% url 'Post:detalle_post' last.slug %}"><h4 style="color:black;" class="pt-3"> {{ last.title }}
+                                </h4></a>
+                                <br>
+                                <p>{{ last.description | safe }}</p>
+
+                            </li>
+                            </li>
+
+
+                        </ol>
+                    </div>
+ 
+
+                </aside>
+                <!-- /.blog-sidebar -->
+
+            </div>
+            <!-- /.row -->
+        </div>
+    </div>
+    <!--Inicio Blog-->
+
+
+{% endblock container %}

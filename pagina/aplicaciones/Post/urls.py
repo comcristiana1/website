@@ -16,4 +16,12 @@ urlpatterns = [
     path('oracion/',views.mostrar_oracion,name='Oracion'),
     path('peticion/',views.mostrar_peticion,name='Peticion'),
     path('contactos/',views.mostrar_contactos,name='Contactos'),
+
+
+
+
+
+
+    path('blog/',views.blog,name='blog'),
+    path('blog/<slug:slug>/',views.detalle_Post,name='detalle_post'),
 ]

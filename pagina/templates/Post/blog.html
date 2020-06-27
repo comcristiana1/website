@@ -1,0 +1,109 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block titulo %}
+    <title>Blog</title>
+{% endblock titulo %}
+
+{% block carousel %}
+{% endblock carousel %}
+
+{% block publicidad %}
+{% endblock publicidad %}
+
+{% block container %}
+<!--Inicio Blog-->
+    <div id="PagBlog" class="p-5">
+        <div role="main" class="container">
+            <div class="row">
+                <div class="col-md-7 blog-main">
+                    <h3 class="pb-4 mb-4 borde mt-5">
+                        De que trata el Blog
+                    </h3>
+                    <p class="borde pb-4"> Texto explicando de que trata el blog: Cum sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere
+                        consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</p>
+
+
+
+                    {% for post in posts %}
+                    <div class="col">
+                        <div class="row no-gutters border rounded mt-5">
+                            <div class="col-4  imagblog">
+                            </div>
+                            <div class="col-8 p-4 ">
+                                <a href="{% url 'Post:detalle_post' post.slug %}">
+                                    <h3 class="mb-0">{{ post.title }}</h3>
+                                </a>
+                                <br>
+                                <div class="mb-1 text-muted">{{ post.create_date }}, publicado por <br> {{ post.auth_post }} </div>
+                                <div class="mb-1 text-muted">{{ post.category_post }} </div>
+                                <p class="mb-auto">{{ post.description | safe }}</p>
+                                <br>
+                                
+                                <a class="btn btn-light" href="{% url 'Post:detalle_post' post.slug %}">Ver el post</a>
+                                
+                            </div>
+
+                        </div>
+                    </div>
+                    {% endfor %}   
+                  
+
+                    
+                    <!-- /.blog-post -->
+                    <nav class="blog-pagination pt-5 pl-3 mb-5">
+                        {% if posts.has_previous %}
+                            <a class="btn btn-light" href="?page={{posts.previous_page_number}}
+                            {% if request.GET.search %} &q={{ request.GET.search }} {% endif %}">Atras</a>
+                        {% endif %}
+                        {% if posts.has_next  %}
+                            <a class="btn btn-light" href="?page={{posts.next_page_number}}
+                            {% if request.GET.search %} &q={{ request.GET.search }} {% endif %}">Siguiente</a>
+                        {% endif %}
+                    </nav>
+
+                </div>
+                <!-- /.blog-main -->
+                <div class="col-md-2"></div>
+
+                <aside class="col-md-3 blog-sidebar">
+                    <form method="GET">
+                    {% csrf_token %}
+                    <div class="input-group mb-3 p-4">
+                        <input name="buscar" value="{{ request.GET.buscar }}" type="text" class="form-control" placeholder="Buscar..." aria-label="Busca tu..." aria-describedby="basic-addon2">
+                        <div class="input-group-append">
+                            <button id="busqueda" class="btn btn-outline-secondary" type="submit"><ion-icon name="search"></ion-icon></button>
+                        </div>
+                    </div>
+                    
+                    </form>
+
+                    <div class="p-4">
+                        <h4 class="font-italic" style="color:white;">Última publicación</h4>
+                        <ol class="list-unstyled mb-0">
+                            <li>
+                                <a href="{% url 'Post:detalle_post' last.slug %}"><h4 class="pt-3"> {{ last.title }}
+                                </h4></a>
+                                <br>
+                                <p>{{ last.description | safe }}</p>
+
+                            </li>
+
+
+                        </ol>
+                    </div>
+
+ 
+                </aside>
+
+                <!-- /.blog-sidebar -->
+
+            </div>
+            <!-- /.row -->
+        </div>
+    </div>
+    <!--Inicio Blog-->
+
+
+
+{% endblock container %}
