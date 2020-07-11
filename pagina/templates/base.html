@@ -66,7 +66,7 @@
     {% block publicidad %}
     <div class="publicidad">
 		<ul>
-			<li><a href="edificadores.html">Únete a mi Muro</a></li>
+			<li><a href="{% url 'Post:Edificadores' %}">Únete a mi Muro</a></li>
 			<li><a href="{% url 'Post:Recursos' %}">Peticiones/Oraciones</a></li>
             
 		</ul>
@@ -85,7 +85,7 @@
                 <div class="row">
                         
                         <div class="col-md well pt-2 pb-4">
-                          <a href=""><img src={{ultimo.image_ev.url}} width="90%" height="60%" class="mediana zoom"><br></a>
+                          <a href="{% url 'Post:Eventos' %}"><img src={{ultimo.image_ev.url}} width="90%" height="60%" class="mediana zoom"><br></a>
                             <br>
                     <div class="letra">
                         <h4 align="center">Vida en familia</h4>
@@ -95,7 +95,7 @@
                         </div>
                         
                         <div class="col-md well pt-2 pb-4">
-                           <a href=""><img src={{penultimo.image_ev.url}} width="96%" height="72%" class="mediana zoom"></a> <br><br>
+                           <a href="{% url 'Post:Eventos' %}"><img src={{penultimo.image_ev.url}} width="96%" height="72%" class="mediana zoom"></a> <br><br>
                     <div class="letra">
                         <h4 align="center">Misiones en zonas urbanas y rurales.</h4>
                     </div><br>

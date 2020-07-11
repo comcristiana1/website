@@ -47,13 +47,11 @@
 
                <div class="card mb-3" style="background-color:#262626">
                   <div class="row no-gutters">
-                    <div class="col-md-4">
-                      <img src="{% static 'images/1.jpg' %}" class="card-img" alt="...">
-                    </div>
+                    
                     <div class="col-md-8">
                       <div class="card-body">
-                        <h5 class="card-title"> {{ i.tittle }} </h5>
-                        <p class="card-text" align="justify"> {{ i.description_r | safe }} </p>
+                        <h5 class="card-title"> {{ i.title }} </h5>
+                        <p class="card-text" style="color:white;" align="justify"> {{ i.description_r | safe }} </p>
                         <br>
                         <button type="button" class="btnt btn-yellow pt-2 pb-2 btn-lg ">
                            <a style="color:white;" download="{{ i.title }}" href="{{ i.pdf.url }}" >Descargar PDF</a>
@@ -62,9 +60,6 @@
                     </div>
                   </div>
                 </div>
-           
-           
-           
            {% endfor %}
     
   

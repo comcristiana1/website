@@ -142,48 +142,9 @@ def contactanos(request):
     else:
         datos = ContactosForm()
     return render(request,'Post/contactos.html',{"datos":datos})
-#JORGE
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#KEVIN
 def edificadores(request):
     if request.method == 'POST':
         datos = EdificadoresForm(request.POST)
@@ -202,57 +163,6 @@ def edificadores(request):
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#ANDRES
-
 def detalle_casa_oracion(request,slug):
     oracion = get_object_or_404(CasaOracion,slug=slug)
     oracion2 = CasaOracion.objects.filter(status=True)
@@ -264,41 +174,6 @@ def detalle_casa_oracion(request,slug):
 
 
     return render(request,'Post/casa_oracion2.html',{'oracion':oracion,'last':last_prayer})
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#Adrian
 
 
 def blog(request):

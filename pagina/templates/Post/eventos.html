@@ -49,9 +49,9 @@
                 <h5 style="color:#FFF">Cuando tus rodillas toquen el suelo, tu corazón tocará el cielo.</h5>
                 <p style="color:#FFF">&nbsp;</p>
 <form action="" method="GET">
-<button type="submit" class=".btn-outline-*-primary btne "  > <a href="{% url 'Post:Eventos' %}">Todos</a>  </button> 
-<button type="submit" class=".btn-outline-*-secondary btne" > <a href="{% url 'Post:Eventos_Espirituales' %}">Eventos Espirituales</a>     </button>
-<button type="submit" class=".btn-outline-*-success btne">  <a href="{% url 'Post:Eventos_Sociales' %}"> Eventos sociales</a>   </button> 
+<button type="submit" style="color:white;" class="btn btn-dark rounded-pill"  > <a style="color:white;" href="{% url 'Post:Eventos' %}">Todos</a>  </button> 
+<button type="submit" style="color:white;" class="btn btn-dark rounded-pill" > <a style="color:white;" href="{% url 'Post:Eventos_Espirituales' %}">Eventos Espirituales</a>     </button>
+<button type="submit" style="color:white;" class="btn btn-dark rounded-pill">  <a style="color:white;" href="{% url 'Post:Eventos_Sociales' %}"> Eventos sociales</a>   </button> 
 </form>
 
                 <p>&nbsp;</p>
@@ -61,13 +61,12 @@
                     <div class="cont-work seminario">
                         
                             <div class="img-work">
-                            <p style="color:#000">Eventos {{i.category}}</p>
                                 <img src= {{i.image_ev.url}}  alt="">
                             
-                                <div class="hover-galeria">
-                                    <h4>{{i.name}}<br>
+                                <div  class="hover-galeria">
+                                    <h4 style="color:white;">{{i.name}}<br>
                                         {{i.event_date}}</h4>
-                                    <p>Lugar: {{i.primary_street}},{{i.secondary_street}},{{i.house_number}}</br>
+                                    <p style="color:white;">Lugar: {{i.primary_street}},{{i.secondary_street}},{{i.house_number}}</br>
                                         Invitado:{{i.invited}}</br>
                                         Hora: {{i.event_time}}</br>
                                         Descripción: {{i.description}}</p>
