@@ -263,3 +263,18 @@ class PostBlog(models.Model):
 
     def __str__(self):
         return self.title
+
+class Galeria(models.Model):
+    id = models.AutoField("Id",primary_key=True)
+    title = models.CharField("Nombre imagen",max_length=100,null=False,blank=False)
+    image = models.ImageField("Imagen", upload_to="Galery")
+    status = models.BooleanField('Publicado/No publicado',default=True)
+    created_date = models.DateField('Fecha de Creación',auto_now=False,auto_now_add=True)
+
+    class Meta:
+        verbose_name = "Galeria"
+        verbose_name_plural = "Galerias"
+
+    def __str__(self):
+        return self.title
+

@@ -49,7 +49,7 @@
 
   <div id="tramo2"></div>
 
-  {% if peticiones %}
+  {% if peticion %}
   <div class="container esp">
 
     <div class="row">
@@ -58,8 +58,8 @@
         <div class="card">
           <div class="card-bodyptt">
             <h5 class="card-titlep p-2" align="center" style="color:#F1BE38">{{ i.title }}</h5>
-            <div class="col-xl-4"><span>Pedido por:</span> {{ i.name_person }}</div>
-            <div class="col-xl-4"><span>Fecha de Petición:</span> {{ i.creation_date }} </div>
+            <div class="col-xl-4 text-light"><span>Pedido por:</span> {{ i.name_person }}</div>
+            <div class="col-xl-4 text-light"><span>Fecha de Petición:</span> {{ i.creation_date }} </div>
             <p class="card-textpt p-3" align="justify" >{{ i.description }}</p>
           </div>
         </div>

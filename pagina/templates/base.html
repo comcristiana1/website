@@ -13,6 +13,7 @@
 	<link rel="stylesheet" type="text/css" href={% static 'CSS/util-contact.css' %}>
 	<link rel="stylesheet" type="text/css" href={% static 'CSS/main-contact.css' %}>
     <link rel="stylesheet" type="text/css" href={% static 'CSS/publicidad.css' %}>
+    
 
 
     {% block titulo %}
@@ -112,149 +113,53 @@
         <div id="tramo1">
         </div>
         <div class="pt-4 pb-4" id="galeria">
-            <div class="container">
+            <div class="container-fluid">
                 <div class="t-g pt-4 pb-4 col-md-12 col-lg">
                     <h1 class="t-g" align="center"><b>Galeria </b></h1>
                 </div>
+
                 <div class="row">
-                    <div class="col-xs-6 offset-sm-3 col-sm-7 offset-xl-0 col-xl-3 col-md-5 offset-md-4 col-lg-4 offset-lg-4 offset-0 col-12">
-                        <div class="rowb pt-2 pb-2">
-                            <button type="button" class="btnt btn-yellow pt-2 pb-2 btn-lg btn-block galery-brand">Multimedia de la Iglesia</button>
-                        </div>
-                        <div class="rowb pt-2 pb-2">
-                            <button type="button" class="btnt btn-yellow pt-2 pb-2 btn-lg btn-block galery-brand">Multimedia de los grupos</button>
-                        </div>
-                        <div class="rowb pt-2 pb-2">
-                            <button type="button" class="btnt btn-yellow pt-2 pb-2 btn-lg btn-block galery-brand">Multimedia de reuniones</button>
-                        </div>
+                    <div class="col">
+                    {% if galeria %}
+                        <nav class="blog-pagination mb-5">
+                                
+                                <ul class="galeria">
+                                    {% if galeria.has_previous %}
+                                        <li>
+                                            <a class="btn btn-light fas fa-arrow-circle-left p-2 mt-3 mb-2" href="?page={{galeria.previous_page_number}}#galeria"></a>
+                                        </li>
+                                    {% else %}
+                                         <li>
+                                            <a class="btn btn-light fas fa-arrow-circle-left p-2 mt-3 mb-2" href="?page={{paginator.num_pages}}#galeria"></a>
+                                        </li>
+                                    {% endif %}
+                                    {% for i in galeria %}
+                                        <li>
+                                            <a href="#{{ i.id }}"><img src="../media/{{i.image}}#galeria" style="width:18rem; height:18rem;"></a>
+                                        </li>
+                                    {% endfor %} 
+                                    {% if galeria.has_next  %}
+                                        <li>
+                                            <a class="btn btn-light fas fa-arrow-circle-right p-2 mt-5" href="?page={{galeria.next_page_number}}#galeria"></a>
+                                        </li>
+                                    {% else %}
+                                         <li>
+                                            <a class="btn btn-light fas fa-arrow-circle-right p-2 mt-5" href="?page=1#galeria"></a>
+                                        </li>
+                                    {% endif %}
+                                </ul>
+                                
+                        </nav>
+                    {% else %}
+                        <h1 class="text-light">No hay imagenes</h1>
+                    {% endif %}
                     </div>
-
-
-
-                    <div class="col-xs-12 col-l-2 col-xl-9 col-md-9 offset-md-2 offset-lg-0 col-lg-12">
-                        <div class="row">
-
-                            <ul class="galeria">
-                                <li>
-                                    <a href="#img1"><img src={% static 'images/g1.jpeg' %}></a>
-                                </li>
-                                <li>
-                                    <a href="#img2"><img src={% static 'images/g2.jpeg' %}></a>
-                                </li>
-                                <li>
-                                    <a href="#img3"><img src={% static 'images/g3.jpg' %}></a>
-                                </li>
-                                <li>
-                                    <a href="#img4"><img src={% static 'images/g4.jpg' %}></a>
-                                </li>
-                            </ul>
-
-                            <div class="modal" id="img1">
-                                <h3>IMAGEN 1</h3>
-                                <div class="imagen">
-                                    <a href="#img4">&#60;</a>
-                                    <a href="#img2"><img src={% static 'images/g1.jpg' %}></a>
-                                    <a href="#img2">></a>
-                                </div>
-                                <a class="cerrar" href="">X</a>
-                            </div>
-
-
-                            <div class="modal" id="img2">
-                                <h3>IMAGEN 2</h3>
-                                <div class="imagen">
-                                    <a href="#img1">&#60;</a>
-                                    <a href="#img3"><img src={% static 'images/g2.jpg' %}></a>
-                                    <a href="#img3">></a>
-                                </div>
-                                <a class="cerrar" href="">X</a>
-                            </div>
-
-                            <div class="modal" id="img3">
-                                <h3>IMAGEN 3</h3>
-                                <div class="imagen">
-                                    <a href="#img2">&#60;</a>
-                                    <a href="#img4"><img src={% static 'images/g3.jpg' %}></a>
-                                    <a href="#img4">></a>
-                                </div>
-                                <a class="cerrar" href="">X</a>
-                            </div>
-
-                            <div class="modal" id="img4">
-                                <h3>IMAGEN 4</h3>
-                                <div class="imagen">
-                                    <a href="#img3">&#60;</a>
-                                    <a href="#img5"><img src={% static 'images/g4.jpg' %}></a>
-                                    <a href="#img5">></a>
-                                </div>
-                                <a class="cerrar" href="">X</a>
-                            </div>
-
-                        </div>
-                        <!--row-->
-
-
-                        <div class="row">
-
-                            <ul class="galeria">
-                                <li>
-                                    <a href="#img5"><img src={% static 'images/g5.jpeg' %}></a>
-                                </li>
-                                <li>
-                                    <a href="#img6"><img src={% static 'images/g6.jpeg' %}></a>
-                                </li>
-                                <li>
-                                    <a href="#img7"><img src={% static 'images/g7.jpeg' %}></a>
-                                </li>
-                                <li>
-                                    <a href="#img8"><img src={% static 'images/g8.jpg' %}></a>
-                                </li>
-                            </ul>
-
-                            <div class="modal" id="img5">
-                                <h3>IMAGEN 5</h3>
-                                <div class="imagen">
-                                    <a href="#img8">&#60;</a>
-                                    <a href="#img6"><img src={% static 'images/g5.jpg' %}></a>
-                                    <a href="#img6">></a>
-                                </div>
-                                <a class="cerrar" href="">X</a>
-                            </div>
-
-
-                            <div class="modal" id="img6">
-                                <h3>IMAGEN 6</h3>
-                                <div class="imagen">
-                                    <a href="#img5">&#60;</a>
-                                    <a href="#img7"><img src={% static 'images/g6.jpg' %}></a>
-                                    <a href="#img37">></a>
-                                </div>
-                                <a class="cerrar" href="">X</a>
-                            </div>
-
-                            <div class="modal" id="img37">
-                                <h3>IMAGEN 7</h3>
-                                <div class="imagen">
-                                    <a href="#img6">&#60;</a>
-                                    <a href="#img8"><img src={% static 'images/g7.jpg' %}></a>
-                                    <a href="#img8">></a>
-                                </div>
-                                <a class="cerrar" href="">X</a>
-                            </div>
-
-                            <div class="modal" id="img8">
-                                <h3>IMAGEN 8</h3>
-                                <div class="imagen">
-                                    <a href="#img7">&#60;</a>
-                                    <a href="#img1"><img src={% static 'images/g8.jpg' %}></a>
-                                    <a href="#img1">></a>
-                                </div>
-                                <a class="cerrar" href="">X</a>
-                            </div>
-
-                        </div>
-                    </div>
+                    
+                    
                 </div>
+
+
+            
             </div>
         </div>
 
@@ -271,7 +176,7 @@
 
 
     <!--FIN FOOTER -->
-
+    <script src="https://kit.fontawesome.com/7b69db723f.js" crossorigin="anonymous"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>

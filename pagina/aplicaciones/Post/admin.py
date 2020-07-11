@@ -2,6 +2,7 @@ from django.contrib import admin
 from .models import Evento,Groups,Ministry,CasaOracion,FormularioRecursos,Recurso,Contactos,Edificadores,CategoriaPost,AutorPost,PostBlog
 from .models import Actividades
 from .models import Miembro
+from .models import Galeria
 
 # Register your models here.
 
@@ -80,7 +81,11 @@ class EdificadoresAdmin(admin.ModelAdmin):
     search_fields = ['tipe','name']
     list_display = ('id','tipe','name','mail','description')
 
-
+@admin.register(Galeria)
+class GaleriaAdmin(admin.ModelAdmin):
+    search_fields = ['title']
+    list_display = ('id','title','image','status')
+    list_editable= ['title','status']
 
 
 admin.site.register(Miembro,MiembroAdmin)

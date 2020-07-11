@@ -3,6 +3,7 @@ from .models import CasaOracion,Ministry,Evento,Groups,Recurso,Contactos,Edifica
 from .models import Actividades
 from .models import Miembro
 from .models import FormularioRecursos
+from .models import Galeria
 from .forms import O_PForm,ContactosForm,EdificadoresForm
 from django.core.mail import send_mail
 from django.conf import settings
@@ -24,9 +25,12 @@ def home(request):
     pen = Evento.objects.all();
     aux = len(pen)
     penultimo = pen[aux-2]
-    print(aux-1)
+    galery = Galeria.objects.filter(status=True)
+    paginator = Paginator(galery,1)
+    page = request.GET.get('page')
+    galery = paginator.get_page(page)
     #evento2 = Evento.objects.filter(creation_date =  ultimo-1)
-    return render(request,'base.html',{'ultimo':ultimo,'penultimo':penultimo})
+    return render(request,'base.html',{'ultimo':ultimo,'penultimo':penultimo,'galeria':galery,'paginator':paginator})
 
 
 
