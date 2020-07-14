@@ -12,6 +12,49 @@
     --SECTION1: linear-gradient(to bottom, #262626, #030202);
 }
 
+@font-face{
+    font-family: 'LFAX';
+    src: url(../fonts/LFAX.TTF);
+}
+
+@font-face{
+    font-family: 'Limelight-Regular';
+    src: url(../fonts/Limelight-Regular.ttf);
+}
+
+@font-face{
+    font-family: 'Roboto-Light';
+    src: url(../fonts/Roboto-Light.ttf);
+}
+
+@font-face{
+    font-family: 'Roboto-Regular';
+    src: url(../fonts/Roboto-Regular.ttf);
+}
+
+
+
+
+
+.titulo_fonts{
+    font-family: 'Limelight-Regular';
+}
+
+
+.subtitulos_fonts{
+    font-family: 'LFAX';
+}
+
+
+.fonts_navbar{
+    font-family: 'Roboto-Regular';
+}
+
+.texto_fonts{
+    font-family: 'Roboto-Light';
+}
+
+
 
 /*
 
@@ -23,13 +66,10 @@
 */
 
 * {
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 12;
+    font-family: 'Roboto-Light', sans-serif;
 }
 
-body {
-    font-family: VAR(--LETRA);
-}
+
 
 
 /*-------------------------CSS NAVBAR*/
@@ -66,6 +106,16 @@ ion-icon {
 
 
 /*-------------------------CSS PUBLICACIONES*/
+.gal_cont{
+    color: VAR(--COLOR_LETRA);
+    background-image: url("../backgrounds/Backgrounds-01.png");
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
 
 #publicaciones {
     color: VAR(--COLOR_LETRA);
@@ -154,6 +204,8 @@ form input[type="text"] {
     color: white;
 }
 
+
+
 .secc2 .card-deck {
     opacity: 0.8;
     filter: alpha(opacity=60);
@@ -161,7 +213,7 @@ form input[type="text"] {
 }
 
 .secc2 {
-    background-image: url("../images/ale.jpg");
+    background-image: url("../backgrounds/Backgrounds-07.png");
     background-position: center center;
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -1122,7 +1174,7 @@ div#sep {
 }
 
 #PagBlog2 {
-    background: url("../images/backblog2.jpg");
+    background: url("../backgrounds/Backgrounds-03.png");
     border-top: 2px solid white;
     border-bottom: 2px solid white;
     background-position: center center;
@@ -1181,7 +1233,7 @@ div#sep {
 }
 
 #CasaBlog {
-    background: url("../images/Casa_oracion4.jpg");
+    background: url("../backgrounds/Backgrounds-08.png");
     border-top: 2px solid white;
     border-bottom: 2px solid white;
     background-position: center center;
@@ -1237,7 +1289,7 @@ div#sep {
 }
 
 #PagBlog {
-    background: url("../images/Casa_oracion4.jpg");
+    background: url("../backgrounds/Backgrounds-03.png");
     border-top: 2px solid white;
     border-bottom: 2px solid white;
     background-position: center center;
@@ -1259,7 +1311,7 @@ div#sep {
 /*----Peticiones--constructores del Muro */
 
 .peticionesm{
-	background-image: url("../images/bg-01.jpg");
+	background-image: url("../backgrounds/Backgrounds-01.png");
 	background-position: center center;
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -1365,7 +1417,7 @@ div#tramo2 {
 
 
 .oracion{
-	background-image:url("../images/1.jpg");
+	background-image:url("../backgrounds/Backgrounds-01.png");
 	background-position: center center;
     background-attachment: fixed;
     background-repeat: no-repeat;

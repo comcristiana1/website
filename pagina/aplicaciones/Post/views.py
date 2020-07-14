@@ -3,13 +3,13 @@ from .models import CasaOracion,Ministry,Evento,Groups,Recurso,Contactos,Edifica
 from .models import Actividades
 from .models import Miembro
 from .models import FormularioRecursos
-from .models import Galeria
 from .forms import O_PForm,ContactosForm,EdificadoresForm
 from django.core.mail import send_mail
 from django.conf import settings
 from django.core.paginator import Paginator
 from django.shortcuts import get_object_or_404
 from django.db.models import Q
+from .models import GaleriaEventos,GaleriaGrupo,GaleriaMinisterio
 
 
 from .models import PostBlog, CategoriaPost, AutorPost
@@ -25,12 +25,9 @@ def home(request):
     pen = Evento.objects.all();
     aux = len(pen)
     penultimo = pen[aux-2]
-    galery = Galeria.objects.filter(status=True)
-    paginator = Paginator(galery,1)
-    page = request.GET.get('page')
-    galery = paginator.get_page(page)
+
     #evento2 = Evento.objects.filter(creation_date =  ultimo-1)
-    return render(request,'base.html',{'ultimo':ultimo,'penultimo':penultimo,'galeria':galery,'paginator':paginator})
+    return render(request,'base.html',{'ultimo':ultimo,'penultimo':penultimo})
 
 
 
@@ -66,7 +63,8 @@ def mostrar_actividades(request):
 
 def mostrar_ministerio(request):
     ministerio = Ministry.objects.all()
-    return render(request,'POST/ministerios.html',{'ministerio':ministerio})    
+    galery = GaleriaMinisterio.objects.filter(status=True)
+    return render(request,'POST/ministerios.html',{'ministerio':ministerio,'galeria':galery})    
 
 
 def oracion_peticion(request):
@@ -92,19 +90,24 @@ def oracion_peticion(request):
 
 def mostrar_eventos(request):
     eventos = Evento.objects.filter(status= True)
-    return render(request,'POST/eventos.html',{'eventos':eventos})
+
+    galeria = GaleriaEventos.objects.filter(status=True)
+    return render(request,'POST/eventos.html',{'eventos':eventos,'galeria':galeria})
 
 def mostrar_eventosEspirituales(request):
     eventos = Evento.objects.all().filter(category = 'Espirituales');
-    return render(request,'POST/eventos.html',{'eventos':eventos})    
+    galeria = GaleriaEventos.objects.filter(status=True)
+    return render(request,'POST/eventos.html',{'eventos':eventos,'galeria':galeria})   
 
 def mostrar_eventosSociales(request):
     eventos = Evento.objects.all().filter(category = 'Sociales');
-    return render(request,'POST/eventos.html',{'eventos':eventos})
+    galeria = GaleriaEventos.objects.filter(status=True)
+    return render(request,'POST/eventos.html',{'eventos':eventos,'galeria':galeria})
 
 def mostrar_grupos(request):
     grupos = Groups.objects.all()
-    return render(request,'POST/grupos.html',{'grupos':grupos})
+    galery = GaleriaGrupo.objects.filter(status=True)
+    return render(request,'POST/grupos.html',{'grupos':grupos,'galeria':galery})
 
 def mostrar_oracion(request):
     prayer = FormularioRecursos.objects.filter(section_category='Oracion',status=True)

@@ -19,12 +19,12 @@
                 <div class="col-md-7 blog-main">
 					<img src="{{ posts.picture.url }}" height="350px" width="550px" class="fotoblog pb-4 mb-4 borde mt-4">
                     
-                    <h3 class="pb-4 mb-4 borde"> {{ posts.title }} </h3>
+                    <h3 class="pb-4 mb-4 borde titulo_fonts"> {{ posts.title }} </h3>
 					
                     <div class="blog-post blog">
-                        <span class="blog-post-meta"> {{ posts.create_date }} • Elaborado por: {{ posts.auth_post }}</span>
+                        <span class="blog-post-meta texto_fonts"> {{ posts.create_date }} • Elaborado por: {{ posts.auth_post }}</span>
 
-                        <p>
+                        <p class="texto_fonts">
                         {{ posts.content | safe}}
                         
                         
@@ -44,14 +44,14 @@
 
                 <div class="input-group mb-3 p-4">
                     <div class="p-4">
-                        <h4 class="font-italic">Última publicacion</h4>
+                        <h4 class="font-italic texto_fonts">Última publicacion</h4>
                         <ol class="list-unstyled mb-0">
                             <li>
                             <li>
-                                <a href="{% url 'Post:detalle_post' last.slug %}"><h4 style="color:black;" class="pt-3"> {{ last.title }}
+                                <a class="texto_fonts" href="{% url 'Post:detalle_post' last.slug %}"><h4 style="color:black;" class="pt-3 texto_fonts"> {{ last.title }}
                                 </h4></a>
                                 <br>
-                                <p>{{ last.description | safe }}</p>
+                                <p class="texto_fonts">{{ last.description | safe }}</p>
 
                             </li>
                             </li>

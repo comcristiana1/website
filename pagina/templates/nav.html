@@ -1,6 +1,7 @@
+    {% load static %}
     <nav id="navbarcc" class="navbar navbar-expand-lg fixed-top ">
         <div class="container">
-            <a class="navbar-brand" href="#">Com. Crist. "La Magdalena"</a>
+            <a class="navbar-brand fonts_navbar" href="{% url 'index' %}"> <img src="{% static 'logos/2.png' %}" style="width:110px;" alt=""> </a>
             <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
               	<ion-icon name="menu"></ion-icon>
       		</button>
@@ -8,47 +9,47 @@
             <div class="collapse navbar-collapse" id="collapsibleNavId">
                 <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
                     <li class="nav-item mr-auto">
-                        <a class="nav-link" href={% url 'index' %} id="Inicio">Inicio </a>
+                        <a class="nav-link fonts_navbar" href={% url 'index' %} id="Inicio">Inicio </a>
                     </li>
-                    <li class="nav-item dropdown mr-auto" id="Tu_Iglesia">
+                    <li class="nav-item dropdown mr-auto fonts_navbar" id="Tu_Iglesia">
                         <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tu Iglesia</a>
                         <div class="dropdown-menu" aria-labelledby="dropdownId">
 
-                            <a class="dropdown-item" href={% url 'Post:Quienes_Somos' %}>¿Quienes somos?</a>
-                            <a class="dropdown-item" href={% url 'Post:Recursos' %}>Recursos</a>
-                            <a class="dropdown-item" href={% url 'Post:Casa_de_Oracion' %}>Casa de Oración</a>
+                            <a class="dropdown-item fonts_navbar" href={% url 'Post:Quienes_Somos' %}>¿Quienes somos?</a>
+                            <a class="dropdown-item fonts_navbar" href={% url 'Post:Recursos' %}>Recursos</a>
+                            <a class="dropdown-item fonts_navbar" href={% url 'Post:Casa_de_Oracion' %}>Casa de Oración</a>
 
 
 
                         </div>
                     </li>
                     <li class="nav-item dropdown mr-auto" id="Eventos">
-                        <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Actos</a>
+                        <a class="nav-link dropdown-toggle fonts_navbar" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Actos</a>
                         <div class="dropdown-menu" aria-labelledby="dropdownId">
-                            <a class="dropdown-item" href={% url 'Post:Actividades' %}>Actividades</a>
-                            <a class="dropdown-item" href={% url 'Post:Eventos' %}>Eventos</a>
+                            <a class="dropdown-item fonts_navbar fonts_navbar" href={% url 'Post:Actividades' %}>Actividades</a>
+                            <a class="dropdown-item fonts_navbar fonts_navbar" href={% url 'Post:Eventos' %}>Eventos</a>
                         </div>
                     </li>
                     <li class="nav-item mr-auto">
-                        <a class="nav-link" href={% url 'Post:Ministerios' %} id="Ministerios">Ministerios </a>
+                        <a class="nav-link fonts_navbar" href={% url 'Post:Ministerios' %} id="Ministerios">Ministerios </a>
                     </li>
                     <li class="nav-item mr-auto">
-                        <a class="nav-link" href={% url 'Post:Grupos' %} id="Grupos">Grupos </a>
+                        <a class="nav-link fonts_navbar" href={% url 'Post:Grupos' %} id="Grupos">Grupos </a>
                     </li>
-                    <li class="nav-item mr-auto">
+                    <li class="nav-item mr-auto fonts_navbar">
                         <a class="nav-link" href={% url 'Post:blog' %} id="Grupos">Blog </a>
                     </li>
                     <li class="nav-item dropdown mr-auto" id="Muro Espiritual">
-                        <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Constructores del Muro</a>
+                        <a class="nav-link dropdown-toggle fonts_navbar" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Constructores del Muro</a>
                         <div class="dropdown-menu" aria-labelledby="dropdownId">
-                            <a class="dropdown-item" href={% url 'Post:Edificadores' %}>Edificadores y Protectores del Muro</a>
-                            <a class="dropdown-item" href={% url 'Post:Oracion' %}>Oración</a>
-                            <a class="dropdown-item" href={% url 'Post:Peticion' %}>Petición</a>
+                            <a class="dropdown-item fonts_navbar" href={% url 'Post:Edificadores' %}>Edificadores y Protectores del Muro</a>
+                            <a class="dropdown-item fonts_navbar" href={% url 'Post:Oracion' %}>Oración</a>
+                            <a class="dropdown-item fonts_navbar" href={% url 'Post:Peticion' %}>Petición</a>
 
                         </div>
                     </li>
                     <li class="nav-item mr-auto">
-                        <a class="nav-link" href={% url 'Post:Contactos' %}>Contactos</a>
+                        <a class="nav-link fonts_navbar" href={% url 'Post:Contactos' %}>Contactos</a>
                 </ul>
             </div>
         </div>

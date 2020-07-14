@@ -12,11 +12,11 @@
 	
 			<form class="contact100-form validate-form" method="POST" >
 			{% csrf_token %}
-				<span class="contact100-form-title">
+				<span class="contact100-form-title titulo_fonts">
 					¡Contactanos!
 				</span>
 
-				<label class="label-input100" for="first-name">Ingresa tú Nombre y Apellido *</label>
+				<label class="label-input100 texto_fonts" for="first-name">Ingresa tú Nombre y Apellido *</label>
 				<div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate="Type first name">
 					<input id="name" class="input100" type="text" name="name" placeholder="Nombre">
 					<span class="focus-input100"></span>
@@ -26,19 +26,19 @@
 					<span class="focus-input100"></span>
 				</div>
 
-				<label class="label-input100" for="email">Ingresa tú Correo Electrónico *</label>
+				<label class="label-input100 texto_fonts" for="email">Ingresa tú Correo Electrónico *</label>
 				<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
 					<input id="mail" class="input100" type="text" name="mail" placeholder="Ej. ejemplo@email.com">
 					<span class="focus-input100"></span>
 				</div>
 
-				<label class="label-input100" for="message">Mesaje *</label>
+				<label class="label-input100 texto_fonts" for="message">Mesaje *</label>
 				<div class="wrap-input100 validate-input" data-validate = "Message is required">
 					<textarea id="message" class="input100" name="message" placeholder="Escribe aquí tú mensaje"></textarea>
 					<span class="focus-input100"></span>
 				</div>
 
-				<div class="container-contact100-form-btn">
+				<div class="container-contact100-form-btn texto_fonts">
 					<button class="contact100-form-btn" type="submit">
 						Enviar Mensaje
 					</button>
@@ -52,12 +52,13 @@
 					</div>
 
 					<div class="flex-col size2">
-						<span class="txt1 p-b-20">
+						<span class="txt1 p-b-20 texto_fonts">
 							Dirección
 						</span>
 
-						<span class="txt2">
-							Calle n76 , 585 Calle n85,</br>Quito-Ecuador , UIO 10018 EC
+						<span class="txt2 texto_fonts">
+							Epiclachima S 9- 329
+y Cóndorazo
 						</span>
 					</div>
 				</div>
@@ -68,12 +69,12 @@
 					</div>
 
 					<div class="flex-col size2">
-						<span class="txt1 p-b-20">
+						<span class="txt1 p-b-20 texto_fonts">
 							Llámanos
 						</span>
 
-						<span class="txt3">
-							+593 (02) 5266525
+						<span class="txt3 texto_fonts">
+							+593 99 527 6986
 						</span>
 					</div>
 				</div>
@@ -84,16 +85,20 @@
 					</div>
 
 					<div class="flex-col size2">
-						<span class="txt1 p-b-20">
+						<span class="txt1 p-b-20 texto_fonts">
 							Correo Institucional
 						</span>
 
-						<span class="txt3">
-							contact@example.com
+						<span class="txt3 texto_fonts">
+							Byronquitoe@gmail.com 
 						</span>
 					</div>
 				</div>
 			</div>
+		</div>
+		<br>
+		<div class="row pt-5 pb-5">
+			<iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d1056.7567362394184!2d-78.52757475517726!3d-0.24377738468373392!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sQuito%2C%20Epiclachima%20S%209-%20329%20y%20C%C3%B3ndorazo!5e0!3m2!1ses-419!2sec!4v1594762210977!5m2!1ses-419!2sec" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
 		</div>
 	</div>
 {% endblock container %}

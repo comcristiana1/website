@@ -26,8 +26,8 @@
                 <div class="container">
                     <div class="row align-items-center">
                         <div class="col text-center">
-                            <h1>Comunidad Cristiana</h1>
-                            <p class="d-none d-md-block"> No hay días malos, solo días en los que tenemos que aprender a confiar más en Dios.</p>
+                            <h1 class="titulo_fonts">Comunidad Cristiana</h1>
+                            <p class="d-none d-md-block subtitulo_fonts"> No hay días malos, solo días en los que tenemos que aprender a confiar más en Dios.</p>
                         </div>
                     </div>
                 </div>
@@ -45,13 +45,13 @@
 <div class="eventos">
 <section class="work contenedor pb-5" id="trabajo" >
                 <h3 style="color:#FFF">&nbsp;</h3>
-                <h3 style="color:#FFF">Eventos                    </h3>
-                <h5 style="color:#FFF">Cuando tus rodillas toquen el suelo, tu corazón tocará el cielo.</h5>
+                <h3 style="color:#FFF" class="titulo_fonts">Eventos                    </h3>
+                <h5 style="color:#FFF" class="subtitulo_fonts">Cuando tus rodillas toquen el suelo, tu corazón tocará el cielo.</h5>
                 <p style="color:#FFF">&nbsp;</p>
 <form action="" method="GET">
-<button type="submit" style="color:white;" class="btn btn-dark rounded-pill"  > <a style="color:white;" href="{% url 'Post:Eventos' %}">Todos</a>  </button> 
-<button type="submit" style="color:white;" class="btn btn-dark rounded-pill" > <a style="color:white;" href="{% url 'Post:Eventos_Espirituales' %}">Eventos Espirituales</a>     </button>
-<button type="submit" style="color:white;" class="btn btn-dark rounded-pill">  <a style="color:white;" href="{% url 'Post:Eventos_Sociales' %}"> Eventos sociales</a>   </button> 
+<button type="submit" style="color:white;" class="btn btn-dark rounded-pill texto_fonts"  > <a style="color:white;" href="{% url 'Post:Eventos' %}">Todos</a>  </button> 
+<button type="submit" style="color:white;" class="btn btn-dark rounded-pill texto_fonts" > <a style="color:white;" href="{% url 'Post:Eventos_Espirituales' %}">Eventos Espirituales</a>     </button>
+<button type="submit" style="color:white;" class="btn btn-dark rounded-pill texto_fonts">  <a style="color:white;" href="{% url 'Post:Eventos_Sociales' %}"> Eventos sociales</a>   </button> 
 </form>
 
                 <p>&nbsp;</p>
@@ -64,9 +64,9 @@
                                 <img src= {{i.image_ev.url}}  alt="">
                             
                                 <div  class="hover-galeria">
-                                    <h4 style="color:white;">{{i.name}}<br>
+                                    <h4 style="color:white;" class="texto_fonts">{{i.name}}<br>
                                         {{i.event_date}}</h4>
-                                    <p style="color:white;">Lugar: {{i.primary_street}},{{i.secondary_street}},{{i.house_number}}</br>
+                                    <p class="texto_fonts" style="color:white;">Lugar: {{i.primary_street}},{{i.secondary_street}},{{i.house_number}}</br>
                                         Invitado:{{i.invited}}</br>
                                         Hora: {{i.event_time}}</br>
                                         Descripción: {{i.description}}</p>
@@ -80,4 +80,26 @@
 </div>
  <div id="tramo1">
 </div>
+
+  <main id="main" class="gal_cont pt-5 pb-5">
+    <h2 class="text-center subtitulo_fonts pb-5">Galeria de nuestros eventos</h2>
+    <div class="container">
+      <div class="row">
+      {% for foto in galeria %}
+        <div class="col col-lg-4 col-md-4 ">
+          <img  src="{{ foto.image.url }}" alt="{{ foto.title }}" style="height:500px; width:400px; object-fit: cover;">
+        </div>
+      {% endfor %}
+
+      </div>
+    </div>
+    
+
+  </main> 
+ <div id="tramo1">
+</div>
+
+
+
+
 {% endblock container %}

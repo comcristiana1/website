@@ -31,7 +31,7 @@
         <div class="container">
           <div class="row align-items-center">
             <div class="col text-center">
-              <h1>¿Quiénes somos?</h1>
+              <h1 class="titulo_fonts">¿Quiénes somos?</h1>
             </div>
           </div>
         </div>
@@ -39,6 +39,8 @@
     </div>
   </div>
 </main>
+<div id="tramo1">
+        </div>
 {% endblock carousel %} 
 {% block publicidad %} 
 {% endblock publicidad %} 
@@ -51,13 +53,13 @@
     <div class="container">
       <div class="row mb-5 justify-content-center">
         <div class="col-md-12">
-          <h1>Sobre nosotros</h1>
+          <h1 class="subtitulos_fonts">Sobre nosotros</h1>
         </div>
       </div>
       <div class="row">
         <div class="col-md-6">
-          <h2>¿Quiénes somos?</h2>
-          <p>
+          <h2 class="subtitulos_fonts">¿Quiénes somos?</h2>
+          <p class="texto_fonts">
             Somos una comunidad de discípulos de Jesús, deseosos de compartir
             nuestras experiencias personales acerca del Reino de los cielos, y
             de como vivirlas aquí, en la tierra. <br />
@@ -66,35 +68,35 @@
           </p>
           <br />
 
-          <h2>Misión</h2>
-          <p>
+          <h2 clas="subtitulos_fonts">Misión</h2>
+          <p class="texto_fonts">
             Mediante el evangelio del Reino de Dios alcanzar al mayor número de
             personas, para que sus vidas sean formadas a la imagen de Jesús.
           </p>
           <br />
 
-          <h2>Visión</h2>
-          <p>Ser una familia de muchos hijos semejantes a Jesús.</p>
+          <h2 class="subtitulos_fonts">Visión</h2>
+          <p class="texto_fonts">Ser una familia de muchos hijos semejantes a Jesús.</p>
           <br />
 
-          <h2>Valores</h2>
+          <h2 class="subtitulos_fonts">Valores</h2>
 
-          <ul>
-            <li>
+          <ul class="texto_fonts">
+            <li class="texto_fonts">
               Anhelamos: Ser como Jesús, vivir como Jesús, predicar como Jesús
             </li>
-            <li>
+            <li class="texto_fonts">
               Enfocados en el cumplimiento de la palabra de Dios y la sujeción a
               Jesucristo.
             </li>
-            <li>
+            <li class="texto_fonts">
               Formar Familias, que viven en comunidad, priorizando el servicio
             </li>
-            <li>
+            <li class="texto_fonts">
               Fortalecimiento del Evangelismo y un discipulado cuyo objetivo es
               formar las vidas de la personas a la imagen de Jesús
             </li>
-            <li>
+            <li class="texto_fonts">
               Fomentar la unidad dentro de nuestra comunidad, y con el cuerpo de
               Cristo.
             </li>
@@ -109,7 +111,9 @@
       </div>
     </div>
   </section>
-</div>
+</div><div id="tramo1">
+        </div>
+
 
 <div class="secc2">
   <br />
@@ -121,8 +125,8 @@
         class="row mb-5 justify-content-center element-animate fadeInUp element-animated"
       >
         <div class="col-md-12">
-          <h1 class = "text-center mb-2">Miembros</h1>
-          <h2>Conoce a nuestros miembros</h2>
+          <h1 class = "text-center mb-2 titulo_fonts">Miembros</h1>
+          <h2 class="subtitulos_fonts">Conoce a nuestros miembros</h2>
         </div>
       </div>
 
@@ -141,11 +145,11 @@
               {% endif %}
 
               <div class="card-body">
-                <h5 class="card-title text-center mb-3">
+                <h5 class="card-title text-center mb-3 subtitulos_fonts">
                   {{i.name1}} {% if i.name2 %} {{i.name2}} {% endif %} 
                   {{i.surname1}} {% if i.surname2 %} {{i.surname2}} {% endif %}
                 </h5>
-                <p class="card-text text-justify ">
+                <p class="card-text text-justify texto_fonts">
                   {{i.ocupation}}
                 </p>
               </div>
@@ -163,6 +167,7 @@
     <br />
     <br />
   </section>
-</div>
+</div><div id="tramo1">
+        </div>
 {% endblock container %} 
 

@@ -1,7 +1,7 @@
 {% extends 'base.html'%}
 {% load static %}
 {% block titulo %}
-        <title>Com. Cris. "La Magdalena" | Ministerios</title>
+        <title>Ministerios</title>
 {% endblock titulo %}
 {% block carousel %}
 <main id="main">
@@ -23,8 +23,8 @@
                     <div class="container">
                         <div class="row align-items-center">
                             <div class="col text-center">
-                                <h1>Ministerios</h1>
-                                <p class="d-none d-md-block">Pequeña frase referente. Pequeña frase referente. Pequeña frase referente.</p>
+                                <h1 class="titulo_fonts">Ministerios</h1>
+                                <p class="d-none d-md-block subtitulo_fonts">Pequeña frase referente. Pequeña frase referente. Pequeña frase referente.</p>
                             </div>
                         </div>
                     </div>
@@ -47,8 +47,8 @@
             <div class="align-self-center text-center col-sm-11 col-md-12 col-lg-9">
                 <div class="cardm shadow pt-4">
                     <div class="card-bodym col-12">           
-                      <h1 class="pt-2 col-md-5 offset-md-4 col-sm-8 offset-sm-2 col-xl-4 col-10 offset-1" align="center">MINISTERIOS</h1>
-						<p class="m-5 pb-4">Descripción de ministerios. Descripción de ministerios. Descripción de ministerios. Descripción de ministerios. Descripción de ministerios. Descripción de ministerios. Descripción de ministerios. Descripción de ministerios. Descripción de ministerios. Descripción de ministerios. Descripción de ministerios. Descripción de ministerios. Descripción de ministerios. 
+                      <h1 class="pt-2 col-md-5 offset-md-4 col-sm-8 offset-sm-2 col-xl-4 col-10 offset-1 titulo_fonts" align="center">MINISTERIOS</h1>
+						<p class="m-5 pb-4 texto_fonts">Descripción de ministerios. Descripción de ministerios. Descripción de ministerios. Descripción de ministerios. Descripción de ministerios. Descripción de ministerios. Descripción de ministerios. Descripción de ministerios. Descripción de ministerios. Descripción de ministerios. Descripción de ministerios. Descripción de ministerios. Descripción de ministerios. 
 						</p>
                     </div>
                 </div>
@@ -79,15 +79,15 @@
                     <div class="single-ministry mb-100" align="center">
                         <img src={{i.ministry_image.url}} class="img-fluid" alt="Responsive image" style="height: 300px; width: 550px;">
                         <div class="ministry-content col-xl-12">
-                            <h1>{{i.name}}</h1>
-							<h6></br>Lugar de Reunión:</h6>
-                            <span>{{i.direction}}</span>
-							<h6>Responsable:</h6>
-                            <span>{{i.responsible_person}}</span>
-							<h6>Frecuencia:</h6>
-                            <span>{{i.frequency}}</span>
-							<h6>Colaboradores:</h6>
-                            <span>{{i.collaborators}}</span>
+                            <h1 class="titulo_fonts">{{i.name}}</h1>
+							<h6 class="texto_fonts"></br>Lugar de Reunión:</h6>
+                            <span class="texto_fonts">{{i.direction}}</span>
+							<h6 class="texto_fonts">Responsable:</h6>
+                            <span class="texto_fonts">{{i.responsible_person}}</span>
+							<h6 class="texto_fonts">Frecuencia:</h6>
+                            <span class="texto_fonts">{{i.frequency}}</span>
+							<h6 class="texto_fonts">Colaboradores:</h6>
+                            <span class="texto_fonts">{{i.collaborators}}</span>
 							
                             <!--p align="justify">{{i.description}} </p-->
 							
@@ -105,4 +105,23 @@
             </div>
         </div>
     </section>
+
+
+  <main id="main" class="gal_cont pt-5 pb-5">
+    <h2 class="text-center subtitulo_fonts pb-5">Galeria de nuestros eventos</h2>
+    <div class="container">
+      <div class="row">
+      {% for foto in galeria %}
+        <div class="col col-lg-4 col-md-4 ">
+          <img  src="{{ foto.image.url }}" alt="{{ foto.title }}" style="height:500px; width:400px; object-fit: cover;">
+        </div>
+      {% endfor %}
+
+      </div>
+    </div>
+    
+
+  </main> 
+ <div id="tramo1">
+</div>
 {% endblock container %}

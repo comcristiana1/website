@@ -23,8 +23,8 @@
                     <div class="container">
                         <div class="row align-items-center">
                             <div class="col text-center">
-                                <h1>Recursos</h1>
-                                <p class="d-none d-md-block">Nuestra oración y amor a Dios nos mantendran juntos, apoyandonos unos a otros.</p>
+                                <h1 class="titulo_fonts">Recursos</h1>
+                                <p class="d-none d-md-block subtitulos_fonts">Nuestra oración y amor a Dios nos mantendran juntos, apoyandonos unos a otros.</p>
                             </div>
                         </div>
                     </div>
@@ -41,7 +41,7 @@
       <div class="container esp">
         <div class="tit" style="color:#FFF">
     
-	         <h1 class="t-g stroke" align="center"><b>Informate</b></h1></div><br>
+	         <h1 class="t-g stroke titulo_fonts" align="center"><b>Informate</b></h1></div><br>
 
            {% for i in recursos %}
 
@@ -50,11 +50,11 @@
                     
                     <div class="col-md-8">
                       <div class="card-body">
-                        <h5 class="card-title"> {{ i.title }} </h5>
-                        <p class="card-text" style="color:white;" align="justify"> {{ i.description_r | safe }} </p>
+                        <h5 class="card-title titulo_fonts"> {{ i.title }} </h5>
+                        <p class="card-text subtitulos_fonts" style="color:white;" align="justify"> {{ i.description_r | safe }} </p>
                         <br>
                         <button type="button" class="btnt btn-yellow pt-2 pb-2 btn-lg ">
-                           <a style="color:white;" download="{{ i.title }}" href="{{ i.pdf.url }}" >Descargar PDF</a>
+                           <a style="color:white;" class="subtitulos_fonts" download="{{ i.title }}" href="{{ i.pdf.url }}" >Descargar PDF</a>
                         </button>
                       </div>
                     </div>
@@ -76,25 +76,25 @@
 	<div class="fondo_esp esp">
     <div class="tit">
     
-	<p align="center "><h2>Formulario para solicitar oración o petición</h2></p></div>
+	<p align="center" ><h2 class="subtitulos_fonts">Formulario para solicitar oración o petición</h2></p></div>
     <div class="cont-f">
   <form method="POST" class="formstyle">
         {% csrf_token %}
 
   <!--<p align="center"><i>“Clama a mí y te responderé, y te daré a conocer cosas grandes y ocultas que tú no sabes.”</i></p><p align="center">Jeremías 33:3</p>-->
-  <label> Nombre </label>
+  <label class="texto_fonts"> Nombre </label>
   <input name="name_person" class="form-control" type="text" id="nombre" > 
-    <label for="exampleInputEmail1"> Email </label>
+    <label for="exampleInputEmail1" class="texto_fonts"> Email </label>
     <input name="mail_persona" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
 
-	<label> Petición/Oración</label>
+	<label class="texto_fonts"> Petición/Oración</label>
   {{ datos.section_category }}
-  <label> Título </label>
+  <label class="texto_fonts"> Título </label>
   <input  name="title" class="form-control" type="text" id="titulo" >
-    <label for="exampleFormControlTextarea1">Escriba aquí</label>
+    <label for="exampleFormControlTextarea1" class="texto_fonts">Escriba aquí</label>
     <textarea name="description" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
     <br>
-  <button style="color:white" class="btn btn-yellow pt-2 pb-2 btn-lg btn-block galery-brand" type="submit">Enviar</button>
+  <button style="color:white" class="btn btn-yellow pt-2 pb-2 btn-lg btn-block galery-brand" type="submit" class="texto_fonts">Enviar</button>
 
 </form></div><br>
 </div>

@@ -21,7 +21,7 @@
                     <h3 class="pb-4 mb-4 borde mt-5">
                         Que es la "Casa de Oracion"
                     </h3>
-                    <p class="borde pb-4 text-justify"> 
+                    <p class="borde pb-4 text-justify texto_fonts"> 
                         <strong>Objetivo: </strong>
                         Que la Oración sea la cultura del pueblo de Dios 
                         Oración continua 24/7. Veinte y cuatro horas al día, siete días  a la semana.
@@ -31,26 +31,26 @@
                         <div class="blog-post blog">
                             {% for i in oracion %}
                             <h2 class="blog-post-title my-2">{{i.title}}</h2>
-                            <p style="color:#FFC107">{{i.author}}</p>
-                            <p class="blog-post-meta mb-2">{{i.created_date}}</p>
+                            <p style="color:#FFC107" class="texto_fonts">{{i.author}}</p>
+                            <p class="blog-post-meta mb-2 texto_fonts">{{i.created_date}}</p>
                             
-                            <p class='text-justify'>{{i.prayer}}</p>
-                            <p class="borde my-4"></p>
+                            <p class='text-justify texto_fonts'>{{i.prayer}}</p>
+                            <p class="borde my-4 texto_fonts"></p>
                             {% endfor %}
                             
                         </div>
                         <!-- /.blog-post -->
                         <nav class="blog-pagination mb-5">
                             {% if oracion.has_previous %}
-                                <a class="btn btn-outline-primary" href="?page={{oracion.previous_page_number}}">Atras</a>
+                                <a class="btn btn-outline-primary texto_fonts" href="?page={{oracion.previous_page_number}}">Atras</a>
                             {% endif %}
                             {% if oracion.has_next  %}
-                                <a class="btn btn-outline-primary" href="?page={{oracion.next_page_number}}">Siguiente</a>
+                                <a class="btn btn-outline-primary texto_fonts" href="?page={{oracion.next_page_number}}">Siguiente</a>
                             {% endif %}
                         </nav>
                     {% else %}
                         <div class="blog-post blog ">
-                            <h2 class="blog-post-title my-5 ">No se a encontrado la oracion</h2>
+                            <h2 class="blog-post-title my-5 texto_fonts">No se a encontrado la oracion</h2>
                         </div>
                     {% endif %}
                     

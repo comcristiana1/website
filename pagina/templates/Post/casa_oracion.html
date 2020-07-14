@@ -14,15 +14,15 @@
 {% endblock publicidad %}
 
 {% block container %}
-    <div id="CasaBlog" class="p-5">
+    <div id="CasaBlog" class="pt-5">
         <div role="main" class="container">
             <div class="row">
                 <div class="col-md-7 blog-main">
-                    <h3 class="pb-4 mb-4 borde mt-5">
+                    <h3 class="pb-4 mb-4 borde mt-5 titulo_fonts">
                         Que es la "Casa de Oracion"
                     </h3>
-                    <p class="borde pb-4 text-justify"> 
-                        <strong>Objetivo: </strong>
+                    <p class="borde pb-4 text-justify texto_fonts"> 
+                        <strong class="subtitulo_fonts">Objetivo: </strong>
                         Que la Oración sea la cultura del pueblo de Dios 
                         Oración continua 24/7. Veinte y cuatro horas al día, siete días  a la semana.
                         Buscar la unidad de la Iglesia, mediante el vínculo de la oración intercesora y la adoración.
@@ -30,17 +30,17 @@
                     {% if oracion %}
                         <div class="blog-post blog">
                             {% for i in oracion %}
-                            <h2 class="blog-post-title my-2">{{i.title}}</h2>
-                            <p style="color:#FFC107">{{i.author}}</p>
-                            <p class="blog-post-meta mb-2">{{i.created_date}}</p>
+                            <h2 class="blog-post-title my-2 subtitulo_fonts">{{i.title}}</h2>
+                            <p class="texto_fonts" style="color:#FFC107">{{i.author}}</p>
+                            <p class="blog-post-meta mb-2 texto_fonts">{{i.created_date}}</p>
                             
-                            <p class='text-justify'>{{i.prayer}}</p>
-                            <p class="borde my-4"></p>
+                            <p class='text-justify texto_fonts'>{{i.prayer}}</p>
+                            <p class="borde my-4 texto_fonts"></p>
                             {% endfor %}
                             
                         </div>
                         <!-- /.blog-post -->
-                        <nav class="blog-pagination mb-5">
+                        <nav class="blog-pagination mb-5 texto_fonts">
                             {% if oracion.has_previous %}
                                 <a class="btn btn-outline-primary" href="?page={{oracion.previous_page_number}}">Atras</a>
                             {% endif %}
@@ -49,8 +49,8 @@
                             {% endif %}
                         </nav>
                     {% else %}
-                        <div class="blog-post blog ">
-                            <h2 class="blog-post-title my-5 ">No hay oraciones</h2>
+                        <div class="blog-post blog texto_fonts">
+                            <h2 class="blog-post-title my-5 texto_fonts">No hay oraciones</h2>
                         </div>
                     {% endif %}
                     
@@ -61,15 +61,15 @@
                 <aside class="col-md-3 blog-sidebar">
                     <form method="GET">
                     {% csrf_token %}
-                    <div class="input-group mb-3 p-4">
+                    <div class="input-group mb-3 p-4 texto_fonts">
                         <input name="buscar" value="{{ request.GET.buscar }}" type="text" class="form-control" placeholder="Buscar..." aria-label="Busca tu..." aria-describedby="basic-addon2">
-                        <div class="input-group-append">
+                        <div class="input-group-append texto_fonts">
                             <button id="busqueda" class="btn btn-outline-secondary" type="submit"><ion-icon name="search"></ion-icon></button>
                         </div>
                     </div>
                     </form>
                     {% if last %}
-                    <button type="button" class="btn ml-4 mb-3" style="background-color: #FFC107" data-toggle="modal" data-target="#last">
+                    <button type="button" class="btn ml-4 mb-3 texto_fonts" style="background-color: #FFC107" data-toggle="modal" data-target="#last">
                          Ultima oracion
                     </button>
                     <div class="modal fade" id="last" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -85,7 +85,7 @@
                             {{last.prayer}}
                         </div>
                         <div class="modal-footer bg-dark">
-                            <button type="button" class="btn" data-dismiss="modal" style="background-color: #FFC107">Close</button>
+                            <button type="button" class="btn texto_fonts" data-dismiss="modal" style="background-color: #FFC107">Close</button>
                         </div>
                         </div>
                     </div>

@@ -32,7 +32,7 @@
         <div class="container">
           <div class="row align-items-center">
             <div class="col text-center">
-              <h1>Peticiones</h1>
+              <h1 class="titulo_fonts">Peticiones</h1>
             </div>
           </div>
         </div>
@@ -57,10 +57,10 @@
       <div class="card-deck w-100">
         <div class="card">
           <div class="card-bodyptt">
-            <h5 class="card-titlep p-2" align="center" style="color:#F1BE38">{{ i.title }}</h5>
-            <div class="col-xl-4 text-light"><span>Pedido por:</span> {{ i.name_person }}</div>
-            <div class="col-xl-4 text-light"><span>Fecha de Petición:</span> {{ i.creation_date }} </div>
-            <p class="card-textpt p-3" align="justify" >{{ i.description }}</p>
+            <h5 class="card-titlep p-2 subtitulo_fonts" align="center" style="color:#F1BE38">{{ i.title }}</h5>
+            <div class="col-xl-4 text-light texto_fonts"><span>Pedido por:</span> {{ i.name_person }}</div>
+            <div class="col-xl-4 text-light texto_fonts"><span>Fecha de Petición:</span> {{ i.creation_date }} </div>
+            <p class="card-textpt p-3 texto_fonts" align="justify" >{{ i.description }}</p>
           </div>
         </div>
       </div>
@@ -94,10 +94,9 @@
   </div>  
   {% else %}
     <div class="blog-post blog text-center">
-      <h2 class="blog-post-title my-5">No hay peticiones disponibles</h2>
+      <h2 class="blog-post-title my-5 texto_fonts">No hay peticiones disponibles</h2>
     </div>
   {% endif %}
   <div id="tramo"></div>
 </div>
-<div id="tramo"></div>
 {% endblock container %}

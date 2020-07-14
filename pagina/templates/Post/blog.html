@@ -17,10 +17,10 @@
         <div role="main" class="container">
             <div class="row">
                 <div class="col-md-7 blog-main">
-                    <h3 class="pb-4 mb-4 borde mt-5">
+                    <h3 class="pb-4 mb-4 borde mt-5 titulo_fonts">
                         De que trata el Blog
                     </h3>
-                    <p class="borde pb-4"> Texto explicando de que trata el blog: Cum sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere
+                    <p class="borde pb-4 texto_fonts"> Texto explicando de que trata el blog: Cum sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere
                         consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</p>
 
 
@@ -32,15 +32,15 @@
                             </div>
                             <div class="col-8 p-4 ">
                                 <a href="{% url 'Post:detalle_post' post.slug %}">
-                                    <h3 class="mb-0">{{ post.title }}</h3>
+                                    <h3 class="mb-0 titulo_fonts">{{ post.title }}</h3>
                                 </a>
                                 <br>
-                                <div class="mb-1 text-muted">{{ post.create_date }}, publicado por <br> {{ post.auth_post }} </div>
-                                <div class="mb-1 text-muted">{{ post.category_post }} </div>
-                                <p class="mb-auto">{{ post.description | safe }}</p>
+                                <div class="mb-1 text-muted texto_fonts">{{ post.create_date }}, publicado por <br> {{ post.auth_post }} </div>
+                                <div class="mb-1 text-muted texto_fonts">{{ post.category_post }} </div>
+                                <p class="mb-auto texto_fonts">{{ post.description | safe }}</p>
                                 <br>
                                 
-                                <a class="btn btn-light" href="{% url 'Post:detalle_post' post.slug %}">Ver el post</a>
+                                <a class="btn btn-light texto_fonts" href="{% url 'Post:detalle_post' post.slug %}">Ver el post</a>
                                 
                             </div>
 
@@ -79,13 +79,13 @@
                     </form>
 
                     <div class="p-4">
-                        <h4 class="font-italic" style="color:white;">Última publicación</h4>
+                        <h4 class="font-italic texto_fonts" style="color:white;">Última publicación</h4>
                         <ol class="list-unstyled mb-0">
                             <li>
-                                <a href="{% url 'Post:detalle_post' last.slug %}"><h4 class="pt-3"> {{ last.title }}
+                                <a href="{% url 'Post:detalle_post' last.slug %}"><h4 class="pt-3 texto_fonts"> {{ last.title }}
                                 </h4></a>
                                 <br>
-                                <p>{{ last.description | safe }}</p>
+                                <p class="texto_fonts">{{ last.description | safe }}</p>
 
                             </li>
 
