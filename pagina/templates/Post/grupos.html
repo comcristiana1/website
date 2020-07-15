@@ -48,14 +48,18 @@
 	<p align="center"><h2 class="titulo_fonts">Nuestros grupos te ayudarán a integrarte a la comunidad</h2></p></div>
 
     
-{% for i in grupos  %}
+
     <div class="opacityy opacityyy">
 
         <div class="row ml-58 mr-58">
         
             <div class="card-deck">
-                <div class="card">
-                    <img class="card-img-top" src={{i.group_image.url}} alt="Card image cap">
+            {% for i in grupos  %}
+            <div
+            class="col-lg-6 col-md-6 col-sm-12 pb-3 offset-1 col-11 offset-xl-0 offset-lg-0 offset-sm-0 col-sm-12"
+            >
+                <div class="card" style="height: 550px"> 
+                    <img class="card-img-top" src={{i.group_image.url}} alt="Card image cap" style="height:300px">
 
                       <div class="card-body">
                           
@@ -66,25 +70,27 @@
 	                        <p class="texto_fonts">Dia: {{i.date}}</p>
                           <p class="texto_fonts">Hora Inicio: {{i.initial_hour}} </p>
                           <p class="texto_fonts">Hora Fin: {{i.finish_hour}} </p>
-	                        <p class="texto_fonts">Colaboradores:{{i.collaborators}} </p>
+	                        <p class="texto_fonts">Colaboradores: {{i.collaborators}} </p>
 
                       </div>
                 </div>
+                </div>
+                    {% endfor %}
             </div>
         </div>
     </div>
-    {% endfor %}
+
               
     </div>
 
 
   <main id="main" class="gal_cont pt-5 pb-5">
     <h2 class="text-center subtitulo_fonts pb-5">Galeria de nuestros eventos</h2>
-    <div class="container">
+    <div class="container-fluid">
       <div class="row">
       {% for foto in galeria %}
-        <div class="col col-lg-4 col-md-4 ">
-          <img  src="{{ foto.image.url }}" alt="{{ foto.title }}" style="height:500px; width:400px; object-fit: cover;">
+        <div class="col-xl-4 col-md-6 d-flex justify-content-center">
+          <img class="mb-2" src="{{ foto.image.url }}" alt="{{ foto.title }}" style="height:500px; width:400px; object-fit: cover;">
         </div>
       {% endfor %}
 

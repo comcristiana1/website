@@ -109,11 +109,11 @@
 
   <main id="main" class="gal_cont pt-5 pb-5">
     <h2 class="text-center subtitulo_fonts pb-5">Galeria de nuestros eventos</h2>
-    <div class="container">
+    <div class="container-fluid">
       <div class="row">
       {% for foto in galeria %}
-        <div class="col col-lg-4 col-md-4 ">
-          <img  src="{{ foto.image.url }}" alt="{{ foto.title }}" style="height:500px; width:400px; object-fit: cover;">
+        <div class="col col-xl-4 col-md-6 d-flex justify-content-center">
+          <img class="mb-2" src="{{ foto.image.url }}" alt="{{ foto.title }}" style="height:500px; width:400px; object-fit: cover;">
         </div>
       {% endfor %}
 
